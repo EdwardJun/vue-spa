@@ -1,0 +1,28 @@
+@import "../common/mixin.scss";
+
+div#member-page{
+  div.item{
+    background: #fff;
+    margin-bottom: 0.444rem;
+    padding: 0.667rem;
+    > div {
+      width: 18.666rem;
+      line-height: 2rem;
+      &:nth-of-type(1) {
+        height: 12.389rem;
+        @include imgBgFix(18.666rem 12.389rem);
+        border-radius: 0.667rem;
+      }
+      &:nth-of-type(2) {
+        height: 2rem;
+        color: #333;
+      }
+      &:nth-of-type(3) {
+        color: #666;
+        font-size: 0.778rem;
+        line-height: 1.167rem;
+        word-break: break-all;
+      }
+    }
+  }
+}

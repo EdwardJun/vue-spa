@@ -1,0 +1,641 @@
+@import "../common/mixin.scss";
+
+@include keyframes(slideLeft){
+  from{
+    border-color: darken(rgba(255,255,255,.9),0);
+    @include transform(translate(0,0) rotate(45deg));
+  }
+  to{
+    border-color: darken(rgba(255,255,255,.6),16%);
+    @include transform(translate(-200%,0) rotate(45deg));
+  }
+}
+@include keyframes(slideRight){
+  from{
+    border-color: darken(rgba(255,255,255,.9),0);
+    @include transform(translate(0,0) rotate(-135deg));
+  }
+  to{
+    border-color: darken(rgba(255,255,255,.6),16%);
+    @include transform(translate(200%,0) rotate(-135deg));
+  }
+}
+
+$slideTime: 4s;
+
+div#appoint-tech-page{
+  height: 100%;
+  position: relative;
+  background-color: #121c2e;
+  @include img('../assets/icons/appointTech/bg.jpg',100% 100%);
+  .title{
+    position: absolute;
+    z-index: 11;
+    width: 20rem;
+    background-color: rgba(68, 63, 71, .5);
+    height: px2rem(80px);
+    line-height: px2rem(80px);
+    color: #fff;
+    div.item-title{
+      position: relative;
+      padding-left: 2.5rem;
+      font-size: 0.989rem;
+      text-decoration-line: underline;
+      display: inline-block;
+      @include sl();
+      max-width: 15.5rem;
+      >div{
+        position: absolute;
+        width: px2rem(50px);
+        height: px2rem(50px);
+        left: 0.667rem;
+        top: 50%;
+        margin-top: -0.6945rem;
+        border-radius: 50%;
+        border:1px solid #9f9ea3;
+        @include imgBgFix(px2rem(50px) px2rem(50px));
+        background-position: center center;
+        background-image: url("../assets/icons/itemCardDonationRecord/spa_icon.png");
+      }
+    }
+    div.item-filter{
+      position: relative;
+      padding-right: 0.667rem;
+      font-size: 0.989rem;
+      float: right;
+      >div{
+        position: absolute;
+        width: px2rem(33px);
+        height: px2rem(33px);
+        left: -1.433rem;
+        top: 50%;
+        margin-top: -0.3945rem;
+        @include imgBgFix(px2rem(33px) px2rem(33px));
+        background-position: center center;
+        background-image: url("../assets/icons/appointTech/filter.png");
+      }
+    }
+  }
+
+  .act-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    &:before,&:after{
+      content: "";
+      display: block;
+    }
+    &:before{
+      width: 3.861rem;
+      height:3.639rem;
+      @include img('../assets/icons/appointTech/coupon-text.png',3.861rem 1.778rem);
+      background-position: 0 95%;
+    }
+    &:after{
+      position: absolute;
+      bottom: 0;
+      left: -1.5rem;
+      width: 3rem;
+      height: 3.639rem;
+      @include img('../assets/icons/appointTech/coupon-icon.png',3rem 3.639rem);
+      @include dhz(activitiesAni,600ms ease-in-out 5);
+    }
+  }
+  .image-area{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    >div{
+      &:nth-of-type(1),&:nth-of-type(2){
+        >div{
+          @include transform(translate(0,4%) scale(.88,1));
+        }
+      }
+      &:nth-of-type(3){
+        >div{
+          opacity: .9;
+          @include transform(translate(0,2%) scale(.94,1));
+        }
+      }
+      &:nth-of-type(5){
+        pointer-events: none;
+        >div{
+          opacity: 0;
+          @include transform(translate(100%,0%));
+        }
+      }
+      &:nth-of-type(6){
+        pointer-events: none;
+        >div{
+          opacity: 0;
+          @include transform(translate(-100%,0));
+        }
+      }
+    }
+    >div.item-like{
+      position: absolute;
+      height: px2rem(120px);
+      width: px2rem(120px);
+      border-radius: 50%;
+      right: px2rem(30px);
+      bottom: px2rem(225px);
+      background-color: rgba(255, 102, 102, 0.5);
+      >div{
+        height: px2rem(150px);
+        width: px2rem(150px);
+        position: relative;
+        text-align: center;
+        i:nth-of-type(1){
+          width: px2rem(57px);
+          height: px2rem(58px);
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-top: -0.89444rem;
+          margin-left: -1.29167rem;
+          @include imgBgFix(px2rem(57px) px2rem(58px));
+          background-image: url('../assets/icons/appointTech/icon_like.png');
+        }
+        i:nth-of-type(2){
+          position: absolute;
+          width: px2rem(52px);
+          height: px2rem(32px);
+          border-radius: px2rem(15px);
+          background-color: #f94b4b;
+          color: #fff;
+          font-size: px2rem(25px);
+          line-height: px2rem(34px);
+          right: 1.03333rem;
+          top: 0.65556rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .image-item{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%,-50%);
+    >div:nth-of-type(1){
+      background-color: #fff;
+      border-radius: .5rem;
+      padding: .556rem;
+      @include ty(0,.1rem,0.3rem,0,rgba(0,0,0,0.3));
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transition-property: -webkit-transform,opacity;
+      transition-property: transform,opacity;
+      >div{
+        line-height: 1;
+        &:nth-of-type(1){
+          position: relative;
+          overflow: hidden;
+          >img{
+            width: 15.556rem;
+            height: 15.556rem;
+          }
+          >span{
+            position: absolute;
+            top: 0.222rem;
+            left: -.7rem;
+            padding: 0 .85rem 0 1.2rem;
+            text-align: center;
+            color: #fff;
+            font-size: 1.111rem;
+            background-color: rgba(140,150,165,.5);
+            border-radius: .75rem;
+            line-height: 1.5;
+          }
+          >div{
+            position: absolute;
+            top: 0.222rem;
+            right: -.7rem;
+            width: px2rem(115px);
+            height: px2rem(60px);
+            padding: 0 .85rem 0 1.2rem;
+            color: #fff;
+            background-color: rgba(140,150,165,.5);
+            border-radius: .75rem;
+            &:after{
+              position: absolute;
+              left: px2rem(3px);
+              top: px2rem(3px);
+              width: px2rem(49px);
+              height: px2rem(49px);
+              line-height: px2rem(49px);
+              border-radius: 50%;
+              border: px2rem(3px) solid #fff;
+              font-size: px2rem(30px);
+              text-align: center;
+              vertical-align:middle;
+              overflow:hidden;
+            }
+            &.free{
+              &:after{
+                background-color: #66cc66;
+                content: '闲';
+              }
+            }
+            &.busy{
+              &:after{
+                content: '忙';
+                background-color: #ff4949;
+              }
+            }
+            &.rest{
+              &:after{
+                content: '休';
+                background-color: #8f8f8f;
+              }
+            }
+          }
+        }
+        &:nth-of-type(2){
+          font-size: .944rem;
+          color: #4d4d4d;
+          width: 15.556rem;
+          position: relative;
+          height: px2rem(65px);
+          line-height: px2rem(65px);
+          @include sl();
+          >div{
+            height: px2rem(55px);
+            width: px2rem(165px);
+            line-height: px2rem(55px);
+            position: relative;
+            border-radius: .4rem;
+            font-size: px2rem(30px);
+            float: right;
+            color: #999999;
+            margin-top: px2rem(10px);
+            padding: 0 px2rem(10px) 0 px2rem(55px);
+            border: 0.01rem solid #bdbdbf;
+            text-align: center;
+            >div{
+              position: absolute;
+              width: .85rem;
+              height: .85rem;
+              top: 50%;
+              left: 0.7rem;
+              margin-top: px2rem(-17px);
+              @include imgBgFix(.85rem .85rem);
+              background-position: center center;
+              background-image: url('../assets/icons/appointTech/album_1.png');
+              &.active{
+                left: 0.333rem;
+                background-image: url('../assets/icons/appointTech/album-active.png');
+              }
+            }
+          }
+        }
+        &:nth-of-type(3){
+          margin-top: .556rem;
+          >span{
+            font-size: .667rem;
+            color: #ff6666;
+            margin:0 .556rem;
+          }
+        }
+        &:nth-of-type(4){
+          margin-top: .756rem;
+          font-size: .778rem;
+          color: #757575;
+          width: 15.556rem;
+          @include sl();
+        }
+      }
+    }
+    >div:nth-of-type(2){
+      position: absolute;
+      font-size: 1.556rem;
+      color: #fff;
+      top: 7rem;
+      width: 100%;
+      height: 2.667rem;
+      background: -webkit-linear-gradient(left,rgba(255,255,255,0),rgba(255,255,255,.3),rgba(0,0,0,.3),rgba(0,0,0,.5),rgba(0,0,0,.3),rgba(255,255,255,.3),rgba(255,255,255,0));
+      background: linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,.3),rgba(0,0,0,.3),rgba(0,0,0,.5),rgba(0,0,0,.3),rgba(255,255,255,.3),rgba(255,255,255,0));
+      @include wq();
+      >div{
+        @include wq();
+        &:nth-of-type(1),&:nth-of-type(3){
+          position: relative;
+          >div{
+            width: .778rem;
+            height: .778rem;
+            border-left: .2rem solid;
+            border-bottom: .2rem solid;
+            border-color: darken( rgba(255,255,255,.6), 8%);
+            &:nth-of-type(4){
+              position: absolute;
+              top: 0;
+              border-color: darken( rgba(255,255,255,.9), 0);
+            }
+          }
+        }
+        &:nth-of-type(1){
+          >div{
+            @include rotate(45deg);
+            &:nth-of-type(1){
+              border-color: darken( rgba(255,255,255,.6), 24%);
+            }
+            &:nth-of-type(2){
+              border-color: darken( rgba(255,255,255,.6), 16%);
+            }
+            &:nth-of-type(4){
+              right: 0;
+              @include dhz(slideLeft,$slideTime infinite);
+            }
+          }
+        }
+        &:nth-of-type(3){
+          >div{
+            @include rotate(-135deg);
+            &:nth-of-type(2){
+              border-color: darken( rgba(255,255,255,.6), 16%);
+            }
+            &:nth-of-type(3){
+              border-color: darken( rgba(255,255,255,.6), 24%);
+            }
+            &:nth-of-type(4){
+              left: 0;
+              @include dhz(slideRight,$slideTime infinite);
+            }
+          }
+        }
+      }
+    }
+    >span{
+      margin-top: 1rem;
+      display: block;
+      color: #fff;
+      font-size: .667rem;
+    }
+  }
+
+  .footer-btn{
+    position: absolute;
+    bottom: 3%;
+    width: 100%;
+    @include wq();
+    >div{
+      @include wq();
+      width: 5.833rem;
+      height: 2.083rem;
+      border:1px solid #7c797e;
+      border-radius: .3rem;
+      font-size: .889rem;
+      color: #fff;
+      box-sizing: content-box;
+      background-color: rgba(255, 255, 255, .1);
+      &:before{
+        content: "";
+        display: block;
+        width: 1.111rem;
+        height: 1.111rem;
+        margin-right: .5rem;
+        @include imgBgFix(1.111rem 1.111rem);
+      }
+      &:nth-of-type(2){
+        &:before{
+          background-image: url('../assets/icons/appointTech/like_03.png');
+        }
+        &.active{
+          &:before{
+            background-image: url('../assets/icons/appointTech/like-active.png');
+          }
+        }
+      }
+      &:nth-of-type(1){
+        margin-right: .833rem;
+        &:before{
+          background-image: url('../assets/icons/appointTech/album.png');
+        }
+      }
+    }
+  }
+
+  .no-tech-pop{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, .6);
+    overflow: hidden;
+    @include wq();
+    >div{
+      text-align: center;
+      background-color: #fff;
+      @include ty(0,0,1rem,0,#aaa);
+      >div{
+        &:nth-of-type(1){
+          padding: 1rem;
+          font-size: .889rem;
+          color: #212121;
+          >span{
+            color: #6c6;
+          }
+        }
+        &:nth-of-type(2){
+          padding: .5rem;
+          background-color: #fb5549;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  div.selector-area{
+    @include tOrigin(top center);
+    top:2.29rem;
+    &.show-search{
+      top:7.4rem;
+    }
+    >div{
+      display: none;
+      border-top:1px solid #eee;
+      background-color: #fff;
+      position: relative;
+      &:after{
+        position: absolute;
+        content: ' ';
+        width: .6rem;
+        height: .6rem;
+        top: -.3rem;
+        left:8.7rem;
+        border-top:1px solid #eee;
+        border-right:1px solid #eee;
+        @include rotate(-45deg);
+        @include tOrigin();
+        background-color: inherit;
+      }
+      &.active{
+        display: block;
+      }
+    }
+    >.item-bg{
+      display: none;
+      border-top:1px solid #eee;
+      position: relative;
+      &:after{
+        position: absolute;
+        content: ' ';
+        width: .6rem;
+        height: .6rem;
+        top: -.3rem;
+        left:8.7rem;
+        border-top:1px solid #eee;
+        border-right:1px solid #eee;
+        @include rotate(-45deg);
+        @include tOrigin();
+        background-color: #f2f2f2;
+      }
+      &.active{
+        display: block;
+      }
+    }
+    >div.comment{
+      >div{
+        height: 2.222rem;
+        line-height: 2.222rem;
+        border-bottom:1px solid #eee;
+        padding-left: 1.944rem;
+        position: relative;
+        font-size: .889rem;
+        color: #212121;
+        &.active{
+          color: #f66;
+        }
+        &.active:before{
+          position: absolute;
+          content: ' ';
+          height: .367rem;
+          width: 0.611rem;
+          left: .667rem;
+          top: 0.8rem;
+          border-left:1px solid #f66;
+          border-bottom:1px solid #f66;
+          @include tOrigin(center top);
+          @include rotate(-45deg);
+        }
+      }
+    }
+    >div.service-item{
+      &:after{
+        left:17.8rem;
+      }
+      >div{
+        &:nth-of-type(1){
+          height: 18.306rem;
+          overflow-x: hidden;
+          -webkit-overflow-scrolling: touch;
+          >div{
+            margin-left:.667rem;
+          }
+          div.item-selected{
+            position: relative;
+            width: 100%;
+            height: 3rem;
+            border-bottom:1px solid #e0e0e0;
+            margin: 0;
+          }
+          div.all{
+            position: relative;
+            width: 100%;
+            height: 3rem;
+          }
+          div.category{
+            font-size: .889rem;
+            color: #212121;
+            > div {
+              width: 18.666rem;
+              display: inline-block;
+              div.item:nth-of-type(4n) {
+                margin-right: 0;
+              }
+            }
+          }
+          div.gray{
+            background-color: #e3e3e3;
+            height: px2rem(20px);
+            margin: 0;
+          }
+          div.service-title{
+            width: 4.3rem;
+            height: 1.889rem;
+            border-radius: 3px;
+            float: left;
+            margin-right: .444rem;
+            margin-top: .611rem;
+            background: #fff;
+            @include sl();
+            text-align: center;
+            line-height: 1.889rem;
+            font-size: .978rem;
+            color:#212121;
+            position: absolute;
+            left: 50%;
+            margin-left: -2.15rem;
+          }
+          div.item{
+            width: 4.3rem;
+            height: 1.889rem;
+            border-radius: 3px;
+            border: 1px solid #616161;
+            float: left;
+            margin-right: .444rem;
+            margin-top: .611rem;
+            background: #fff;
+            @include sl();
+            text-align: center;
+            line-height: 1.889rem;
+            font-size: .778rem;
+            color:#4d4d4d;
+            &.active {
+              border: 1px solid #f66;
+              color: #f66;
+            }
+          }
+        }
+        &:nth-of-type(2){
+          @include sx();
+          border-top: 1px solid #e0e0e0;
+          padding: .306rem .667rem;
+          >div{
+            @include boxFlex(1);
+            -webkit-border-radius: .3rem;
+            -moz-border-radius: .3rem;
+            border-radius: .3rem;
+            height: 2.444rem;
+            line-height: 2.444rem;
+            font-size: .889rem;
+            color: #fff;
+            text-align: center;
+            &:nth-of-type(1){
+              margin-right: .667rem;
+              background-color: #bbb;
+            }
+            &:nth-of-type(2){
+              background-color: #f66;
+            }
+          }
+        }
+      }
+    }
+    >span.service-bg{
+      display: block;
+      width: px2rem(720px);
+      height: 100%;
+      background-size: px2rem(720px) px2rem(963px);
+      background-image: url('../assets/icons/appointTech/1.png');
+      margin-top: -0.1rem;
+      background-position: center center;
+    }
+  }
+}

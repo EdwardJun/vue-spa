@@ -1,0 +1,57 @@
+@import "../common/mixin.scss";
+
+div.home-tech-wrap{
+  width: 19.333rem;
+  margin-left: 0.667rem;
+  div.swiper-container{
+    height:7.4rem;
+  }
+  div.swiper-slide{
+    margin: 0.333rem 0.6rem .333rem;
+    font-size:0.778rem;
+    text-align: center;
+    overflow: hidden;
+    width: 4.2rem;
+    text-align: center;
+    >div{
+      &:nth-of-type(1){
+        position: relative;
+        width:4.2rem;
+        height:4.2rem;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        @include imgBgFix(4.2rem 4.2rem);
+        >div{
+            position: absolute;
+            right: 0;
+            top: .2rem;
+            width: 1.389rem;
+            height: .944rem;
+            @include img('../assets/icons/home/tech_msg_icon.png',1.389rem .944rem);
+        }
+      }
+      &:nth-of-type(2),&:nth-of-type(3){
+          font-size: px2rem(28px);
+          text-align: center;
+      }
+      &:nth-of-type(2){
+          @include sl();
+          margin-top: px2rem(4px);
+        color: #4d4d4d;
+        line-height: px2rem(48px);
+      }
+      &:nth-of-type(3){
+          display: inline-block;
+          // height: px2rem(30px);
+          min-width: px2rem(100px);
+          padding: 0 px2rem(10px);
+          line-height: px2rem(30px);
+          color: #616161;
+          border: 1px solid #999;
+          border-radius: px2rem(15px);
+          transform: translateY(-4px);
+      }
+    }
+  }
+}

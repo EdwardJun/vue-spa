@@ -1,0 +1,157 @@
+@import "../common/mixin.scss";
+
+div#suggestions-page{
+  div.star-comment{
+    border-bottom: 1px solid #d9d9d9;
+    background: #fff;
+    >div{
+      margin:0 0.667rem;
+      width: 18.666rem;
+      height: 4.444rem;
+      @include sx();
+      >div{
+        height: 1.4rem;
+        color:#4d4d4d;
+        font-size: 0.889rem;
+        @include sx();
+        &:nth-of-type(1){
+          width: 4.444rem;
+        }
+        &:nth-of-type(2){
+          margin-right: 0.612rem;
+          width: 10.944rem;
+          height: 1.667rem;
+          @include imgBgFix(10.944rem 1.667rem);
+          display: block;
+          position: relative;
+          >div{
+            width: 0;
+            height: 1.667rem;
+            @include imgBgFix(10.944rem 1.667rem);
+          }
+        }
+      }
+    }
+  }
+
+  ul.tab{
+        display: flex;
+        justify-content: center;
+        background: #fff;
+        padding: px2rem(20px) 0;
+        border-bottom: 1px solid #e0e0e0;
+        >li{
+            flex: 1;
+            border-right: 1px solid #eeeeee;
+            text-align: center;
+            color: #666666;
+            font-size: px2rem(26px);
+            line-height: 1.6;
+            &:before{
+                content: "";
+                display: block;
+                width: px2rem(50px);
+                height: px2rem(50px);
+                margin: px2rem(10px) auto;
+                @include imgBgFix(100% 100%);
+            }
+            &.active{
+                color: #f66;
+            }
+            &:nth-of-type(1){
+                &:before{
+                    background-image: url("../assets/icons/suggestions/1.png");
+                }
+            }
+            &:nth-of-type(2){
+                &:before{
+                    background-image: url("../assets/icons/suggestions/2.png");
+                }
+            }
+        }
+    }
+
+  div.input-comment{
+    position: relative;
+    margin-top: 0.667rem;
+    border-bottom: 1px solid #e0e0e0;
+    color: #666666;
+    background-color: #fafafa;
+    border-top: 1px solid #e0e0e0;
+    height: px2rem(720px);
+    margin-bottom: px2rem(120px);
+    >div{
+      &:nth-of-type(1){
+        height: px2rem(90px);
+        border-bottom: 1px solid #eeeeee;
+        background-color: #fff;
+        @include sx();
+        >div{
+          height: 100%;
+          line-height: 100%;
+          @include sx();
+          font-size: 0.889rem;
+          padding-left: 0.334rem;
+          &:before{
+                content: "";
+                display: block;
+                width: px2rem(36px);
+                height: px2rem(34px);
+                @include imgBgFix(100% 100%);
+                margin-left: px2rem(25px);
+                background-image: url("../assets/icons/suggestions/3.png");
+            }
+        }
+      }
+      &:nth-of-type(2){
+        width: px2rem(670px);
+        height: px2rem(560px);
+        background-color: #fff;
+        margin-top: px2rem(20px);
+        border: px2rem(1px) solid #e0e0e0;
+        border-radius: px2rem(15px);
+        position: absolute;
+        left: 50%;
+        margin-left: px2rem(-335px);
+        padding: px2rem(20px);
+        color: #999999;
+        @include sx();
+        >textarea{
+          width: px2rem(630px);
+          height: 100%;
+          color: #999999;
+          font-size: px2rem(30px);
+          resize: none;
+        }
+          >span{
+              position: absolute;
+              right: px2rem(15px);
+              bottom: px2rem(10px);
+              font-size: px2rem(26px);
+          }
+      }
+    }
+  }
+
+  div.donation-btn{
+        position: fixed;
+        bottom: 0;
+        height: 3.333rem;
+        left: 0;
+        right: 0;
+        background-color: #e1e1e1;
+        z-index:10;
+        >a{
+            display: block;
+            height: 2.444rem;
+            line-height: 2.444rem;
+            margin: .444rem .667rem 0;
+            background-color: #f66;
+            color: #fff;
+            font-size: 1.056rem;
+            text-align: center;
+            letter-spacing: 2px;
+            border-radius: 5px;
+        }
+    }
+}

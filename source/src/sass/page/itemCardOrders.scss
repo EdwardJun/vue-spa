@@ -1,0 +1,234 @@
+@import "../common/mixin.scss";
+
+div#item-card-orders-page{
+    overflow: hidden;
+  &.padding{
+      padding-bottom: 3.5rem;
+  }
+  ul.tab{
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    padding: px2rem(29px) 0;
+    >li{
+      height: px2rem(62px);
+      flex: 1;
+      border-right: 1px solid #e0e0e0;
+      text-align: center;
+      color: #212121;
+      font-size: px2rem(26px);
+      line-height: 1.6;
+      &:before{
+        content: "";
+        display: block;
+        width: px2rem(32px);
+        height: px2rem(32px);
+        margin: 0 auto;
+        @include imgBgFix(100% 100%);
+      }
+      &.active{
+        color: #f66;
+      }
+      &:nth-of-type(1){
+        &:before{
+          background-image: url("../assets/icons/discountMall/5.png");
+        }
+        &.active{
+          &:before{
+            background-image: url("../assets/icons/discountMall/6.png");
+          }
+        }
+      }
+      &:nth-of-type(2){
+        &:before{
+          background-image: url("../assets/icons/discountMall/9.png");
+        }
+        &.active{
+          &:before{
+            background-image: url("../assets/icons/discountMall/10.png");
+          }
+        }
+      }
+      &:nth-of-type(3){
+        border-right-width: 0;
+        &:before{
+          background-image: url("../assets/icons/discountMall/7.png");
+        }
+        &.active{
+          &:before{
+            background-image: url("../assets/icons/discountMall/8.png");
+          }
+        }
+      }
+    }
+  }
+
+  div.zone{
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+
+  div.all-list{
+    overflow-y: auto;
+  }
+
+  div.item-title{
+    position: relative;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    padding-left: 2.5rem;
+    font-size: 0.889rem;
+    color: #4d4d4d;
+    background-color: #e6e6e6;
+    >div{
+      position: absolute;
+      width: 1.389rem;
+      height: 1.389rem;
+      left: 0.667rem;
+      top: 50%;
+      margin-top: -0.6945rem;
+      border-radius: 50%;
+      border:1px solid #ccc;
+      background-position: center center;
+      @include imgBgFix(1.389rem 1.389rem);
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      width: 0.4rem;
+      height: 0.4rem;
+      right: 0.5rem;
+      top: 50%;
+      margin-top:-0.225rem;
+      border-left: 0.1rem solid #808080;
+      border-bottom: 0.1rem solid #808080;
+      @include rotate(-135deg);
+    }
+  }
+
+  ul.item-list{
+    padding-left: 0.75rem;
+    background: #fff;
+    li{
+      position: relative;
+      height: 3.833rem;
+      padding: 0.556rem 0 0.833rem 4.333rem;
+      border-bottom: 1px solid #eee;
+      box-sizing: content-box;
+      &:last-child{
+        border-bottom-width: 0;
+      }
+      >div{
+        &:nth-of-type(1){
+          position: absolute;
+          top: 0.556rem;
+          left: 0;
+          width: 3.833rem;
+          height: 3.833rem;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          @include imgBgFix(3.833rem 3.833rem);
+          &:after{
+            position: absolute;
+            color: #fff;
+            height: 0.944rem;
+            top:0;
+            left: 0;
+            padding: 0 0.15rem;
+            line-height: 0.944rem;
+            background: #61be32;
+            text-align: center;
+            font-size: 0.611rem;
+            border-top-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+          }
+          &.item_card{
+            &:after{
+              content: "次卡";
+              background: #fbaa52;
+            }
+              >span{
+                  position: absolute;
+                  font-size: 0.661rem;
+                  height: px2rem(32px);
+                  line-height: px2rem(32px);
+                  width: 100%;
+                  text-align: center;
+                  color: #fff;
+                  bottom: 0;
+                  background: rgba(0, 0, 0, .5);
+              }
+          }
+          &.item_package{
+            &:after{
+              content: "套餐"
+            }
+          }
+          &.credit_gift{
+            &:after{
+              content: "积分"
+            }
+          }
+        }
+        &:nth-of-type(2){
+          font-size: 0.944rem;
+          color: #212121;
+            width: 10.1rem;
+            @include sl();
+        }
+        &:nth-of-type(3){
+          font-size: 0.778rem;
+          color: #757575;
+          line-height: 1.56;
+          >span{
+            color: #616161;
+            font-size: 0.889rem;
+            margin-right: 0.1rem;
+          }
+        }
+        &:nth-of-type(4){
+          font-size: 0.667rem;
+          color: #757575;
+          padding-right: 0.722rem;
+          >span{
+            color: #616161;
+            float: right;
+            font-size: 0.722rem;
+            >b{
+              margin-left: 0.15rem;
+              font-weight: normal;
+              color: #f66;
+            }
+          }
+        }
+        &:nth-of-type(5){
+          position: absolute;
+          height: 1.389rem;
+          width: 3.889rem;
+          right: 0.722rem;
+          top: 1.389rem;
+          text-align: center;
+          color: #fff;
+          font-size: 0.833rem;
+          line-height: 1.389rem;
+          background: #f66;
+          border-radius: 4px;
+        }
+      }
+      &.disabled{
+        >div{
+          &:nth-of-type(1){
+            &:after{
+              background: #bbb4ac;
+            }
+          }
+          &:nth-of-type(5){
+            background: #ccc;
+          }
+        }
+      }
+    }
+  }
+}

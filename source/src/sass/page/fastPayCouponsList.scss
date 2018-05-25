@@ -1,0 +1,509 @@
+@import "../common/mixin.scss";
+
+div#fastPay-couponsList-page{
+    background-color: #f5f5f5;
+
+    div.top-wrap{
+        position: relative;
+        div.item-title{
+            height: px2rem(80px);
+            >div{
+                &:nth-of-type(1){
+                    position: absolute;
+                    width: px2rem(680px);
+                    top: px2rem(50px);
+                    border-top: px2rem(1px) solid #e0e0e0;
+                    left: 50%;
+                    margin-left: px2rem(-340px);
+                }
+                &:nth-of-type(2){
+                    width: px2rem(330px);
+                    font-size: px2rem(30px);
+                    color: #4d4d4d;
+                    position: absolute;
+                    left: 50%;
+                    margin-left: px2rem(-165px);
+                    top: px2rem(20px);
+                    text-align: center;
+                    background-color: #f5f5f5;
+                    >span{
+                        color: #ff6666;
+                    }
+                }
+            }
+        }
+        div.coupons{
+            position: relative;
+            margin-left: px2rem(20px);
+            >div{
+                &:nth-of-type(1){
+                    width:1.028rem;
+                    height:1.028rem;
+                    @include img("../assets/icons/fastPay/8.png",1.028rem 1.028rem);
+                    top:50%;
+                    margin-top:-0.514rem;
+                    position: absolute;
+                    &.selected{
+                        @include img("../assets/icons/fastPayCashier/icon_danxuan.png",1.028rem 1.028rem);
+                    }
+                }
+                /*&.selected{
+                    &:nth-of-type(1){
+                        @include img("../assets/icons/fastPay/5.png",1.028rem 1.028rem);
+                    }
+                }*/
+            }
+
+            div.item-coupon{
+                font-size: px2rem(28px);
+                color: #616161;
+                padding-left: px2rem(60px);
+                padding-right: px2rem(20px);
+                >.item-container{
+                    width: 100%;
+                    >.item-data1{
+                        position: relative;
+                        height: px2rem(202px);
+                        margin-bottom: px2rem(25px);
+                        &:nth-of-type(1){
+                            margin-top: px2rem(20px);
+                        }
+                        >.coupon-left{
+                            width: px2rem(178px);
+                            height: px2rem(200px);
+                            background-size: px2rem(178px) px2rem(200px);
+                            background-repeat: no-repeat;
+                            border-radius: px2rem(8px);
+                            display: inline-block;
+                            position: absolute;
+                            bottom: 0;
+                            background-image: url("../assets/icons/oClockCoupon/9.png");
+                            box-shadow: 0 0 2px rgba(100, 100, 100, 0.5);
+                            >div{
+                                &:nth-of-type(1){
+                                    height: px2rem(45px);
+                                    text-align: center;
+                                    padding-bottom: px2rem(60px);
+                                    padding-top: px2rem(50px);
+                                    >span{
+                                        color: #333333;
+                                        font-weight: 700;
+                                        &:nth-of-type(2), &:nth-of-type(3){
+                                            font-size: px2rem(48px);
+                                        }
+                                    }
+                                }
+                                &:nth-of-type(2){
+                                    padding-top: px2rem(2px);
+                                    text-align: center;
+                                    color: #333333;
+                                    border-top: 0.06556rem  solid rgba(0, 0, 0, .2);
+                                    margin-left: 0.5rem;
+                                    margin-right: 0.5rem;
+                                }
+                            }
+                        }
+                        .cash,.coupon,.discount,.money{
+                            background-image: url("../assets/icons/oClockCoupon/8.png");
+                        }
+                        .paid{
+                            background-image: url("../assets/icons/oClockCoupon/4.png");
+                        }
+                        .gift{
+                            background-color: #fff;
+                            background-size: px2rem(158px) px2rem(156px);
+                            background-position: center center;
+                            /*background-image: url("../assets/icons/home/serviceItem_default.jpg");*/
+                        }
+                        >.coupon-right{
+                            display: inline-block;
+                            width: px2rem(440px);
+                            height: px2rem(200px);
+                            background-color: #fff;
+                            margin-left: px2rem(180px);
+                            border-radius: px2rem(8px);
+                            position: absolute;
+                            bottom: 0;
+                            padding: px2rem(17px);
+                            box-shadow: 0 0 2px rgba(100, 100, 100, 0.5);
+                            >div{
+                                border-radius: px2rem(8px);
+                                height: px2rem(168px);
+                                padding: px2rem(5px) px2rem(10px);
+                                border: px2rem(2px) dashed #e7daeb;
+                                >div{
+                                    font-size: px2rem(27px);
+                                    color: #333333;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    &:nth-of-type(1){
+                                        font-size: px2rem(32px);
+                                        color: #333333;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        width: px2rem(200px);
+                                    }
+                                    &:nth-of-type(2){
+                                        font-size: px2rem(27px);
+                                        color: #333333;
+                                        width: px2rem(200px);
+                                    }
+                                    &:nth-of-type(3){
+                                        font-size: px2rem(27px);
+                                        color: #333333;
+                                        width: px2rem(200px);
+                                    }
+                                    &:nth-of-type(4){
+                                        font-size: px2rem(27px);
+                                        color: #333333;
+                                        height: px2rem(0px);
+                                        width: px2rem(200px);
+                                    }
+                                    &:nth-of-type(5){
+                                        font-size: px2rem(27px);
+                                        color: #333333;
+                                        width: px2rem(200px);
+                                    }
+                                    &:nth-of-type(6){
+                                        font-size: px2rem(27px);
+                                        color: #333333;
+                                        width: px2rem(200px);
+                                    }
+                                    &:nth-of-type(7){
+                                        font-size: px2rem(27px);
+                                        color: #333333;
+                                        width: px2rem(200px);
+                                    }
+                                    &:nth-of-type(8){
+                                        font-size: px2rem(27px);
+                                        color: #333333;
+                                        width: px2rem(200px);
+                                    }
+                                    &:nth-of-type(9){
+                                        font-size: px2rem(27px);
+                                        color: #333333;
+                                        width: px2rem(200px);
+                                    }
+                                    &:nth-of-type(10){
+                                        font-size: 0.67rem;
+                                        color: #757575;
+                                    }
+                                }
+                            }
+                            .cash1,.coupon1,.discount1,.money1{
+                                border: px2rem(2px) dashed #ffd37f;
+                            }
+                            .paid1{
+                                border: px2rem(2px) dashed #f6bab9;
+                            }
+                            .gift1{
+                                border: px2rem(2px) dashed #bbbbbb;
+                            }
+                            &:after{
+                                content: "";
+                                width: px2rem(25px);
+                                height: px2rem(25px);
+                                border-radius: 100%;
+                                background-color: #f5f5f5;
+                                position: absolute;
+                                left: -0.370rem;
+                                bottom: -0.26667rem;
+                            }
+                            &:before{
+                                content: "";
+                                width: px2rem(25px);
+                                height: px2rem(25px);
+                                line-height: px2rem(20px);
+                                border-radius: 100%;
+                                background-color: #f5f5f5;
+                                position: absolute;
+                                left: -0.370rem;
+                                top: -0.26667rem;
+                            }
+                            >ul{
+                                position: absolute;
+                                left: -0.10989rem;
+                                >li{
+                                    width: px2rem(6px);
+                                    height: px2rem(6px);
+                                    border-radius: 100%;
+                                    background-color: #dadada;
+                                    margin-top: px2rem(6px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div.bottom-wrap{
+        position: relative;
+        div.item-title{
+            height: px2rem(80px);
+            >div{
+                &:nth-of-type(1){
+                    position: absolute;
+                    width: px2rem(680px);
+                    top: px2rem(50px);
+                    border-top: px2rem(1px) solid #e0e0e0;
+                    left: 50%;
+                    margin-left: px2rem(-340px);
+                }
+                &:nth-of-type(2){
+                    width: px2rem(340px);
+                    font-size: px2rem(30px);
+                    color: #4d4d4d;
+                    position: absolute;
+                    left: 50%;
+                    margin-left: px2rem(-170px);
+                    top: px2rem(20px);
+                    text-align: center;
+                    background-color: #f5f5f5;
+                    >span{
+                        color: #ff6666;
+                    }
+                }
+            }
+        }
+        div.coupons{
+            position: relative;
+            margin-left: px2rem(20px);
+            >div{
+                &:nth-of-type(1){
+                    color: #4d4d4d;
+                    font-size: px2rem(27px);
+                    padding-left: px2rem(45px);
+                    &:before{
+                        content: "!";
+                        position: absolute;
+                        width: px2rem(30px);
+                        height: px2rem(30px);
+                        line-height: px2rem(30px);
+                        font-weight: 700;
+                        text-align: center;
+                        color: #fff;
+                        left: px2rem(3px);
+                        top: px2rem(10px);
+                        border-radius: 100%;
+                        background-color: #ffad43;
+                    }
+                }
+            }
+            div.item-coupon{
+                font-size: px2rem(28px);
+                color: #999999;
+                padding-left: px2rem(60px);
+                padding-right: px2rem(20px);
+                >.item-container{
+                    width: 100%;
+                    >.item-data1{
+                        position: relative;
+                        height: px2rem(202px);
+                        margin-bottom: px2rem(25px);
+                        &:nth-of-type(1){
+                            margin-top: px2rem(20px);
+                        }
+                        >.coupon-left{
+                            width: px2rem(178px);
+                            height: px2rem(200px);
+                            background-size: px2rem(178px) px2rem(200px);
+                            background-repeat: no-repeat;
+                            border-radius: px2rem(8px);
+                            display: inline-block;
+                            position: absolute;
+                            bottom: 0;
+                            background-color: #fff;
+                            background-image: url("../assets/icons/oClockCoupon/5.png");
+                            box-shadow: 0 0 2px rgba(100, 100, 100, 0.5);
+                            >div{
+                                &:nth-of-type(1){
+                                    height: px2rem(45px);
+                                    text-align: center;
+                                    padding-bottom: px2rem(60px);
+                                    padding-top: px2rem(50px);
+                                    >span{
+                                        color: #999999;
+                                        font-weight: 700;
+                                        &:nth-of-type(2), &:nth-of-type(3){
+                                            font-size: px2rem(48px);
+                                        }
+                                    }
+                                }
+                                &:nth-of-type(2){
+                                    padding-top: px2rem(2px);
+                                    text-align: center;
+                                    color: #999999;
+                                    border-top: 0.06556rem  solid rgba(0, 0, 0, .2);
+                                    margin-left: 0.5rem;
+                                    margin-right: 0.5rem;
+                                }
+                            }
+                        }
+                        .cash,.coupon,.discount,.money{
+                            background-image: url("../assets/icons/oClockCoupon/8.png");
+                        }
+                        .paid{
+                            background-image: url("../assets/icons/oClockCoupon/4.png");
+                        }
+                        .gift{
+                            opacity: 0.7;
+                            background-color: #fff;
+                            background-size: px2rem(155px) px2rem(155px);
+                            background-position: center center;
+                            /*background-image: url("../assets/icons/home/serviceItem_default.jpg");*/
+                        }
+                        >.coupon-right{
+                            display: inline-block;
+                            width: px2rem(440px);
+                            height: px2rem(200px);
+                            background-color: #fff;
+                            margin-left: px2rem(180px);
+                            border-radius: px2rem(8px);
+                            position: absolute;
+                            bottom: 0;
+                            padding: px2rem(17px);
+                            box-shadow: 0 0 2px rgba(100, 100, 100, 0.5);
+                            >div{
+                                border-radius: px2rem(8px);
+                                height: px2rem(168px);
+                                padding: px2rem(5px) px2rem(10px);
+                                border: px2rem(2px) dashed #e7daeb;
+                                >div{
+                                    font-size: px2rem(27px);
+                                    color: #999999;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    &:nth-of-type(1){
+                                        font-size: px2rem(32px);
+                                        color: #999999;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        width: px2rem(200px);
+                                    }
+                                    &:nth-of-type(2){
+                                        font-size: px2rem(27px);
+                                        color: #999999;
+                                        width: px2rem(200px);
+                                    }
+                                    &:nth-of-type(3){
+                                        font-size: px2rem(27px);
+                                        color: #999999;
+                                        width: px2rem(200px);
+                                    }
+                                    &:nth-of-type(4){
+                                        font-size: px2rem(27px);
+                                        color: #999999;
+                                        height: px2rem(0px);
+                                        width: px2rem(200px);
+                                    }
+                                    &:nth-of-type(5){
+                                        font-size: px2rem(27px);
+                                        color: #999999;
+                                        width: px2rem(200px);
+                                    }
+                                    &:nth-of-type(6){
+                                        font-size: px2rem(27px);
+                                        color: #999999;
+                                        width: px2rem(200px);
+                                    }
+                                    &:nth-of-type(7){
+                                        font-size: px2rem(27px);
+                                        color: #999999;
+                                        width: px2rem(200px);
+                                    }
+                                    &:nth-of-type(8){
+                                        font-size: px2rem(27px);
+                                        color: #999999;
+                                        width: px2rem(200px);
+                                    }
+                                    &:nth-of-type(9){
+                                        font-size: px2rem(27px);
+                                        color: #999999;
+                                        width: px2rem(200px);
+                                    }
+                                    &:nth-of-type(10){
+                                        font-size: 0.67rem;
+                                        color: #999999;
+                                    }
+                                }
+                            }
+                            .cash1,.coupon1,.discount1,.money1{
+                                border: px2rem(2px) dashed #ffd37f;
+                            }
+                            .paid1{
+                                border: px2rem(2px) dashed #f6bab9;
+                            }
+                            .gift1{
+                                border: px2rem(2px) dashed #bbbbbb;
+                            }
+                            &:after{
+                                content: "";
+                                width: px2rem(25px);
+                                height: px2rem(25px);
+                                border-radius: 100%;
+                                background-color: #f5f5f5;
+                                position: absolute;
+                                left: -0.370rem;
+                                bottom: -0.26667rem;
+                            }
+                            &:before{
+                                content: "";
+                                width: px2rem(25px);
+                                height: px2rem(25px);
+                                line-height: px2rem(20px);
+                                border-radius: 100%;
+                                background-color: #f5f5f5;
+                                position: absolute;
+                                left: -0.370rem;
+                                top: -0.26667rem;
+                            }
+                            >ul{
+                                position: absolute;
+                                left: -0.10989rem;
+                                >li{
+                                    width: px2rem(6px);
+                                    height: px2rem(6px);
+                                    border-radius: 100%;
+                                    background-color: #fafafa;
+                                    margin-top: px2rem(6px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div.item{
+        height: px2rem(110px);
+    }
+
+    div.item-footer{
+        position: fixed;
+        bottom: 0;
+        height: px2rem(110px);
+        width: 100%;
+        background-color: #fff;
+        border-top: px2rem(1px) solid #e0e0e0;
+        >div{
+            position: fixed;
+            bottom: px2rem(10px);
+            color: #fff;
+            font-size: .889rem;
+            text-align: center;
+            border-radius: px2rem(10px);
+            width: px2rem(670px);
+            height: px2rem(85px);
+            line-height: px2rem(85px);
+            margin: 0 px2rem(23px);
+            background-color: #ff6666;
+        }
+    }
+}

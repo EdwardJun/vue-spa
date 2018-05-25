@@ -1,0 +1,145 @@
+@import "../common/mixin.scss";
+
+div#pos-pay-page{
+    background: #eee;
+    padding: px2rem(26px) 0;
+
+    .top-wrap{
+      position: relative;
+      // height: px2rem(423px);
+      background: #fff;
+      margin: 0 px2rem(24px);
+      border-radius: px2rem(12px);
+      box-shadow: 0 1px 1px 2px rgba(0,0,0,0.05);
+      padding-bottom: px2rem(8px);
+      &:before,&:after{
+        content: "";
+        position: absolute;
+        width: px2rem(30px);
+        height: px2rem(30px);
+        top: px2rem(108px);
+        background: #eee;
+        border-radius: 50%;
+      }
+      &:before{
+        left: px2rem(-15px);
+      }
+      &:after{
+        right: px2rem(-15px);
+      }
+
+      .club-info{
+        position: relative;
+        height: px2rem(122px);
+        line-height: px2rem(122px);
+        color: #4d4d4d;
+        font-size: px2rem(38px);
+        padding-right: px2rem(36px);
+        text-align: right;
+        border-bottom: 1px dotted #e1e1e1;
+        margin-bottom: px2rem(10px);
+        >div{
+          position: absolute;
+          width: px2rem(66px);
+          height: px2rem(66px);
+          left: px2rem(40px);
+          top: 50%;
+          margin-top: px2rem(-33px);
+          border-radius: 50%;
+          @include imgBgFix(px2rem(66px) px2rem(66px));
+        }
+      }
+
+      .item{
+        padding: 0 px2rem(40px);
+        font-size: px2rem(32px);
+        color: #4d4d4d;
+        line-height: 2.2;
+        >span{
+          float: right;
+        }
+      }
+
+      .pay{
+        margin-top: px2rem(30px);
+        height: px2rem(90px);
+        line-height: px2rem(90px);
+        >span{
+          color: #212121;
+          font-size: px2rem(60px);
+        }
+      }
+    }
+
+    .pay-btn{
+      height: px2rem(80px);
+      line-height: px2rem(80px);
+      text-align: center;
+      margin: px2rem(90px) px2rem(24px) 0;
+      background: #3cae34;
+      color: #fff;
+      font-size: px2rem(36px);
+      border-radius: px2rem(10px);
+      letter-spacing: 2px;
+      &.alipay{
+          background: #00aaef;
+      }
+    }
+
+    .consume-list{
+      border-bottom: 1px solid #e4e4e4;
+      padding: 0 px2rem(33px);
+      margin-bottom: px2rem(20px);
+      >li{
+        border-bottom: 1px dashed #e4e4e4;
+        &:last-child{
+          border-bottom: none;
+        }
+      }
+    }
+    .room-info{
+      font-size: px2rem(30px);
+      color: #7997b7;
+      margin-bottom: px2rem(16px);
+      line-height: 1.65;
+      >span{
+        float: right;
+      }
+      b{
+        font-size: px2rem(36px);
+        font-weight: normal;
+      }
+    }
+    .consume-item-info{
+      position: relative;
+      margin-bottom: px2rem(10px);
+      padding: 0 px2rem(20px);
+      &:before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: px2rem(20px);
+        display: block;
+        width: px2rem(8px);
+        height: px2rem(8px);
+        border-radius: 50%;
+        background: #ecddbc;
+      }
+    }
+    .service-item-info, .tech-item-info{
+      font-size: px2rem(28px);
+      color: #666;
+      line-height: 1.6;
+    }
+    .service-item-info{
+      >span{
+        float: right
+      }
+    }
+    .tech-item-info{
+      >span{
+        color: #7fbdff;
+        margin-left: px2rem(14px);
+      }
+    }
+}

@@ -1,0 +1,445 @@
+@import "../common/mixin.scss";
+
+div#item-package-detail-page {
+  padding-bottom: 3.333rem;
+  &.padding-more{
+      padding-bottom: 4.9rem;
+  }
+  .banner{
+    height: 10rem;
+    @include imgBgFix(20rem 10rem);
+    line-height: 1.6108rem;
+    font-size: 0.889rem;
+    color: #fff;
+    background-color: #e6e6e6;
+    >div{
+      position: relative;
+      padding-left: 2.5rem;
+      >div{
+        position: absolute;
+        width: 1.5278rem;
+        height: 1.5278rem;
+        left: 0.667rem;
+        top: 0.083rem;
+        border-radius: 50%;
+        border:1px solid #ccc;
+        @include imgBgFix(1.5278rem 1.5278rem);
+      }
+      &:after{
+        content: "";
+        position: absolute;
+        width: 0.4rem;
+        height: 0.4rem;
+        right: 0.5rem;
+        top: 0.65rem;
+        margin-top:-0.225rem;
+        border-left: 0.1rem solid #fff;
+        border-bottom: 0.1rem solid #fff;
+        @include rotate(-135deg);
+      }
+    }
+  }
+
+  .package-wrap, .integral-wrap{
+    background: #fff;
+    >div{
+      &:nth-of-type(1){
+        position: relative;
+          &:before{
+            position: absolute;
+            display: table-cell;
+            left: 0;
+            top: 50%;
+            margin-top: px2rem(-16.5px);
+            width: px2rem(64px);
+            text-align: center;
+            height: px2rem(33px);
+            line-height: px2rem(38px);
+            color: #fff;
+            font-size: px2rem(28px);
+            border-radius: px2rem(4px);
+            vertical-align: middle;
+          }
+
+        height: px2rem(89px);
+        line-height: px2rem(89px);
+        border-bottom: 1px solid #eee;
+        margin-left: px2rem(24px);
+        padding-left: px2rem(72px);
+        color: #212121;
+        font-size: px2rem(40px);
+      }
+      &:nth-of-type(2){
+        height: px2rem(100px);
+        line-height: px2rem(100px);
+        text-align: right;
+        margin-left: px2rem(24px);
+        border-top: 1px solid #eee;
+        >span{
+          &:nth-of-type(1){
+            color: #f66;
+            font-size: px2rem(28px);
+            >b{
+              font-size: px2rem(44px);
+              margin-right: px2rem(4px);
+            }
+          }
+          &:nth-of-type(2){
+            color: #616161;
+            font-size: px2rem(24px);
+            padding-right: px2rem(24px);
+            >span{
+              text-decoration: line-through;
+            }
+          }
+        }
+      }
+    }
+    >ul{
+      position: relative;
+      padding: px2rem(12px) 0 px2rem(12px) px2rem(70px);
+      margin-left: px2rem(24px);
+      &:before{
+        position: absolute;
+        display: block;
+        top: px2rem(20px);
+        left: px2rem(20px);
+        color: #fff;
+        border-radius: px2rem(4px);
+        height: px2rem(34px);
+        width: px2rem(34px);
+        line-height: px2rem(38px);
+        text-align: center;
+        font-size: px2rem(26px);
+        overflow: hidden;
+      }
+      >li{
+        font-size: px2rem(28px);
+        margin-bottom: px2rem(4px);
+        padding-left: px2rem(8px);
+        &:last-child{
+          margin-bottom: 0;
+        }
+        >div{
+          line-height: 1.5;
+          display: inline-block;
+          vertical-align: middle;
+          @include sl();
+          &:nth-of-type(1){
+            color: #212121;
+            width: px2rem(220px);
+          }
+          &:nth-of-type(2),&:nth-of-type(3){
+            color: #616161;
+            width: px2rem(250px);
+            text-align: right;
+          }
+          &:nth-of-type(3){
+            width: px2rem(110px);
+          }
+        }
+      }
+    }
+  }
+
+  .package-wrap{
+    >div{
+      &:nth-of-type(1){
+        &:before{
+          content: "套餐";
+          background: #61be32;
+        }
+      }
+    }
+    >ul{
+      &:before{
+        background: #9ccc65;
+      }
+      &.paid{
+        &:before{
+          content: "买";
+        }
+      }
+      &.give{
+        &:before{
+          content: "赠";
+          background: #ff7043;
+        }
+        li{
+          background: #fff6ee;
+        }
+      }
+    }
+  }
+
+  .integral-wrap{
+    >div{
+      &:nth-of-type(1){
+        &:before{
+          content: "积分";
+          background: #ff4f20;
+        }
+      }
+    }
+    >ul{
+      &:before{
+        content: "含";
+        background: #9ccc65;
+      }
+    }
+  }
+
+  .item-wrap{
+    background: #fff;
+    padding: 0.333rem 0 0.333rem 0.75rem;
+    margin-top: 0.5278rem;
+    &.pay{
+      >.item-title{
+        margin-bottom: 0.3rem;
+        &:before{
+          background-image: url("../assets/icons/itemCardDetail/1.png");
+        }
+      }
+      >div:first-child~div{
+        font-size: 0.833rem;
+        color: #616161;
+        padding-right: 0.5rem;
+        >p{
+            line-height: 1.55
+        }
+        &.strong{
+          color: #ff9d09;
+          font-size: 0.889rem;
+        }
+        >strong{
+          margin-left: 0.15rem;
+        }
+      }
+    }
+    &.service{
+      padding-bottom: 0.5rem;
+      >.item-title{
+        &:before{
+          background-image: url("../assets/icons/itemCardDetail/2.png");
+        }
+      }
+      &.notPay{
+        padding-bottom: 6.5rem;
+      }
+    }
+  }
+
+  .item-title{
+    display: -webkit-flex;
+    display: flex;
+    height: 1.667rem;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.778rem;
+    color: #999;
+    border-bottom: 1px solid #eee;
+    &:before{
+      content: "";
+      display: block;
+      width: 0.944rem;
+      height: 0.944rem;
+      margin-right: 0.4167rem;
+      @include imgBgFix(0.944rem 0.944rem);
+    }
+  }
+
+  .service-item{
+    position: relative;
+    height: 2.778rem;
+    padding: 0.611rem 0 0.611rem 3.333rem;
+    border-bottom: 1px solid #eee;
+    box-sizing: content-box;
+    >div{
+      &:nth-of-type(1){
+        position: absolute;
+        width: 2.778rem;
+        height: 2.778rem;
+        top: 0.611rem;
+        left: 0;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        @include imgBgFix(2.778rem 2.778rem);
+      }
+      &:nth-of-type(2){
+        font-size: 0.9444rem;
+        color: #4a4a4a;
+      }
+      &:nth-of-type(3){
+        color: #616161;
+        font-size: 0.8rem;
+        >span{
+          margin-left: .5rem;
+          background: #ff9a0c;
+          color: #fff;
+          font-size: 0.722rem;
+          margin-right: 0.2rem;
+          border-radius: 3px;
+          padding: 0.1rem 0.3rem;
+        }
+      }
+    }
+  }
+}
+
+div.item-package-detail-page-wrap{
+  div.footer{
+    &.sellOut,&.expired{
+      &:before{
+        content: "已售完";
+        position: absolute;
+        top: -2.233rem;
+        left:-0.444rem;
+        height: 1.944rem;
+        line-height: 1.944rem;
+        width: 20rem;
+        text-align: center;
+        color: #fff;
+        font-size: 0.722rem;
+        background: rgba(0,0,0,0.8);
+      }
+    }
+    &.expired{
+      &:before{
+        content: "已过期"
+      }
+    }
+  }
+
+  .tech-selector>div{
+    width: px2rem(592px);
+    height: px2rem(738px);
+    background: #fff;
+    border-radius: px2rem(12px);
+    top: 45%;
+    overflow: hidden;
+    >div{
+      &:nth-of-type(1){
+        font-size: px2rem(36px);
+        color: #212121;
+        text-align: center;
+        line-height: px2rem(88px);
+      }
+      &:nth-of-type(2){
+        width: px2rem(544px);
+        height: px2rem(392px);
+        border: 1px solid #e0e0e0;
+        border-radius: px2rem(6px);
+        margin:0 auto;
+        background: #fafafa;
+        box-sizing: border-box;
+        overflow-y: auto;
+        padding: px2rem(24px) 0;
+      }
+      &:nth-of-type(3){
+        height: px2rem(88px);
+        line-height: px2rem(88px);
+        border-top: 1px solid #e0e0e0;
+        margin-top: px2rem(24px);
+        >div{
+          float: left;
+          width: px2rem(294px);
+          height: 100%;
+          text-align: center;
+          font-size: px2rem(32px);
+          &:nth-of-type(1){
+            border-right: 1px solid #e0e0e0;
+            color: #616161;
+          }
+          &:nth-of-type(2){
+            color: #f66;
+          }
+        }
+      }
+    }
+    >h4{
+      margin:0;
+      padding: 0;
+      height: px2rem(63px);
+      line-height: px2rem(63px);
+      text-align: center;
+      color: #616161;
+      font-size: px2rem(32px);
+      font-weight: normal;
+    }
+    >input{
+      display: block;
+      height: px2rem(80px);
+      width: px2rem(544px);
+      border-radius: px2rem(8px);
+      border: 1px solid #ccc;
+      margin: 0 auto;
+      box-sizing: border-box;
+      text-align: center;
+      font-size: px2rem(32px);
+      color: #616161;
+      &:-moz-placeholder {
+        color: #999 !important;
+        font-size: px2rem(32px);
+      }
+      &::-moz-placeholder {
+        color: #999 !important;
+        font-size: px2rem(32px);
+      }
+      &::-webkit-input-placeholder {
+        color: #999 !important;
+        font-size: px2rem(32px);
+      }
+    }
+  }
+
+  .tech-wrap{
+    box-sizing: content-box;
+    height: px2rem(60px);
+    padding:px2rem(10px) 0 px2rem(10px) px2rem(110px);
+    >div{
+      display: inline-block;
+      vertical-align: middle;
+      box-sizing: content-box;
+      &:nth-of-type(1){
+        width: px2rem(45px);
+        height: px2rem(45px);
+        border-radius: 50%;
+        @include imgBgFix(px2rem(45px) px2rem(45px));
+        border:1px solid #ddd;
+      }
+      &:nth-of-type(2){
+        font-size: px2rem(36px);
+        color: #616161;
+        margin-left: px2rem(12px);
+        max-width: px2rem(185px);
+        @include sl();
+      }
+      &:nth-of-type(3){
+        font-size: px2rem(24px);
+        border-radius: px2rem(21px);
+        border: 1px solid #999;
+        height: px2rem(24px);
+        line-height: 1.1;
+        margin-left: px2rem(6px);
+        padding: px2rem(2px) px2rem(18px);
+      }
+      &:nth-of-type(2),&:nth-of-type(3){
+        >strong{
+          font-weight: normal;
+          color: #f66;
+        }
+      }
+    }
+    &.active{
+      background: #99b9e3;
+      >div{
+        &:nth-of-type(2),&:nth-of-type(3){
+          color: #fff;
+        }
+        &:nth-of-type(3){
+          border-color: #fff;
+        }
+      }
+    }
+  }
+}

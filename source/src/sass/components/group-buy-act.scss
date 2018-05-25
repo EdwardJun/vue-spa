@@ -1,0 +1,104 @@
+@import "../common/mixin.scss";
+
+div.group-buy-act-wrap{
+    display: flex;
+    align-items: center;
+    height: px2rem(200px);
+    background: #fff;
+    padding: 0 px2rem(24px);
+    border-bottom: 1px solid #eee;
+    >div{
+        &:nth-of-type(1){
+            position: relative;
+            width: px2rem(138px);
+            height: px2rem(138px);
+            border-radius: px2rem(8px);
+            @include imgBgFix(100% 100%);
+            margin-right: px2rem(18px);
+            flex: none;
+            &:before{
+                content: "";
+                position: absolute;
+                width: px2rem(71px);
+                height: px2rem(71px);
+                top: px2rem(-12px);
+                left: px2rem(-10px);
+                @include img('../assets/icons/groupBuy/12.png', 100% 100%);
+            }
+        }
+        &:nth-of-type(2){
+            flex: none;
+            width: 10.696rem;
+            >div{
+                &:nth-of-type(1){
+                    font-size: px2rem(34px);
+                    color: #212121;
+                    line-height: 1.5;
+                    margin-top: px2rem(-8px);
+                    @include sl();
+                    >span{
+                        color: #616161;
+                        font-size: px2rem(30px);
+                    }
+                }
+                &:nth-of-type(2){
+                    color: #fb5549;
+                    font-size: px2rem(38px);
+                    line-height: 1.5;
+                    >span{
+                        &:nth-of-type(1){
+                            font-size: px2rem(26px);
+                            margin-right: px2rem(10px);
+                        }
+                        &:nth-of-type(2){
+                            font-size: px2rem(24px);
+                            text-decoration: line-through;
+                            color: #757575;
+                        }
+                    }
+                }
+                &:nth-of-type(3){
+                    &.act-time{
+                        font-size: px2rem(24px);
+                        color: #757575;
+                        line-height: 1.4;
+                    }
+                }
+            }
+        }
+        &:nth-of-type(3){
+            display: flex;
+            flex-direction: column;
+            width: px2rem(131px);
+            justify-content: flex-end;
+            flex: none;
+            >div{
+                &:nth-of-type(1){
+                    font-size: px2rem(26px);
+                    color: #999;
+                    text-align: right;
+                }
+                &:nth-of-type(2){
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: px2rem(131px);
+                    height: px2rem(69px);
+                    font-size: px2rem(27px);
+                    padding-top: px2rem(24px);
+                    color: #fff;
+                    @include img("../assets/icons/groupBuy/14.png", 100% 100%);
+                    &:after{
+                        content: "";
+                        display: block;
+                        width: px2rem(10px);
+                        height: px2rem(10px);
+                        border-bottom: 1px solid #fff;
+                        border-left: 1px solid #fff;
+                        transform: rotate(-135deg);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@import "../common/mixin.scss";
+
+div#account-page{
+  height: 100%;
+  overflow: auto;
+  div.search-area{
+    margin: .667rem .889rem 0;
+    position: relative;
+    >input{
+      width: 18.222rem;
+      padding: .3rem 2.361rem .3rem 1rem;
+      font-size: .889rem;
+      color: #212121;
+      border: 1px solid #ccc;
+      border-radius: .333rem;
+      box-sizing: border-box;
+    }
+    >span{
+      position: absolute;
+      top: 0;
+      height: 100%;
+      right: 0;
+      width: 2.278rem;
+      @include img('../assets/icons/account/ic_search.png',1rem 1rem);
+      background-position: center;
+      &:before{
+        content: ' ';
+        position: absolute;
+        height: 60%;
+        top:20%;
+        left: 0;
+        border:1px solid #ccc;
+      }
+    }
+  }
+}

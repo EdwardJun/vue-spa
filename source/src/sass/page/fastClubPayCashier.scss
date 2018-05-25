@@ -1,0 +1,257 @@
+@import "../common/mixin.scss";
+
+div#fast-club-pay-cashier-page{
+    height: 100%;
+    background-color: #eee;
+    div.top-hint{
+        height: px2rem(60px);
+        line-height: px2rem(60px);
+        background-color: #f5e1bd;
+        color: #b07d0c;
+        text-align: center;
+        font-size: px2rem(28px);
+        letter-spacing: 0.04rem;
+        position: relative;
+        &:before{
+            content: "";
+            position: absolute;
+            width: px2rem(32px);
+            height: px2rem(32px);
+            top: 50%;
+            left: 2.5rem;
+            margin-top: -0.444445rem;
+            @include img("../assets/icons/fastPayCashier/ic_tishi.png",100% 100%);
+        }
+        a{
+            color: #679ded;
+            text-decoration: underline;
+        }
+    }
+    div.top{
+        margin-top: -4rem;
+    }
+    div.top-wrap{
+        position: relative;
+        height: px2rem(148px);
+        padding-top: px2rem(30px);
+        background-color: #fff;
+        border-bottom: 0.01rem solid #e6dabe;
+        .plow{
+            width: 8.85rem;
+            height: px2rem(60px);
+            margin: auto;
+            >div{
+                display: inline-block;
+                &:nth-of-type(1){
+                    width: px2rem(60px);
+                    height: px2rem(60px);
+                    vertical-align: middle;
+                    color: #8f703b;
+                    font-size: px2rem(28px);
+                    letter-spacing: 0.04rem;
+                    position: relative;
+                    @include img("../assets/icons/fastPayCashier/cashier_ic_number01_h.png",100% 100%);
+                    &:before{
+                        content: "结账方式";
+                        position: absolute;
+                        width: px2rem(140px);
+                        top: 1.5rem;
+                        left: -.9rem;
+                    }
+                }
+                &:nth-of-type(2){
+                    width: px2rem(177px);
+                    height: 0.08rem;
+                    background-color:#cccccc;
+                    border-radius: px2rem(10px);
+                }
+                &:nth-of-type(3){
+                    width: px2rem(60px);
+                    height: px2rem(60px);
+                    vertical-align: middle;
+                    position: relative;
+                    @include img("../assets/icons/fastPayCashier/cashier_ic_number02_n.png",100% 100%);
+                    color: #b8b8b8;
+                    font-size: px2rem(28px);
+                    letter-spacing: 0.04rem;
+                    &:before{
+                        content: "支付方式";
+                        position: absolute;
+                        width: px2rem(140px);
+                        top: 1.5rem;
+                        left: -.9rem;
+                    }
+                }
+            }
+        }
+    }
+
+    div.center-wrap{
+        width: px2rem(720px);
+        height: px2rem(260px);
+        padding-top: px2rem(40px);
+        @include img("../assets/icons/fastPayCashier/top_bg.png",100% 100%);
+        .header{
+            height: px2rem(111px);
+            width: px2rem(111px);
+            border-radius: 50%;
+            margin: auto;
+            border: 0.002rem solid #c29d6a;
+            background-origin: padding-box;
+            background-position: center center;
+            @include imgBgFix(3.889rem 3.889rem);
+        }
+
+        .name{
+            margin-top: 0.667rem;
+            text-align: center;
+            font-size: 0.989rem;
+            color: #333333;
+            letter-spacing: 0.04rem;
+        }
+    }
+
+    div.bottom-wrap{
+        margin-top: px2rem(28px);
+        .tab-list{
+            background: #fafafa;
+            width: px2rem(600px);
+            // padding: px2rem(11px) 0;
+            height: px2rem(77px);
+            box-sizing: content-box;
+            border: 0.01rem solid #ff6666;
+            border-radius: px2rem(10px);
+            margin: auto;
+            >div{
+                float: left;
+                box-sizing: border-box;
+                width: 50%;
+                text-align: center;
+                height: 100%;
+                line-height: px2rem(77px);
+                color: #616161;
+                font-size: px2rem(28px);
+                border-right: 1px solid #e0e0e0;
+                &:last-child{
+                    border-right-width: 0;
+                }
+                &.active{
+                    background-color: #ff6666;
+                    color: #fff;
+                }
+            }
+        }
+        >input{
+            width: px2rem(586px);
+            margin: px2rem(45px) auto 0;
+            display: block;
+            font-size: 0.8rem;
+            color: #333333;
+            letter-spacing: 0.04556rem;
+            padding: 0.65rem 0.2rem;
+            text-align: center;
+            border: 0.001rem solid #e0e0e0;
+            border-radius: px2rem(10px);
+        }
+        input::-webkit-input-placeholder { 
+            color:    #333333;
+        }
+        >ul{
+            margin: auto;
+            width: px2rem(599px);
+            border: 0.001rem solid #dfdfdf;
+            border-radius: px2rem(10px);
+            font-size: px2rem(28px);
+            color: #333333;
+            margin-top: px2rem(5px);
+            background-color: #fafafa;
+            li{
+                padding: 0 0.2rem;
+            }
+        }
+        >div{
+            text-align: center;
+            font-size: 0.8rem;
+            line-height: 3rem;
+        }
+        >span{
+            font-size: 0.75rem;
+            letter-spacing: 0.05rem;
+            display: inline-block;
+            text-indent: 1.6rem;
+        }
+    }
+
+    .btn-wrap{
+        position: fixed;
+        bottom: 0;
+        height: 3.333rem;
+        left: 0;
+        right: 0;
+        background-color: #e0e0e0;
+        z-index: 10;
+        border-top: px2rem(1px) solid #e0e0e0;
+        >a{
+            display: block;
+            height: 2.444rem;
+            line-height: 2.444rem;
+            margin: .444rem .667rem 0;
+            background-color: #f66;
+            color: #fff;
+            font-size: 1.056rem;
+            text-align: center;
+            letter-spacing: 2px;
+            border-radius: 5px;
+            &.processing{
+                opacity: 0.4;
+                /*background: #ccc url("../assets/icons/common/loading.gif") no-repeat 15% 48%;*/
+            }
+            &.selected{
+                opacity: 0.4;
+            }
+        }
+    }
+
+    .modalTip{
+        >div{
+            width: px2rem(500px);
+            height: px2rem(330px);
+            background-color: #fff;
+            top: 50%;
+            left: 50%;
+            margin-left: px2rem(-250px);
+            margin-top: px2rem(-175px);
+            text-align: center;
+            color: #212121;
+            font-size: px2rem(27px);
+            position: relative;
+            .title{
+                line-height: 2rem;
+                font-size: .8rem;
+                border-bottom: 0.01rem solid #e0e0e0;
+            }
+            .content{
+                padding: px2rem(40px) px2rem(20px);
+            }
+            .contentPay{
+                padding: 1.84rem px2rem(20px);
+            }
+            .btn{
+                border-top: 0.0001rem solid #ff6666;
+                line-height: 1.9rem;
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                >span{
+                    display: inline-block;
+                    width: 49.2%;
+                    color: #ff6666;
+                    &:nth-of-type(2){
+                        color: #fff;
+                        background-color: #ff6666;
+                    }
+                }
+            }
+        }
+    }
+}

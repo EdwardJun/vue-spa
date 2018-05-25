@@ -1,0 +1,269 @@
+@import "../common/mixin.scss";
+
+div#item-receive{
+    div.page-title{
+        background-color: #fff;
+    }
+    div.item-friends{
+        height: px2rem(65px);
+        background-color: #fff4e1;
+        >div{
+            float: left;
+            margin-left: px2rem(18px);
+            &:nth-of-type(1){
+                width: px2rem(49px);
+                height: px2rem(49px);
+                border-radius: 50%;
+                background-color: #202020;
+                @include imgBgFix(px2rem(49px) px2rem(49px));
+                background-position: center center;
+                background-image: url("../assets/icons/itemCardDonationRecord/spa_icon.png");
+                border: px2rem(1px) solid #f3f3f3;
+                margin-top: px2rem(8px);
+            }
+            &:nth-of-type(2){
+                height: px2rem(49px);
+                font-size: 18px;
+                color: #a37f42;
+                line-height: px2rem(49px);
+                margin-top: px2rem(8px);
+            }
+        }
+    }
+
+    div.item-card-info{
+        padding: px2rem(24px) px2rem(24px);
+        >div{
+            padding: 0 px2rem(20px);
+            background-color: #fff;
+            border-radius: px2rem(5px);
+            >div{
+                /*标题*/
+                &:nth-of-type(1){
+                    color: #212121;
+                    font-size: 18px;
+                    border-bottom: 1px solid #eee;
+                    padding-top: px2rem(10px);
+                    padding-bottom: px2rem(10px);
+                    position: relative;
+
+                    >div{
+                        position: absolute;
+                        right: 0;
+                        top: px2rem(10px);
+                        color: #f66;
+                        font-size: 16px;
+                        >span{
+                            font-size: 16px;
+                            &:nth-of-type(1){
+                                width: px2rem(20px);
+                                height: px2rem(20px);
+                                display: inline-block;
+                                padding-right: px2rem(2px);
+                                @include imgBgFix(px2rem(20px) px2rem(20px));
+                                background-image: url("../assets/icons/itemCardDonationRecord/ic_time_s.png");
+                            }
+                            &:nth-of-type(2){
+                                color: #616161;
+                            }
+                            &:nth-of-type(3){
+                                color: #f66;
+                            }
+                        }
+                    }
+                }
+                /*内容*/
+                &:nth-of-type(2){
+                    display: block;
+                    overflow-y: auto;
+                    padding: px2rem(19px) 0;
+                    position: relative;
+                    >div{
+                        float: left;
+                        &:nth-of-type(1){/*图片*/
+                            width: px2rem(136px);
+                            height: px2rem(136px);
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                            @include imgBgFix(px2rem(136px) px2rem(136px));
+                            border-radius: px2rem(10px);
+                            position: relative;
+                            &:after{
+                                position: absolute;
+                                color: #fff;
+                                height: 0.944rem;
+                                top:0;
+                                left: 0;
+                                padding: 0 0.15rem;
+                                line-height: 0.944rem;
+                                background: #fbaa52;
+                                text-align: center;
+                                font-size: 0.611rem;
+                                border-top-left-radius: 4px;
+                                border-bottom-right-radius: 4px;
+                                content: "次卡";
+                            }
+                        }
+                        &:nth-of-type(2){
+                            margin-left: px2rem(20px);
+                            @include boxFlex(1);
+                            >div{
+                                >div{
+                                    height: px2rem(75px);
+                                    line-height: px2rem(60px);
+                                    &:nth-of-type(1){
+                                        @include boxFlex(1);
+                                        >div{
+                                            color: #212121;
+                                            font-size: 18px;
+                                        }
+                                    }
+                                    &:nth-of-type(2){
+                                        color: #616161;
+                                        @include boxFlex(1);
+                                        font-size: 16px;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        width: 9rem;
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-of-type(3){
+                            font-size: 22px;
+                            color: #ff6666;
+                            position: absolute;
+                            right: 0;
+                            bottom: px2rem(40px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*手机号*/
+    div.spec{
+        padding: px2rem(10px) px2rem(24px);
+        position: relative;
+        >div{
+            &:nth-of-type(1){
+                background-color: #fff;
+                border-radius: px2rem(10px);
+                padding: px2rem(10px) px2rem(20px);
+                border: 1px solid #e0e0e0;
+                >input{
+                    background-color: #fff;
+                }
+            }
+            &:nth-of-type(2){
+                padding: .219rem px2rem(25px);
+                display: inline-block;
+                background-color: #eeeeee;
+                border: 1px solid #616161;
+                font-size: 16px;
+                color: #616161;
+                position: absolute;
+                right: px2rem(24px);
+                border-radius: px2rem(15px);
+            }
+
+            >input{
+                color: #999999;
+                font-size: 20px;
+            }
+        }
+        div.code{
+            display: inline-block;
+            padding-right: px2rem(40px);
+        }
+    }
+
+    div.next-btn{
+        background-color: #ff6666;
+        color: #fff;
+        text-align: center;
+        font-size: 1.056rem;;
+        padding: px2rem(15px) 0;
+        margin: px2rem(10px) px2rem(24px) 0;
+        border-radius: px2rem(15px);
+    }
+
+    div.ex-info{
+        margin-top: px2rem(32px);
+        background-color: #fff;
+        >div{
+            padding: px2rem(20px) px2rem(24px);
+            .donation-info{
+                color: #212121;
+                font-size: 18px;
+                border-bottom: 1px solid #eee;
+                padding-bottom: px2rem(24px);
+            }
+            >ul{
+                padding-top: px2rem(12px);
+                >li{
+                    &:nth-of-type(1){
+                        color: #616161;
+                    }
+                    display: inline-block;
+                    font-size: 16px;
+                    color: #fbab52;
+                    line-height: px2rem(42px);
+                    padding: px2rem(10px) 0;
+                }
+            }
+        }
+    }
+    .clicBtnCode{
+        pointer-events:none
+    }
+
+    /*弹窗*/
+    div.receive-package-pop-wrap{
+        div.center-wrap{
+            width: px2rem(560px);
+            height: px2rem(500px);
+            background-color: #fff;
+            border-radius: px2rem(10px);
+            position: relative;
+            div.center-top{
+                text-align: center;
+                >div{
+                    &:nth-of-type(1){
+                        font-size: 18px;
+                        color: #212121;
+                        padding: px2rem(25px) 0;
+                    }
+                    &:nth-of-type(2){
+                        padding: px2rem(20px) 0;
+                        color: #616161;
+                        font-size: 16px;
+                        line-height: 1.5;
+                    }
+                }
+                >img{
+                    width: px2rem(256px);
+                    height: px2rem(251px);
+                    background-color: #000000;
+                }
+            }
+            div.center-btn{
+                width: 1.611rem;
+                height: 1.611rem;
+                position: absolute;
+                color: #fff;
+                background-color: hsla(0,0%,39%,.7);
+                border-radius: 50%;
+                border: 1px solid #fff;
+                font-size: 1.3rem;
+                text-align: center;
+                line-height: 1.4rem;
+                left: 50%;
+                transform: translate3d(-50%,0,0);
+                margin-top: px2rem(46px);
+            }
+        }
+    }
+}

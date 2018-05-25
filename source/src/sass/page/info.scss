@@ -1,0 +1,82 @@
+@import "../common/mixin.scss";
+
+div.info-page{
+  div.page-title{
+    >div{
+      position: absolute;
+      width: 3.5rem;
+      height: 2.611rem;
+      top:0;
+      right:0;
+      line-height: 2.611rem;
+      font-size: 0.778rem;
+      text-align: center;
+    }
+  }
+  background-color: #fff;
+  div.info-content{
+    border-bottom: 1px solid #e0e0e0;
+    background: #fff;
+    >div{
+      position: relative;
+      width: 18.666rem;
+      margin: 0 auto;
+      padding: 0.667rem;
+      border-top: solid 1px #D8D8D8;
+      font-size: 0.778rem;
+      @include sx();
+      &:nth-of-type(1){
+        border: 0;
+      }
+      >input{
+        position: absolute;
+        opacity: 0;
+        width: 17.332rem;
+        height: 4.666rem;
+      }
+      >div{
+        &:nth-of-type(1){
+          margin-right: 0.667rem;
+        }
+        &:nth-of-type(2){
+          color: #4d4d4d;
+          font-size: .778rem;
+          padding: 0;
+          margin: 0;
+          &.header{
+            width: 4.666rem;
+            height: 4.666rem;
+            @include imgBgFix(4.666rem 4.666rem);
+            border-radius: 0.6rem;
+          }
+          >input{
+            color: #4d4d4d;
+            font-size: .778rem;
+            outline: 0;
+            border: 0;
+            width: 13rem;
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+      >div.tip{
+        width: 11rem;
+        text-align: right;
+      }
+    }
+  }
+  .submit{
+    width: 80%;
+    height: px2rem(80px);
+    line-height: px2rem(80px);
+    border-radius: px2rem(8px);
+    margin: px2rem(40px) auto;
+    background-color: #0abe07;
+    color: #fff;
+    text-align: center;
+    &.loading{
+      background-color: #eee;
+    }
+  }
+}

@@ -1,0 +1,462 @@
+@import "../common/mixin.scss";
+
+div#confirm-order-page{
+    &.pBottom{
+        padding-bottom: 3.5rem;
+    }
+  .tech-info{
+    background-color: #fff;
+    height:4.333rem;
+    border-bottom:1px solid #e0e0e0;
+    >div{
+      float: left;
+      height:2.778rem;
+      margin-top:1.056rem;
+      &:nth-of-type(1){
+        margin-left:0.667rem;
+        margin-right:0.667rem;
+        width:2.778rem;
+        border-radius: 50%;
+        position: relative;
+        @include imgBgFix(2.778rem 2.778rem);
+        >div{
+          position: absolute;
+          height:1.111rem;
+          width:1.111rem;
+          border-radius: 50%;
+          font-size: 0.667rem;
+          color:#fff;
+          text-align: center;
+          line-height: 1.111rem;
+          top:-0.555rem;
+          right:-0.3rem;
+          background-color: #66cc66;
+          &.busy{
+            background: #ff6666;
+          }
+        }
+      }
+      &:nth-of-type(2){
+        >div:nth-of-type(1){
+          color:#4d4d4d;
+          >span{
+            font-size:0.778rem;
+            >span{
+              color:#ff9d09;
+            }
+          }
+        }
+        >div:nth-of-type(2){
+          color:#666;
+          font-size:0.778rem;
+          line-height: 1.2rem;
+          width:15rem;
+          @include sl();
+        }
+      }
+    }
+  }
+
+  .service-item-info{
+    >div:nth-of-type(1){
+      &.active{
+        position: relative;
+        &:after{
+          content: ' ';
+          @include arrowRight();
+          display: inline-block;
+          position: absolute;
+          right: .667rem;
+          top: .9rem;
+        }
+      }
+    }
+  }
+
+  .item{
+    margin-top:0.444rem;
+    border-top:1px solid #d9d9d9;
+    padding-left:1.278rem;
+    border-bottom:1px solid #e0e0e0;
+    background-color: #fff;
+    >div{
+      height:2.222rem;
+      line-height: 2.222rem;
+      color:#666;
+      font-size:0.778rem;
+      >span{
+        color:#333;
+        &.del{
+          text-decoration: line-through;
+        }
+      }
+      >input{
+        width:13.889rem;
+        border:0;
+        padding:0.3rem 0.4rem;
+        color:#333;
+        font-size:0.778rem;
+      }
+      &:nth-of-type(1){
+        border-bottom:1px solid #ebebeb;
+      }
+    }
+  }
+
+  .appoint-info{
+      >div{
+          >span{
+              display: inline-block;
+              width: 3.8056rem;
+              height: 1.3056rem;
+              line-height: 1.3056rem;
+              text-align: center;
+              color: #fb5549;
+              border: 1px solid #fb5549;
+              border-radius: 3px;
+          }
+          &:nth-of-type(2){
+              margin: px2rem(14px) 0 px2rem(10px);
+              color: #f66;
+              line-height: 1.4;
+          }
+      }
+  }
+
+  .arrive-info{
+    margin-top:0.444rem;
+    border-top:1px solid #d9d9d9;
+    border-bottom:1px solid #e0e0e0;
+    background-color: #fff;
+    font-size:0.778rem;
+    color:#4d4d4d;
+    >div:nth-of-type(1){
+      height:1.667rem;
+      line-height: 1.667rem;
+      text-indent: 1.944rem;
+      position: relative;
+      border-bottom:1px solid #d9d9d9;
+      >div{
+        width:1rem;
+        height:1rem;
+        position: absolute;
+        top:50%;
+        margin-top:-0.5rem;
+        left:0.65rem;
+        @include img("../assets/icons/order/clock_icon.png",1rem 1rem);
+      }
+    }
+    >div:nth-of-type(2){
+      margin-left:1.278rem;
+      height:2.222rem;
+      line-height: 2.222rem;
+      border-bottom:1px solid #ebebeb;
+      >span:nth-of-type(2){
+        display: inline-block;
+        width: 14rem;
+        padding-left: .5rem;
+        position: relative;
+        color: #fb5549;
+        &.active{
+          &:after{
+            content: ' ';
+            display: inline-block;
+            position: absolute;
+            right:.3rem;
+            top: .9rem;
+            @include arrowRight();
+          }
+        }
+      }
+    }
+    >div:nth-of-type(3){
+      margin-left:1.278rem;
+      height:2.222rem;
+      line-height: 2.222rem;
+      border-bottom: 1px solid #ebebeb;
+    }
+    >div:nth-of-type(4){
+      margin-left:1.278rem;
+      height:2.222rem;
+      line-height: 2.222rem;
+      padding:.4721rem;
+      >span{
+        display: inline-block;
+        width: 3.8rem;
+        height: 1.2778rem;
+        line-height: 1.2778rem;
+        border:1px solid #fb5549;
+        border-radius: 3px;
+        text-align: center;
+        color: #fb5549;
+        position: relative;
+        top: -.4rem;
+        font-size:.77778rem;
+        &:not(:first-child){
+          margin-left: .58333rem;
+        }
+        &.active{
+          background-color: #fb5549;
+          color: #fff;
+        }
+        &.cancel,&.disabled{
+          background-color: #fff;
+          border-color: #999;
+          color: #999;
+        }
+      }
+    }
+  }
+
+  .time-picker-modal{
+    font-size:0.889rem;
+    >div{
+      padding-bottom: 0.667rem;
+      background-color: #fff;
+      border-radius: 3px;
+      width: 18.666rem;
+      >div:nth-of-type(1){
+        text-align: center;
+        background-color: #fb5549;
+        height: 1.6667rem;
+        line-height: 1.667rem;
+        color: #fff;
+        font-size:0.667rem;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        position: relative;
+        &:before{
+          content: "";
+          display: inline-block;
+          width: .63rem;
+          height: .63rem;
+          @include img('../assets/icons/confirmOrder/calendar.png',.63rem);
+          margin-right: .2778rem;
+          position: relative;
+          top: .07rem;
+        }
+        >span{
+          position: absolute;
+          right: .445rem;
+          font-size: 1.5rem;
+        }
+      }
+      .day-list{
+        overflow: hidden;
+        font-size: .667rem;
+        display: table;
+        width: 100%;
+        >div{
+          display: table-cell;
+          height: 2.4rem;
+          text-align: center;
+          box-sizing: border-box;
+          border-bottom:4px solid #e0e0e0;
+          color: #666;
+          vertical-align: middle;
+          &.active{
+            border-bottom-color: #fb5549;
+            color: #fb5549;
+          }
+        }
+      }
+      .time-list{
+        overflow: hidden;
+        padding: .4167rem;
+        min-height: 5rem;
+        display: none;
+        &.active{
+          display: block;
+        }
+        >div{
+          float: left;
+          width: 15%;
+          margin:.2167rem 0;
+          padding:0 .1389rem;
+          font-size:0.676rem;
+          box-sizing: content-box;
+          >span{
+            display: block;
+            border-radius: 3px;
+            border:1px solid #fb5549;
+            color: #fb5549;
+            height: 1.1111rem;
+            line-height: 1.1111rem;
+            text-align: center;
+          }
+          >span:last-child{
+            display: none;
+            color: #999;
+            border-color: #999;
+          }
+          &.active{
+            >span:first-child{
+              display: block;
+              color: #fff;
+              background-color: #fb5549;
+            }
+            >span:last-child{
+              display:none;
+            }
+          }
+          &.disabled{
+            >span:first-child{
+              display: none;
+              text-decoration: line-through;
+              color: #999;
+              border-color: #999;
+            }
+            >span:last-child{
+              display:block;
+            }
+          }
+        }
+      }
+      .selected-time{
+        color:#666;
+        font-size: .6667rem;
+        padding-left: .5556rem;
+        >span{
+          color: #fb5549;
+        }
+      }
+      .confirm-button{
+        margin: .4444rem .5556rem 0 .5556rem;
+        border-radius: 3px;
+        background-color: #fb5549;
+        color: #fff;
+        height: 2.4722rem;
+        line-height: 2.4722rem;
+        text-align: center;
+        font-size: 1.0556rem;
+        &.disabled{
+          background-color: #999;
+        }
+      }
+    }
+  }
+
+  .service-picker-modal{
+    font-size:0.889rem;
+    >div{
+      background-color: #fff;
+      padding-bottom:.6667rem;
+      border-radius: 3px;
+      width: 18.666rem;
+      >div:nth-of-type(1){
+        text-align: center;
+        background-color: #fb5549;
+        height: 1.6667rem;
+        line-height: 1.667rem;
+        color: #fff;
+        font-size:0.667rem;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        position: relative;
+        &:before{
+          content: "";
+          display: inline-block;
+          width: .63rem;
+          height: .63rem;
+          @include img('../assets/icons/confirmOrder/calendar.png',.63rem);
+          margin-right: .2778rem;
+          position: relative;
+          top: .07rem;
+        }
+        >span{
+          position: absolute;
+          right: .445rem;
+          font-size: 1.5rem;
+        }
+      }
+      .service-list{
+        height: 12rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-left: .611rem;
+        >div.service-item{
+          @include sx();
+          line-height: 1.7;
+          padding: .444rem 0;
+          border-bottom: 1px solid #f0f0f0;
+          >div{
+            &:nth-of-type(1){
+              width: 1.028rem;
+              height: 1.028rem;
+              margin-right: .611rem;
+              @include img('../assets/icons/serviceItem/unselected.png',1.028rem 1.028rem);
+            }
+            &:nth-of-type(2){
+              width: 2.667rem;
+              height: 2.667rem;
+              margin-right: .444rem;
+              @include imgBgFix(2.667rem 2.667rem);
+            }
+            &:nth-of-type(3){
+              @include boxFlex(1);
+              >div{
+                &:nth-of-type(1){
+                  @include sl();
+                  color: #666;
+                  font-size: .778rem;
+                }
+                &:nth-of-type(2){
+                  @include sx();
+                  >div{
+                    width: 45%;
+                    color: #999;
+                    font-size: .667rem;
+                    &:nth-of-type(2){
+                      >span{
+                        background-color: #ff9d09;
+                        color: #fff;
+                        border-radius: px2rem(3px);
+                        padding: 0 0.2rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.active{
+            >div{
+              &:nth-of-type(1){
+                background-image: url('../assets/icons/serviceItem/selected.png');
+              }
+            }
+          }
+        }
+      }
+      .selected-service{
+        color:#666;
+        font-size: .6667rem;
+        padding-left: .5556rem;
+        >span{
+          color: #fb5549;
+        }
+      }
+      .confirm-button{
+        margin: .4444rem .5556rem 0 .5556rem;
+        border-radius: 3px;
+        background-color: #fb5549;
+        color: #fff;
+        height: 2.4722rem;
+        line-height: 2.4722rem;
+        text-align: center;
+        font-size: 1.0556rem;
+        &.disabled{
+          background-color: #999;
+        }
+      }
+    }
+  }
+
+  .tip-info{
+      margin-top: .222rem;
+      padding-left: 1.278rem;
+      font-size: .667rem;
+      color: #999;
+  }
+}

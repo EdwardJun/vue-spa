@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang=zh-CN><head><meta charset=UTF-8><meta name=viewport content="height=device-height,width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><meta name=MobileOptimized content=320><meta name=renderer content=webkit><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=HandheldFriendly content=true><meta name=screen-orientation content=portrait><meta name=x5-orientation content=portrait><meta name=full-screen content=yes><meta name=x5-fullscreen content=true><meta name=x5-page-mode content=app><meta name=apple-touch-fullscreen content=yes><meta name=format-detection content="telephone=no"><meta http-equiv=Cache-Control content="max-age=300"><meta http-equiv=Expires content=300><title>小摩豆</title><link rel="shortcut icon" type=image/ico href=/spa-manager/favicon.ico><script type=text/javascript>var loc = location
+        if (/spa\/\?club=/.test(loc.href)) {
+            var urlArr = loc.href.split('#'),
+                  prefixPathArr = urlArr[0].split('?'),
+                  paramArr = prefixPathArr[1],
+                  queryArr = urlArr[1], // hash部分
+                  url = prefixPathArr[0]+ '#/',
+                  paramObj = {},
+                  prefixParamObj = {},
+                  k,
+                  tempArr,
+                  isClubMode = false,
+                  pageName = '';
+            // hash之前的参数
+            if (paramArr) {
+                paramArr = paramArr.split('&')
+                for (k = 0; k < paramArr.length; k++) {
+                    tempArr = paramArr[k].split('=')
+                    if (tempArr.length == 2) {
+                        prefixParamObj[tempArr[0]] = tempArr[1]
+                    }
+                }
+            }
+            // 处理hash之前的参数
+            var prefixParamStr = ''
+            for (var obj in prefixParamObj) {
+                if (obj != 'club') {
+                    prefixParamStr += (prefixParamStr == '' ? '?' : '&') + obj + '=' + prefixParamObj[obj]
+                }
+            }
+            if (prefixParamStr) {
+                url = url.slice(0,-2) + prefixParamStr + '#/'
+            }
+            if (prefixParamObj.club) {
+                url += prefixParamObj.club +'/'
+                isClubMode = true
+            }
+            // hash部分
+            if (queryArr) {
+                queryArr = queryArr.replace('?', '&')
+                paramArr = queryArr.split('&')
+                for (k = 0; k < paramArr.length; k++){
+                    tempArr = paramArr[k].split('=')
+                    if (tempArr.length == 1 && k == 0) {
+                        pageName = tempArr[0]
+                        if (pageName.indexOf('/')>=0) {
+                            pageName = pageName.split('/')
+                            pageName = pageName[pageName.length-1]
+                        }
+                    } else if (tempArr.length == 2){
+                        paramObj[tempArr[0]] = tempArr[1]
+                    }
+                }
+            }
+            if (!pageName) {
+              pageName = isClubMode ? 'home' : 'clubList'
+            }
+            url += pageName
+            // 链接参数
+            var paramStr = ''
+            tempArr = []
+            for(k in paramObj) {
+                tempArr.push(k + '=' + paramObj[k])
+            }
+            if (tempArr.length > 0) {
+                paramStr = tempArr.join('&')
+            }
+            if (paramStr) {
+                url += '?' + paramStr
+            }
+            if (/spa.93wifi.com/.test(loc.hostname)) {
+                url = url.replace('/spa-manager/', '/')
+            }
+            loc.href = url
+        }
+        setTimeout(function () {
+            if (!window.webpackJsonp) {
+                location.reload(true)
+            }
+        }, 3000)</script><link href=static/css/app.571aa781547eabac855ed1348f683f70.css rel=stylesheet></head><body><div id=_app></div><div id=app-tip><div></div></div><script type=text/javascript src=static/js/manifest.b77504a9e02b49be55f5.js></script><script type=text/javascript src=static/js/vendor.66a54597c52caa09fd6d.js></script><script type=text/javascript src=static/js/app.986d93ae944998dfb279.js></script></body></html>

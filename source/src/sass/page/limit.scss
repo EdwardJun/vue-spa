@@ -1,0 +1,86 @@
+@import "../common/mixin.scss";
+div#limit-page{
+    height: 100%;
+    .tab-list{
+        background: #fafafa;
+        padding: px2rem(11px) 0;
+        height: px2rem(64px);
+        box-sizing: content-box;
+        //border-bottom: px2rem(3px) solid #e0e0e0;
+        >div{
+            float: left;
+            box-sizing: border-box;
+            width: 33.3%;
+            text-align: center;
+            height: 100%;
+            line-height: px2rem(64px);
+            color: #616161;
+            font-size: px2rem(28px);
+            border-right: 1px solid #e0e0e0;
+            &:last-child{
+                border-right-width: 0;
+            }
+            &.active{
+                color: #f66;
+            }
+        }
+    }
+    div.limit{
+        overflow-y: auto;
+        >div.list-item{
+            padding: 0 px2rem(23px);
+            background-color: #fff;
+            margin-top: px2rem(4px);
+            font-size: px2rem(28px);
+            div.item-title{
+                position: relative;
+                height: px2rem(60px);
+                color: #4c4c4c;
+                >span{
+                    position: absolute;
+                    width: px2rem(22px);
+                    height: px2rem(21px);
+                    right: 0;
+                    top: px2rem(17px);
+                    @include imgBgFix(px2rem(22px) px2rem(21px));
+                    background-image: url("../assets/icons/oClockCoupon/back.png");
+                }
+            }
+            >div.item-limit{
+                >div.item{
+                    height: 4.6rem;
+                    margin-top: px2rem(10px);
+                    border-bottom: 1px solid #f0f0f0;
+                    padding-top: px2rem(10px);
+                    >div{
+                        float: left;
+                        &:nth-of-type(1){
+                            width: px2rem(137px);
+                            height: px2rem(138px);
+                            @include imgBgFix(px2rem(137px) px2rem(138px));
+                            border-radius: px2rem(10px);
+                        }
+                        &:nth-of-type(2){
+                            color: #212121;
+                            line-height: px2rem(46px);
+                            margin-top: px2rem(-8px);
+                            margin-left: px2rem(14px);
+                            >div{
+                                line-height: 1.4;
+                                @include sl();
+                                max-width: 14rem;
+                            }
+                            >div span{
+                                font-size: px2rem(24px);
+                                &:nth-of-type(1){
+                                    color: #4c4c4c;
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

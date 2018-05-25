@@ -1,0 +1,103 @@
+@import "../common/mixin.scss";
+
+div#contacts-page{
+  div.edit-title{
+    position: absolute;
+    font-size: .85rem;
+    right: .667rem;
+    top: 0;
+    line-height: 2.611rem;
+  }
+  div.list{
+    overflow-y: auto;
+  }
+  div.list-item{
+    position: relative;
+    height:3.972rem;
+    padding:0.583rem 0.639rem;
+    border-bottom:1px solid #d9d9d9;
+    background-color: #fff;
+    >div:nth-of-type(1){
+      width:2.5rem;
+      height:2.5rem;
+      margin-top:0.153rem;
+      margin-right:0.65rem;
+      float: left;
+      border-radius: 50%;
+      @include imgBgFix(2.5rem 2.5rem);
+    }
+    >div:nth-of-type(2){
+      position: relative;
+      width:15.5rem;
+      height:2.806rem;
+      float: left;
+      >div:nth-of-type(1){
+        font-size:0.889rem;
+        color:#666;
+        >span{
+          margin-left:0.389rem;
+          font-size:0.667rem;
+          color:#ff9d09;
+          >span{
+            color:#666;
+          }
+        }
+      }
+
+      >div:nth-of-type(2){
+        width:15.5rem;
+        line-height: 1.1rem;
+        font-size:0.778rem;
+        color:#999;
+        @include sl();
+        >b{
+          font-weight: normal;
+        }
+      }
+
+      >div:nth-of-type(3){
+        position: absolute;
+        right:0;
+        top:0;
+        font-size:0.667rem;
+        color:#999;
+      }
+
+      >div:nth-of-type(4){
+        position: absolute;
+        width:1rem;
+        height:1rem;
+        bottom:0.3rem;
+        right:0;
+        line-height: 1rem;
+        text-align: center;
+        font-size:0.778rem;
+        color:#fff;
+        background-color: #fb5549;
+        border-radius: 50%;
+        &.hidden{
+          visibility: hidden;
+        }
+      }
+
+    }
+    >div:nth-of-type(3){
+      position: absolute;
+      right: .639rem;
+      bottom: .583rem;
+      font-size: .667rem;
+      background-color: #fb5549;
+      color: #fff;
+      padding: 0 .5rem;
+      border-radius: 4px;
+      @include scale(1,0);
+      @include transition(all .4s);
+      @include tOrigin(center 0);
+      opacity: 0;
+      &.active{
+        opacity: 1;
+        @include scale(1,1);
+      }
+    }
+  }
+}

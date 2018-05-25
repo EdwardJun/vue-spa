@@ -1,0 +1,186 @@
+@import "../common/mixin.scss";
+
+div#invite-activity-gifts-page {
+  background-color: #14105f;
+  padding-bottom: px2rem(135px);
+  .page-title{
+    background: #ededed;
+  }
+  .top-wrap{
+    width: px2rem(720px);
+    height: px2rem(500px);
+    @include img("../assets/icons/inviteActivityGifts/1.jpg", px2rem(720px) px2rem(500px))
+  }
+  .club-info{
+    position: relative;
+    padding-left: px2rem(105px);
+    color: #fff;
+    height: px2rem(80px);
+    line-height: px2rem(80px);
+    font-size: px2rem(32px);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.05));
+    >div{
+      position: absolute;
+      width: px2rem(60px);
+      height: px2rem(60px);
+      left: px2rem(24px);
+      top: 50%;
+      margin-top: px2rem(-30px);
+      border-radius: 50%;
+      border:2px solid #918fab;
+      box-sizing: border-box;
+      @include imgBgFix(px2rem(60px) px2rem(60px));
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      width: 0.4rem;
+      height: 0.4rem;
+      right: 0.5rem;
+      top: 50%;
+      margin-top:-0.225rem;
+      border-left: 0.1rem solid #fff;
+      border-bottom: 0.1rem solid #fff;
+      @include rotate(-135deg);
+    }
+  }
+ 
+  .coupon-wrap{
+    position: relative;
+    width: px2rem(680px);
+    height: px2rem(307px);
+    margin: px2rem(31px) auto 0;
+    padding: px2rem(80px) px2rem(50px) 0;
+    z-index: 5;
+    color: #fff;
+    >canvas{
+      position: absolute;
+      width: px2rem(680px);
+      height: px2rem(307px);
+      top:0;
+      left: 0;
+      z-index: -1;
+    }
+    >div{
+      &:nth-of-type(1){
+          position: relative;
+          font-size: px2rem(32px);
+          @include sl();
+          height: px2rem(68px);
+          line-height: px2rem(68px);
+          padding-right: px2rem(110px);
+          margin-bottom: px2rem(12px);
+          >b{
+            font-size: px2rem(42px);
+            font-weight: normal;
+          }
+          >span{
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+          }
+      }
+      &:nth-of-type(2){
+        font-size: px2rem(30.8px);
+      }
+      &:nth-of-type(3),&:nth-of-type(4){
+        font-size: px2rem(28px);
+        line-height: 1.6;
+        @include sl();
+      }
+    }
+  }
+  .code-wrap, .desc-wrap{
+    background: #fff;
+    margin: 0 px2rem(25px);
+    border-radius: px2rem(12px);
+    border:1px solid #d9d9d9;
+  }
+  .code-wrap{
+    margin-top: px2rem(-30px);
+    padding: px2rem(4px) 0 px2rem(8px);
+    >div{
+      text-align: center;
+      color: #4d4d4d;
+      &:nth-of-type(1){
+        font-size: px2rem(28px);
+        line-height: 2.5;
+        margin-bottom: px2rem(4px);
+      }
+      &:nth-of-type(2){
+        font-size: px2rem(38px);
+        line-height: 2.2;
+      }
+        &:nth-of-type(3){
+          display: none;
+          font-size: px2rem(28px);
+          line-height: 1.6;
+          margin-bottom: px2rem(15px);
+        }
+      }
+      >img{
+        display: block;
+        width: px2rem(290px);
+        height: px2rem(290px);
+        margin: 0 auto;
+      }
+      &.used{
+        padding-top: px2rem(35px);
+        >div{
+          &:nth-of-type(1){
+            display: none;
+          }
+          &:nth-of-type(3){
+            display: block;
+          }
+        }
+      }
+    }
+
+  .desc-wrap{
+      margin-top: px2rem(23px);
+      padding: px2rem(10px) px2rem(18px);
+      >div{
+        &:nth-of-type(1){
+          font-size: px2rem(32px);
+          color: #ff9c0a;
+        }
+        &:nth-of-type(2){
+          color: #4d4d4d;
+          font-size: px2rem(28px);
+          line-height: 1.8;
+          >ul{
+            margin-top: px2rem(10px);
+            margin-bottom: px2rem(10px);
+          }
+          >p{
+            margin: 0;
+          }
+        }
+      }
+  }
+  .invite-btn{
+    position: fixed;
+    height: px2rem(110px);
+    width: 20rem;
+    left: 50%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10rem; 
+    background: #fff;
+    >div{
+      display: flex;
+      height: px2rem(80px);
+      width: px2rem(664px);
+      justify-content: center;
+      align-items: center;
+      background: #f66;
+      color: #fff; 
+      font-size: px2rem(36px);
+      border-radius: px2rem(8px);
+    }
+  }
+}

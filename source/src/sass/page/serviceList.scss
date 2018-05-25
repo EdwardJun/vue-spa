@@ -1,0 +1,140 @@
+@import "../common/mixin.scss";
+
+div#service-list-page{
+  height: 100%;
+  overflow-y: auto;
+  div.category{
+    background: #fff;
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: .444rem;
+    >div{
+      @include ty(0,2px,2px,0px,rgba(226, 226, 226, 0.8));
+      border-bottom: 1px solid;
+      @include sx();
+      height: 2.167rem;
+      >div{
+        &:nth-of-type(1){
+          width: 1.639rem;
+          height: 1.639rem;
+          margin: 0 0.667rem;
+          border-radius: 50%;
+          @include imgBgFix(1.639rem 1.639rem);
+        }
+        &:nth-of-type(2){
+          font-size: 0.889rem;
+          line-height: 1.3335rem;
+        }
+      }
+    }
+    &:last-child{
+      margin-bottom: 0
+    }
+    &.c0>div{
+      border-bottom-color:#f17186;
+      >div{
+        &:nth-of-type(2){
+          color: #f17186;
+        }
+      }
+    }
+    &.c1>div{
+      border-bottom-color:#ff6902;
+      >div{
+        &:nth-of-type(2){
+          color: #ff6902;
+        }
+      }
+    }
+    &.c2>div{
+      border-bottom-color:#8ebe5f;
+      >div{
+        &:nth-of-type(2){
+          color: #8ebe5f;
+        }
+      }
+    }
+    &.c3>div{
+      border-bottom-color:#bc6b08;
+      >div{
+        &:nth-of-type(2){
+          color: #bc6b08;
+        }
+      }
+    }
+    &.c4>div{
+      border-bottom-color:#fe5858;
+      >div{
+        &:nth-of-type(2){
+          color: #fe5858;
+        }
+      }
+    }
+    &.c5>div{
+      border-bottom-color:#c0ac4f;
+      >div{
+        &:nth-of-type(2){
+          color: #c0ac4f;
+        }
+      }
+    }
+  }
+
+  ul.service-list{
+    >li{
+      border-bottom: 1px solid #f0f0f0;
+      height: 3.944rem;
+      @include sx();
+      @supports (display: -moz-box) {
+        float: inherit;
+      }
+      > div {
+        &:nth-of-type(1) {
+          width: 2.722rem;
+          height: 2.722rem;
+          @include imgBgFix(2.722rem 2.722rem);
+          border-radius: 100%;
+          margin: 0 0.667rem;
+        }
+        &:nth-of-type(2) {
+          > div {
+            width: 14rem;
+            &:nth-of-type(1) {
+              height: 1.111rem;
+              line-height:1.111rem;
+              color: #4c4c4c;
+              font-size: 0.889rem;
+              margin-bottom: .4rem;
+              @include sl();
+            }
+            &:nth-of-type(2) {
+              @include sl();
+              line-height:1.45;
+              color: #999;
+              font-size: 0.778rem;
+              >span{
+                margin-left: .833rem;
+                &:before{
+                  content: "加钟";
+                  background-color: rgb(255,167,38);
+                  color: #fff;
+                  padding: 0.1rem 0.2rem;
+                  border-radius: 0.222rem;
+                  margin-right: 0.1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .backTop{
+    position: fixed;
+    width: 2.972rem;
+    height: 2.972rem;
+    right: 1.056rem;
+    bottom: 1.4167rem;
+    @include img("../assets/icons/serviceItem/top.png", 2.972rem 2.972rem);
+  }
+}

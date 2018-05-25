@@ -1,0 +1,42 @@
+@import "../common/mixin.scss";
+
+div#invite-friends-page{
+  .all-list{
+    overflow-y: auto;
+    background: #fff;
+  }
+  .list-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: px2rem(140px);
+    margin-left: px2rem(48px);
+    border-bottom: 1px solid #e0e0e0;
+    >div{
+      &:nth-of-type(1) {
+        width: px2rem(88px);
+        height: px2rem(88px);
+        // border: 1px solid #ebebeb;
+        border-radius: 50%;
+        margin-right: px2rem(28px);
+        @include imgBgFix(100% 100%);
+      }
+      &:nth-of-type(2){
+        height: px2rem(88px);
+        >div{
+          &:nth-of-type(1){
+            font-size: px2rem(32px);
+            color: #212121;
+            line-height: 1.55;
+          }
+          &:nth-of-type(2){
+            color: #999;
+            font-size: px2rem(26px);
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+  }
+}

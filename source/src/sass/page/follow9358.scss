@@ -1,0 +1,122 @@
+@import "../common/mixin.scss";
+
+div#follow9358-page{
+    background: #fffcf5;
+    .top{
+        width: px2rem(720px);
+        height: px2rem(830px);
+        @include img("../assets/icons/follow9358/01.jpg", 100% 100%);
+    }
+    .club-title{
+        height: px2rem(90px);
+        background: rgba(255,255,255,0.1);
+        >div{
+            &:nth-of-type(1){
+                width: px2rem(60px);
+                height: px2rem(60px);
+                background-size: 100% 100%;
+            }
+            &:nth-of-type(2){
+                font-size: px2rem(42px);
+                color: #7d2b20;
+            }
+        }
+        &:after{
+            border-left-color: #7d2b20;
+            border-bottom-color: #7d2b20;
+        }
+    }
+    .swiper-container{
+        margin-top: - px2rem(360px);
+        height: px2rem(670px);
+        padding-bottom: px2rem(60px);
+        box-sizing: content-box;
+        &:before, &:after{
+            position: absolute;
+            content: "";
+            top: 50%;
+            width: px2rem(47px);
+            height: px2rem(89px);
+            margin-top: - px2rem(45px);
+            @include imgBgFix(100% 100%);
+            z-index: 5;
+        }
+        &:before{
+            left: px2rem(20px);
+            background-image: url("../assets/icons/follow9358/06.png");
+        }
+        &:after{
+            right: px2rem(20px);
+            background-image: url("../assets/icons/follow9358/05.png");
+        }
+        .s1{
+            @include img("../assets/icons/follow9358/01.png");
+        }
+        .s2{
+            @include img("../assets/icons/follow9358/02.png");
+        }
+        .s3{
+            @include img("../assets/icons/follow9358/03.png");
+        }
+        .s4{
+            @include img("../assets/icons/follow9358/04.png");
+        }
+    }
+
+    .swiper-pagination{
+        bottom: px2rem(18px);
+        .swiper-pagination-bullet{
+            width: 12px;
+            height: 12px;
+            background: #e5d2ca;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active{
+            background: #7c2c20;
+        }
+    }
+
+    .qrcode-wrap{
+        height: px2rem(558px);
+        background: #ffedca;
+        padding-top: px2rem(34px);
+        >div{
+            &:nth-of-type(1){
+                width: px2rem(350px);
+                height: px2rem(350px);
+                margin: 0 auto;
+                border: 3px solid #fec365;
+                border-radius: px2rem(12px);
+                overflow: hidden;
+                >img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &:nth-of-type(2){
+                position: relative;
+                margin: px2rem(26px) auto 0;
+                height: px2rem(80px);
+                width: px2rem(560px);
+                line-height: px2rem(80px);
+                background: #fec365;
+                border-radius: px2rem(12px);
+                color: #883d2e;
+                font-size: px2rem(32px);
+                text-align: center;
+                &:before{
+                    position: absolute;
+                    content: "";
+                    width: px2rem(20px);
+                    height: px2rem(20px);
+                    background: #fec365;
+                    border-radius: px2rem(4px);
+                    top: 50%;
+                    margin-top: - px2rem(10px);
+                    left: - px2rem(10px);
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,91 @@
+@import "../common/mixin.scss";
+
+div#journal-list-page{
+  overflow-y: hidden;
+  background: #f5f5f5;
+
+  div.list-item{
+    position: relative;
+    height:3.89rem;
+    margin-top:.444rem;
+    padding: .417rem .667rem;
+    background: #fff;
+    div.logo{
+      width:3.056rem;
+      height:3.056rem;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 3.056rem;
+      color:#fff;
+      font-size:.722rem;
+      @include imgBgFix(3.056rem 3.056rem);
+      float: left;
+      text-shadow: 2px 2px 2px rgba(255,255,255,0.5);
+    }
+    div.title{
+      margin-left: 1.111rem;
+      float: left;
+      >div{
+        &:nth-of-type(1){
+          position: relative;
+          color:#4d4d4d;
+          font-size:1.056rem;
+          line-height: 1;
+          margin-top:.472rem;
+          display: inline-block;
+        }
+        &:nth-of-type(2){
+          color:#999;
+          font-size:.722rem;
+          margin-top:.556rem;
+          line-height: 1;
+        }
+      }
+    }
+    &:after{
+      content:"";
+      position: absolute;
+      width:.4rem;
+      height:.4rem;
+      top:50%;
+      right:.667rem;
+      margin-top:-0.2rem;
+      border-bottom:2px solid #9d9d9d;
+      border-left:2px solid #9d9d9d;
+      @include rotate(-135deg);
+    }
+  }
+
+  div.list{
+    overflow-y: auto;
+    >div:nth-of-type(1){
+      div.title>div:nth-of-type(1){
+        &:after{
+          content: '最新';
+          position: absolute;
+          top:-0.15rem;
+          right:-2.1rem;
+          width:1.8rem;
+          height:.833rem;
+          color:#fff;
+          font-size:.5rem;
+          line-height: .833rem;
+          text-align: center;
+          border-radius: 4px;
+          background: linear-gradient(to right, #fea03a, #ff6765);
+        }
+        &:before{
+          content : "";
+          position: absolute;
+          width:0;
+          height:0;
+          right:-.7rem;
+          top:.5rem;
+          border-width:.2rem;
+          border-style: solid;
+          border-color:#fea03a transparent transparent #fea03a;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "../common/mixin.scss";
+
+div.clock-wrap{
+  padding: .278rem .667rem;
+  background-color: #ffeeee;
+  font-size: .778rem;
+  color: #f66;
+  @include wq();
+  &:before{
+    content: "";
+    display: block;
+    width: .889rem;
+    height: .889rem;
+    margin-right: .467rem;
+    @include img('../assets/icons/robProject/clock.png', .889rem .889rem);
+  }
+  >b{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 0.18rem;
+  }
+  >label,>span{
+    font-size: 0.778rem;
+  }
+}

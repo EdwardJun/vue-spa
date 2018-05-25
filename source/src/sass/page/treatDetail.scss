@@ -1,0 +1,153 @@
+@import "../common/mixin.scss";
+
+div#treat-detail-page{
+  div.info-area{
+    >div{
+      background-color: #fff;
+      padding:.889rem .667rem;
+      line-height: 1;
+      color: #616161;
+      font-size: .778rem;
+      margin-top:.667rem;
+      border-bottom:1px solid #e0e0e0;
+      border-top:1px solid #e0e0e0;
+      >div{
+        display: table;
+        width: 100%;
+        &:not(:first-child){
+          margin-top:.667rem;
+        }
+        >div{
+          display: table-cell;
+          vertical-align: middle;
+          &:nth-of-type(1){
+            width: 4.5rem;
+          }
+        }
+      }
+      &:first-child{
+        margin-top:0;
+        border-top-width:0;
+        >div>div{
+          &:nth-of-type(1){
+            width: 5.722rem;
+            padding-left:1.5rem;
+            @include imgBgFix(.778rem .778rem);
+            background-position: left center;
+          }
+          &.treat-code{
+            background-image: url("../assets/icons/qrPay/icon_treat_code.png");
+          }
+          &.treat-money{
+            background-image: url("../assets/icons/qrPay/icon_treat_money.png");
+          }
+          &.treat-tel{
+            background-image: url("../assets/icons/qrPay/icon_treat_tel.png");
+          }
+        }
+      }
+    }
+  }
+
+  .vis-friend,.call-phone{
+    display: inline-block;
+    font-size: .667rem;
+    padding: .2rem .3rem;
+    color: #fff;
+    position: relative;
+    top: -.1rem;
+    margin-left: .5rem;
+  }
+
+  .vis-friend{
+    background-color: #ffb21a;
+  }
+
+  .call-phone{
+    background-color: #ff6501;
+    width: 2.2rem;
+    text-align: center;
+  }
+
+  .disabled{
+    background-color: #E0E0E0;
+    color: #bdbdbd;
+  }
+
+  div.cancel-auth{
+    margin: .889rem .667rem 0;
+    background-color: #fb5549;
+    color: #fff;
+    text-align: center;
+    height: 2.444rem;
+    line-height: 2.444rem;
+    font-size: .889rem;
+    border-radius: .222rem;
+  }
+}
+
+div.cancel-treat-confirm{
+  >div{
+    width:16.667rem;
+    background-color: #fff;
+    color:#4d4d4d;
+    font-size:0.889rem;
+    overflow: hidden;
+    border-radius:.5rem;
+    @include ty(0,0,4px,4px,#908f8f);
+    >div:nth-of-type(1){
+      text-align: center;
+      border-bottom: 1px solid #d9d9d9;
+      padding: 1.472rem 0;
+      >p:nth-of-type(1){
+        line-height: 1;
+        margin-top: 0;
+        font-size: 1.056rem;
+        font-weight: bold;
+        color: #222;
+        margin-bottom: .667rem;
+      }
+      >p:nth-of-type(2){
+        color: #060606;
+        font-size: .778rem;
+        margin-top: .667rem;
+        margin-bottom: 0;
+        line-height: 1.5;
+        padding: 0 1.889rem;
+      }
+    }
+    >div:nth-of-type(2){
+      overflow: hidden;
+      >a{
+        display: block;
+        width:50%;
+        float: left;
+        text-align: center;
+        line-height: 2.806rem;
+        font-size: 1rem;
+        &:nth-of-type(1){
+          color:#fff;
+          background-color: #ff5549;
+        }
+        &:nth-of-type(2){
+          background-color: #ebebeb;
+        }
+      }
+      >div{
+        display: none;
+        text-align: center;
+        background: #ccc url("../assets/icons/common/loading.gif") no-repeat 30% center;
+        height: 2.806rem;
+        line-height: 2.806rem;
+      }
+      &.processing{
+        >div{
+          display: block;
+        }
+        >a{
+          display: none;
+        }
+      }
+    }
+  }
+}

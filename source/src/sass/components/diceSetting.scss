@@ -1,0 +1,85 @@
+@import "../common/mixin.scss";
+
+div.dice-setting-wrap{
+  >div{
+    height:20.639rem;
+    width:16.389rem;
+    border-radius: .22rem;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  h3{
+    height:3.889rem;
+    line-height: 3.889rem;
+    text-align: center;
+    color:#212121;
+    margin:0;
+    font-weight: 400;
+    letter-spacing: 1px;
+    border-bottom:1px solid #e0e0e0;
+    font-size:1.056rem;
+  }
+  ul{
+    height:8.056rem;
+    padding:1.861rem 0 1.611rem 1.528rem;
+    list-style-type: none;
+    margin:0;
+    >li{
+      float: left;
+      width:4.056rem;
+      height:1.806rem;
+      margin-right:0.694rem;
+      margin-bottom:1rem;
+      line-height: 1.806rem;
+      text-align: center;
+      border:1px solid #999;
+      border-radius: 5px;
+      box-sizing: border-box;
+      color:#212121;
+      font-size:1rem;
+      background-color: #fdfdfd;
+      &.active{
+        background-color: #ff6666;
+        border-color:#ff6666;
+        color:#fff;
+      }
+    }
+  }
+  div.shape{
+    width:1.694rem;
+    height:1.694rem;
+    margin:0 auto 1.333rem;
+    @include img("../assets/icons/chat/dice_set.png",1.694rem 1.694rem)
+  }
+  div.tip{
+    width:13rem;
+    height:1.389rem;
+    line-height: 1.389rem;
+    margin:0 auto 0.95rem;
+    text-align: center;
+    border-top:1px solid #e0e0e0;
+    color:#999;
+    font-size:0.722rem;
+  }
+  div.btn{
+    height:3.222rem;
+    line-height: 3.222rem;
+    border-top:1px solid #e0e0e0;
+    >div{
+      float: left;
+      width:50%;
+      height: 100%;
+      text-align: center;
+      font-size:1rem;
+      box-sizing: border-box;
+      border-right:1px solid #e0e0e0;
+      &.cancel{
+        color:#616161;
+      }
+      &.invite{
+        color:#ff6666;
+        border-right-width:0
+      }
+    }
+  }
+}

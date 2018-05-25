@@ -1,0 +1,325 @@
+@import "../common/mixin.scss";
+
+div#one-yuan-records-page{
+  height: 100%;
+  .switch-button{
+    width: 100%;
+    height: 2.222rem;
+    background-color: #fdfdfd;
+    border-bottom: 1px solid #e0e0e0;
+    @include sx();
+    >div{
+      @include boxFlex(1);
+      font-size: .833rem;
+      color: #4d4d4d;
+      height: 100%;
+      text-align: center;
+      >div{
+        display: inline-block;
+        box-sizing: border-box;
+        border-bottom: .2rem solid transparent;
+        height: 100%;
+        padding: 0 1rem;
+        line-height: 2.222rem;
+      }
+      &.active{
+        color: #f66;
+        >div{
+          border-color: #f66;
+        }
+      }
+    }
+  }
+
+  .wrap{
+    width: 40rem;
+    transition: transform 0.4s ease-out;
+    transform: translateX(0);
+    &.active{
+      transform: translateX(-50%);
+    }
+    >div{
+      width: 20rem;
+      float: left;
+    }
+  }
+  .all-list{
+    overflow-y: auto;
+  }
+  .item-title{
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    margin-top: .5rem;
+    color: #616161;
+    font-size: .889rem;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    padding: 0 .667rem;
+    &:nth-of-type(1){
+      margin-top: 0;
+    }
+    @include sx();
+    >div{
+      @include boxFlex(1);
+      @include sl();
+    }
+    &:after{
+      content: "";
+      display: block;
+      width: .43rem;
+      height: .43rem;
+      border-left: .1rem solid #999;
+      border-bottom: .1rem solid #999;
+      @include rotate(-135deg);
+    }
+  }
+
+  .list-wrap>ul{
+    background-color: #fff;
+  }
+
+  .record-item{
+    padding: .556rem .667rem .556rem;
+    border-bottom: 1px solid #e0e0e0;
+    @include s();
+    >div{
+      &:nth-of-type(1){
+        width: 3.833rem;
+        height: 3.833rem;
+        border-radius: .3rem;
+        @include imgBgFix(3.833rem 3.833rem);
+      }
+      &:nth-of-type(2){
+        @include boxFlex(1);
+        margin-left: .5rem;
+        >div{
+          &:nth-of-type(1){
+            @include sx();
+            >div{
+              &:nth-of-type(1){
+                font-size: .944rem;
+                max-width: 11.8rem;
+                color: #212121;
+                @include sl();
+                margin-right: .3rem;
+              }
+              &:nth-of-type(2){
+                width: 2.222rem;
+                height: .833rem;
+                line-height: .833rem;
+                font-size: .667rem ;
+                text-align: center;
+                color: #ff935f;
+                border: 1px solid #ff935f;
+                border-radius: 3px;
+                box-sizing: content-box;
+              }
+            }
+          }
+          &:nth-of-type(2){
+            border-bottom: 1px solid #eee;
+            @include x();
+            >div{
+              &:nth-of-type(1){
+                @include boxFlex(1);
+                line-height: 2;
+                >div{
+                  &.act-process{
+                    font-size: .667rem;
+                    color: #616161;
+                    >span{
+                      color: #ff935f;
+                    }
+                  }
+                  &.act-process-bar{
+                    height: .334rem;
+                    border-radius:.137rem;
+                    background-color: #f2f0f0;
+                    >div{
+                      height: 100%;
+                      border-radius: .137rem;
+                      background: linear-gradient(to right,#ffce60,#feb445);
+                    }
+                  }
+                  &.act-nums{
+                    @include sx();
+                    >div{
+                      @include boxFlex(1);
+                      font-size: .667rem;
+                      color: #757575;
+                      &:nth-of-type(2){
+                        text-align: right;
+                        >span{
+                          color: #ff9a0c;
+                          margin-left: 0.1rem;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              &.act-buy-btn{   //继续抢购按钮
+                margin-bottom: .4rem;
+                width: 3.861rem;
+                height: 1.388rem;
+                line-height: 1.388rem;
+                text-align: center;
+                font-size: .833rem;
+                color: #fff;
+                background-color: #f66;
+                border-radius: .3rem;
+                margin-left: 1rem;
+              }
+            }
+          }
+          &:nth-of-type(3){
+            @include sx();
+            font-size: .667rem;
+            >div{
+              &:nth-of-type(1){
+                @include boxFlex(1);
+                color: #616161;
+                >span{
+                  color: #f66;
+                }
+              }
+              &:nth-of-type(2){
+                color: #4d84b5;
+                text-decoration: underline;
+              }
+            }
+          }
+          &:nth-of-type(4){
+            display: none;
+            border-top: 1px solid #eee;
+            line-height: 2;
+            >div{
+              @include sx();
+              font-size: .667rem;
+              color: #999;
+              >div{
+                &:nth-of-type(2){
+                  @include boxFlex(1);
+                  @include sl();
+                  color: #616161;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.end{
+      >div:nth-of-type(2){
+        >div{
+          &:nth-of-type(1){
+            >div:nth-of-type(2){
+              color: #6fd21d;
+              border-color: #6fd21d;
+            }
+          }
+          &:nth-of-type(2){
+            >div:nth-of-type(2).act-buy-btn{
+              visibility: hidden;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+    &.complete{         // 已揭晓
+      >div:nth-of-type(2){
+        >div{
+          &:nth-of-type(1){
+            >div:nth-of-type(2){
+              color: #21b9ff;
+              border-color: #21b9ff;
+            }
+          }
+          &:nth-of-type(2){
+            border: none;
+            >div{
+              &:nth-of-type(1){
+                >div{
+                  &.act-process,&.act-process-bar,&.act-nums>div:nth-of-type(2){
+                    display: none;
+                  }
+                }
+              }
+              &.act-buy-btn{
+                visibility: hidden;
+                margin-bottom:0;
+              }
+            }
+          }
+          &:nth-of-type(4){
+            display: block;
+          }
+        }
+      }
+    }
+    &.refund{
+      >div:nth-of-type(2){
+        >div{
+          &:nth-of-type(2){
+            >div:nth-of-type(2).act-buy-btn{
+              visibility: hidden;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .num-pop{
+    >div{
+      width: 17.222rem;
+      border-radius: .5rem;
+      background-color: #fff;
+      padding-bottom: .889rem;
+      >div{
+        padding: 0 .889rem;
+        &:nth-of-type(1){
+          @include sx();
+          height: 2rem;
+          color: #fff;
+          background-color: #f66;
+          border-top-left-radius: .5rem;
+          border-top-right-radius: .5rem;
+          >div{
+            &:nth-of-type(1){
+              @include boxFlex(1);
+              @include sl();
+              font-size: 1.056rem;
+              margin-right: .5rem;
+            }
+            &:nth-of-type(2){
+              font-size: 2rem;
+              padding-left: 1rem;
+            }
+          }
+        }
+        &:nth-of-type(2){
+          >div{
+            font-size: .833rem;
+            &:nth-of-type(1){
+              padding-top: .5rem;
+              color: #616161;
+              >span{
+                color: #f66;
+              }
+            }
+            &:nth-of-type(2){
+              color: #212121;
+              min-height: 4.444rem;
+              max-height: 14rem;
+              overflow-y: auto;
+              -webkit-overflow-scrolling: touch;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+@import "../common/mixin.scss";
+
+div.club-item-wrap{
+  background-color: #fff;
+  margin-bottom: .222rem;
+  padding: 0 0 .333rem;
+  &.has-chain{
+    padding-bottom: 0;
+  }
+  &:last-child{
+    margin-bottom: 0;
+  }
+  &.no-techs{
+    padding-bottom: 0;
+  }
+  >div.club-info{
+    padding-top: .5rem;
+    margin:0 .667rem;
+    @include sx();
+    > div {
+      &:nth-of-type(1) {
+        width: 1.778rem;
+        height: 1.778rem;
+        @include imgBgFix(1.778rem 1.778rem);
+        border-radius: 50%;
+        margin-right: .667rem;
+        border: 1px solid #e0e0e0;
+        box-sizing: content-box;
+      }
+      &:nth-of-type(2) {
+        @include boxFlex(1);
+        @include sl();
+        font-size: .889rem;
+        color: #212121;
+        margin-right: .361rem;
+      }
+      &:nth-of-type(3) {
+        padding: 0 .2rem;
+        text-align: center;
+        color: #fff;
+        font-size: .556rem;
+        width: 1.694rem;
+        height: .822rem;
+        line-height: .855rem;
+        margin-right: .631rem;
+        background-color: #ff9d09;
+        background-image: linear-gradient(to right, #f66, #fea03a);
+        border-radius: .16rem;
+      }
+      &:nth-of-type(4) {
+        font-size: .722rem;
+        color: #999;
+        @include img('../assets/icons/clubList/location_icon.png', .444rem .556rem);
+        background-position: left center;
+        padding-left: .889rem;
+      }
+    }
+  }
+  >div.club-techs{
+    padding:.14rem 0.14rem 0.556rem;
+    margin-left: 2.311rem;
+    height: 7.4rem;
+    div.swiper-slide{
+      border-radius: .222rem;
+      display: inline-block;
+      margin-right:.611rem;
+      width: 4.667rem;
+      height: 6.075rem;
+      text-align: center;
+      >div{
+        &:nth-of-type(1){
+          width: 4.667rem;
+          height: 4.667rem;
+          @include imgBgFix(4.667rem 4.667rem);
+          border-radius: .333rem;
+        }
+        &:nth-of-type(2),&:nth-of-type(3){
+            font-size: px2rem(28px);
+            text-align: center;
+        }
+        &:nth-of-type(2){
+            @include sl();
+            margin-top: px2rem(4px);
+          color: #4d4d4d;
+          line-height: px2rem(48px);
+        }
+        &:nth-of-type(3){
+            height: px2rem(30px);
+            display: inline-block;
+            min-width: px2rem(100px);
+            padding: 0 px2rem(10px);
+            line-height: px2rem(30px);
+            color: #616161;
+            border: 1px solid #999;
+            border-radius: px2rem(15px);
+            transform: translateY(px2rem(-12px));
+        }
+      }
+    }
+  }
+
+  .club-chain{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: px2rem(64px);
+    font-size: px2rem(28px);
+    color: #666;
+    // @include img("../assets/icons/clubChains/4.png", 100% 100%);
+    padding:0 px2rem(24px) 0 0;
+    margin-top: px2rem(10px);
+    margin-left: 2.311rem;
+    border-top: 1px solid #eee;
+    &:before{
+      content: "";
+      display: block;
+      width: px2rem(61px);
+      height: px2rem(34px);
+      margin-right: px2rem(28px);
+      @include img("../assets/icons/clubChains/5.png", 100% 100%);
+    }
+    &:after{
+      content: "";
+      display: block;
+      width: px2rem(14px);
+      height: px2rem(24px);
+      @include img("../assets/icons/clubChains/7.png", 100% 100%);
+    }
+    >div{
+      flex: 1;
+      >span{
+        color: #ff933b;
+        margin: 0 px2rem(10px);
+      }
+    }
+  }
+}

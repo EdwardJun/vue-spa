@@ -1,0 +1,46 @@
+@import "../common/mixin.scss";
+
+div.share-pop{
+  >div.top{
+    width:9.222rem;
+    height:5rem;
+    position: absolute;
+    top:0.445rem;
+    right:0.611rem;
+    padding-left:0.42rem;
+    padding-right:0.42rem;
+    @include img("../assets/icons/plumflowers/tip.png",9.222rem 5rem);
+    font-size:0.889rem;
+    color:#fff;
+    text-align: center;
+    padding-top:1.4rem;
+  }
+  >div.center{
+    width:94%;
+    background-color: #fff;
+    color:#4d4d4d;
+    font-size:0.889rem;
+    text-align: center;
+    left:50%;
+    >div:nth-of-type(1){
+      background-color: #CCC;
+      margin:0.611rem 0.611rem 0.4rem 0.611rem;
+      padding:0.278rem;
+      word-wrap: break-word;
+      line-height: 1.2;
+      -webkit-user-select:element;
+      box-sizing: content-box;
+      >a{
+        font-size: px2rem(28px);
+      }
+    }
+    >div:nth-of-type(2){
+      border-bottom: 1px solid #d9d9d9;
+      padding-bottom: 0.2rem;
+    }
+    >div:nth-of-type(3){
+      height:2.222rem;
+      line-height: 2.222rem;
+    }
+  }
+}

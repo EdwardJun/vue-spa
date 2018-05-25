@@ -1,0 +1,602 @@
+@import "../common/mixin.scss";
+
+@include keyframes(voicePlayAni){
+  from{
+    background-image: url('../assets/icons/chat/voice/0.png')
+  }
+  25%{
+    background-image: url('../assets/icons/chat/voice/1.png')
+  }
+  75%{
+    background-image: url('../assets/icons/chat/voice/2.png')
+  }
+  to{
+    background-image: url('../assets/icons/chat/voice/0.png')
+  }
+}
+
+div.messageNode{
+  padding-top: 0.056rem;
+  margin-bottom: 0.5rem;
+  &.center{
+    width:100%;
+    font-size:0.667rem;
+    margin-top:0.638rem;
+    color:#999;
+    text-align: center;
+    line-height: 1.277rem;
+    >span{
+      display: block;
+    }
+    >span:nth-of-type(2){
+      display: inline-block;
+      position: relative;
+      padding: 0.1rem 0.5rem 0.1rem 1.6rem;
+      border-radius: 0.2rem;
+      background-color: #d9d9d9;
+      &.revoke{
+          padding-left: 0.5rem;
+      }
+      >a{
+        margin-left:0.2rem;
+        color:#fb5549;
+      }
+      &:before{
+        content: "";
+        position: absolute;
+        left:0.5rem;
+        top:50%;
+        margin-top:-0.4445rem;
+        width:0.889rem;
+        height:0.889rem;
+        @include imgBgFix(0.889rem 0.889rem);
+      }
+    }
+    &.paidCouponTip{
+      >span:nth-of-type(2):before{
+        background-image: url("../assets/icons/chat/paid_tip.png");
+      }
+    }
+    &.couponTip{
+      >span:nth-of-type(2):before{
+        background-image: url("../assets/icons/chat/coupon_Tip.png");
+      }
+    }
+  }
+  &.left,&.right {
+    margin-top: 0.667rem;
+    padding: 1rem 0.667rem 0;
+    position: relative;
+    > span {
+      position: absolute;
+      color: #999;
+      font-size: 0.5rem;
+      line-height: 1rem;
+      top: 0;
+    }
+    > div:nth-of-type(1) {
+      display: inline-block;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      @include imgBgFix(2.5rem 2.5rem);
+    }
+    > div:nth-of-type(2) {
+      position: relative;
+      display: inline-block;
+      max-width: 11.844rem;
+      line-height: 1.35rem;
+      margin-top:0.5rem;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.778rem;
+      border-radius: 0.38rem;
+      word-break: break-all;
+      &.text img {
+        width: 1.2rem;
+        height: 1.2rem;
+        vertical-align: middle;
+      }
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0.8rem;
+        height: 0.3rem;
+        top: 0.3rem;
+        border-bottom: 0.5rem solid transparent;
+        background: transparent;
+        z-index: -1;
+      }
+      &.img {
+        padding: 0.25rem;
+        line-height: 0;
+        > img {
+          border-radius: 0.2rem;
+          max-width: 6rem;
+          max-height: 10rem;
+        }
+      }
+      &.reward{
+        position: relative;
+        color:#fff;
+        text-indent: 1rem;
+        >span{
+          font-size:1rem;
+        }
+        >i{
+          position: absolute;
+          display: block;
+          width:1.139rem;
+          height:1.139rem;
+          left:0.5rem;
+          top:50%;
+          margin-top:-0.5695rem;
+          @include img("../assets/icons/chat/money.png",1.139rem 1.139rem);
+        }
+      }
+      &.begReward{
+        position: relative;
+        color:#fff;
+        padding-left: 2.4rem;
+        &:after{
+          content: "";
+          position: absolute;
+          display: block;
+          width:1.944rem;
+          height:3.667rem;
+          top:-0.7rem;
+          left:0.3rem;
+          @include img("../assets/icons/chat/beg.png",1.944rem 3.667rem);
+        }
+      }
+      &.order{
+        font-size:0.667rem !important;
+        border:1px solid #cdd7e2;
+        color:#666 !important;
+        >span{
+          color:#fb5549 !important;
+          font-size:0.778rem;
+        }
+        >b{
+          background-color: transparent;
+          font-weight: normal;
+          color:#333 !important;
+        }
+      }
+      &.paidCoupon,&.ordinaryCoupon{
+        min-width: 9rem;
+        box-sizing: content-box;
+        background-color: #ff9c0a !important;
+        color:#fff !important;
+        padding-bottom:1.5rem !important;
+        line-height: 2.222rem;
+        text-indent: 4.5rem;
+        >i{
+          position: absolute;
+          display: block;
+          width:4.111rem;
+          height:1.194rem;
+          line-height: 1.194rem;
+          color:#ff9c0a;
+          top:0.9rem;
+          left:0.8rem;
+          font-size:0.611rem;
+          text-align: right;
+          text-indent: 0;
+          font-style: normal;
+          box-sizing: border-box;
+          padding-right:0.5rem;
+          @include imgBgFix(4.111rem 1.194rem);
+        }
+        >span{
+          font-size:1.056rem;
+        }
+        >b{
+          position: absolute;
+          display: block;
+          height:1.167rem;
+          left:0;
+          right:0;
+          bottom:0;
+          line-height: 1.167rem;
+          background-color: #fff;
+          font-size:0.5rem;
+          color:#a9a9a9;
+          text-indent: 0;
+          font-weight: normal;
+          text-align: left;
+          text-indent: 0.35rem;
+          border-bottom-left-radius: 0.38rem;
+          border-bottom-right-radius: 0.38rem;
+        }
+      }
+      &.paidCoupon{
+        >i{
+          background-image: url("../assets/icons/chat/paidCoupon.png");
+        }
+      }
+      &.ordinaryCoupon{
+        >i{
+          background-image: url("../assets/icons/chat/ordinaryCoupon.png");
+        }
+      }
+    }
+    &:after { ////clear float
+      content: "\200B";
+      display: block;
+      height: 0;
+      clear: both;
+    }
+  }
+  &.left {
+    >span{
+      left:0.667rem;
+    }
+    >div:nth-of-type(1) {
+      float: left;
+      margin-right: 0.6rem;
+    }
+    >div:nth-of-type(2) {
+      float: left;
+      background-color: #fff;
+      color: #222;
+      // &:before {
+      //   left: -0.6rem;
+      //   border-bottom-left-radius: 100%;
+      //   border-bottom-color: #fb5549;
+      // }
+      &.reward,&.begReward{
+        background-color: #6fa9f0;
+        color:#fff;
+        &:before{
+          border-bottom-color: #6fa9f0;
+        }
+      }
+      &.order{
+        &:before{
+          display: none;
+        }
+      }
+      &.paidCoupon,&.ordinaryCoupon{
+        &:before {
+          border-right: 0.358rem solid #ff9c0a;
+          border-bottom-color: #ff9c0a;
+        }
+      }
+      &.order_refuse,&.order_refuse,&.order_cancel,&.order_confirm,&.order_complete{
+          background-color: #fff;
+          &:before{
+              border-bottom-color: #fff;
+          }
+      }
+      &.order_request{
+          background-color: transparent;
+          margin-left: px2rem(-12px);
+          margin-top: px2rem(-8px);
+          &:before{
+              border-bottom-color: transparent;
+          }
+      }
+    }
+  }
+  &.right {
+    > span {
+      right: 0.667rem;
+    }
+    > div:nth-of-type(1) {
+      float: right;
+      margin-left: 0.6rem;
+    }
+    > div:nth-of-type(2) {
+      float: right;
+      background-color: #cdd7e2;
+      color: #4d4d4d;
+      &:after{
+        content: "!";
+        display: block;
+        position: absolute;
+        left:-1.3rem;
+        top:50%;
+        margin-top:-0.45rem;
+        width:0.9rem;
+        height:0.9rem;
+        font-size:0.667rem;
+        line-height: 0.9rem;
+        border-radius: 50%;
+        text-align: center;
+        color:#fff;
+        background-color: #fb5549;
+      }
+      // &::before {
+      //   right: -0.6rem;
+      //   border-bottom-right-radius: 100%;
+      //   border-bottom-color: #cdd7e2;
+      // }
+      &.reward,&.begReward{
+        background-color: #6fa9f0;
+        color:#fff;
+        &:before{
+          //border-top: 0.358rem solid #6fa9f0;
+          //border-left: 0.358rem solid #6fa9f0;
+          border-bottom-color: #6fa9f0;
+        }
+      }
+      &.paidCoupon,&.ordinaryCoupon{
+        &:before {
+          border-top: 0.358rem solid #ff9c0a;
+          border-left: 0.358rem solid #ff9c0a;
+        }
+      }
+      &.order{
+        &:before{
+          display: none;
+        }
+      }
+      &.order_start,&.order_complete{
+          background-color: #fff;
+          &:before{
+              border-bottom-color: #fff;
+          }
+      }
+      &.success{
+        &:after{
+          display: none;
+        }
+      }
+    }
+
+    &.gift{
+      >div:nth-of-type(2){
+        background-color: transparent;
+        padding:0;
+        &::before{
+          display: none;
+        }
+        >img{
+          width:auto;
+          height:auto;
+          max-width: 8rem;
+          max-height: 8rem;
+        }
+      }
+    }
+  }
+  &.activity{
+    >div{
+      &:nth-of-type(2){
+        width: 11rem;
+        line-height: 1.4;
+        background-color: #fff;
+        padding: .556rem;
+        border-radius: .667rem;
+        // &:before{
+        //   border: none;
+        //   width: 1rem;
+        //   height: .3rem;
+        //   background-color: transparent;
+        //   border-bottom: .5rem solid #fff;
+        //   border-bottom-left-radius: 100%;
+        //   top: 0.3rem;
+        //   left: -0.6rem;
+        // }
+        >div{
+          @include s();
+          >div{
+            &:nth-of-type(1){
+              width: 2.333rem;
+              height: 2.333rem;
+              @include imgBgFix(2.333rem 2.333rem);
+              margin-right: .556rem;
+            }
+            &:nth-of-type(2){
+              @include boxFlex(1);
+              >div{
+                &:nth-of-type(1){
+                  font-size: .889rem;
+                  color: #212121;
+                }
+                &:nth-of-type(2){
+                  font-size: .778rem;
+                  color: #999;
+                }
+              }
+            }
+          }
+        }
+        &.timeLimit{
+          >div>div:nth-of-type(1){
+            background-image: url('../assets/icons/chat/timeLimit-icon.png');
+          }
+        }
+        &.luckyWheel{
+          >div>div:nth-of-type(1){
+            background-image: url('../assets/icons/chat/luckyWheel-icon.png');
+          }
+        }
+        &.journal{
+          >div>div:nth-of-type(1){
+            background-image: url('../assets/icons/chat/journal-icon.png');
+          }
+        }
+        &.inviteGift{
+          >div>div:nth-of-type(1){
+            background-image: url('../assets/icons/chat/inviteGift-icon.png');
+          }
+        }
+        &.item_card{
+          >div>div:nth-of-type(1){
+            background-image: url('../assets/icons/chat/icon_oncecard.png');
+          }
+        }
+        &.credit_gift{
+          >div>div:nth-of-type(1){
+            background-image: url('../assets/icons/chat/icon_credit_gift.png');
+          }
+        }
+        &.groupBuy{
+          >div>div:nth-of-type(1){
+            background-image: url('../assets/icons/chat/icon_group_buy.png');
+          }
+        }
+        &.item_package{
+          >div>div:nth-of-type(1){
+            background-image: url('../assets/icons/chat/icon_package.png');
+          }
+        }
+      }
+    }
+  }
+  &.map-loc{
+    >div:nth-of-type(2){
+      background: #fff;
+      width: 12rem;
+      box-sizing: content-box;
+      &:before{
+        border-top-color: #fff;
+        border-left-color: #fff;
+        border-bottom-color: #fff;
+      }
+      >div{
+        &:nth-of-type(1){
+          font-size: 0.889rem;
+          color: #212121;
+        }
+        &:nth-of-type(2){
+          font-size: 0.667rem;
+          color: #999;
+          line-height: 1.5;
+          margin-top: px2rem(6px);
+          margin-bottom: px2rem(14px);
+        }
+        &:nth-of-type(3){
+          height: 4.1667rem;
+          @include imgBgFix(100% 4.1667rem);
+        }
+      }
+    }
+  }
+
+  .audio{
+    padding: 0.55rem 0.9rem !important;
+      &:after{
+          content: "";
+          display: block;
+          width: px2rem(27px);
+          height: px2rem(33px);
+          @include img('../assets/icons/chat/voice/0.png', 100% 100%);
+      }
+      >span{
+          position: absolute;
+          color: #999;
+          font-size: px2rem(20px);
+          bottom: px2rem(-8px);
+          right: px2rem(-40px);
+      }
+      >div{
+        position: absolute;
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        right: px2rem(-20px);
+        top: px2rem(4px);
+        background: #f66;
+      }
+      &.playing{
+          &:after{
+              @include dhz(voicePlayAni,4000ms linear infinite);
+          }
+      }
+  }
+
+  .order_request{
+      width: px2rem(471px);
+      height: px2rem(179px);
+      @include img('../assets/icons/chat/service3.png', 100% 100%);
+      >div{
+          position: relative;
+          padding: px2rem(14px) px2rem(8px);
+          line-height: 1.5;
+          color: #fff;
+          >div{
+              position: absolute;
+              background-color: #c9264f;
+              height: px2rem(50px);
+              width: px2rem(160px);
+              border-radius: px2rem(30px);
+              right: px2rem(28px);
+              bottom: px2rem(-45px);
+              &:before{
+                  content: "点我预约";
+                  display: block;
+                  width: 100%;
+                  height: px2rem(47px);
+                  line-height: px2rem(47px);
+                  background-color: #fb3a71;
+                  border-radius: px2rem(30px);
+                  text-align: center;
+                  font-size: px2rem(24px);
+              }
+          }
+      }
+  }
+
+  .order_start{
+      >div{
+          &:nth-of-type(1){
+              color: #212121;
+              font-size: px2rem(32px);
+          }
+          &:nth-of-type(2){
+              font-size: px2rem(28px);
+              >span{
+                  color: #488dff;
+              }
+          }
+      }
+  }
+
+  .order_refuse,.order_cancel,.order_confirm,.order_complete{
+      >div{
+          font-size: px2rem(28px);
+          color: #999;
+          line-height: 1.6;
+          >span{
+              color: #212121;
+          }
+          &:nth-of-type(1){
+              line-height: 1.8;
+              color: #212121;
+              font-size: px2rem(32px);
+          }
+          &.order-money{
+              >span{
+                  color: #f66;
+              }
+          }
+          &.wx-pay-btn{
+              &:before{
+                  content: "";
+                  display: inline-block;
+                  width: px2rem(40px);
+                  height: px2rem(32px);
+                  @include img("../assets/icons/chat/wx.png", 100% 100%);
+                  margin-right: px2rem(10px);
+                  vertical-align: middle;
+                  margin-top: px2rem(-4px);
+              }
+              border-top: 1px solid #e0e0e0;
+              height: px2rem(80px);
+              line-height: px2rem(80px);
+              color: #02bd24;
+              text-align: center;
+              margin: 0.25rem -0.8rem -0.4rem -0.8rem;
+              &.hasPay{
+                  &:before{
+                      width: px2rem(32px);
+                      background-image: url("../assets/icons/chat/servicer2.png")
+                  }
+              }
+          }
+      }
+  }
+}

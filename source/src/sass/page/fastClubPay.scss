@@ -1,0 +1,398 @@
+@import "../common/mixin.scss";
+
+div#fast-club-pay-page{
+    height: 100%;
+    background-color: #eee;
+    .top-wrap{
+        height: 11.194rem;
+        padding: 1.667rem 0 0;
+        box-sizing: content-box;
+        background: linear-gradient(to bottom, #f2eddb, #e8ddc3);
+        &:before{
+            content: "";
+            display: block;
+            width: 8.389rem;
+            height: 1.667rem;
+            margin: 0 auto;
+            @include img("../assets/icons/fastPay/1.png",8.389rem 1.667rem);
+        }
+        .header{
+            height: 3.889rem;
+            width: 3.889rem;
+            border-radius: 50%;
+            margin: 0.972rem auto 0 auto;
+            border: 0.167rem solid #f3d698;
+            background-origin: padding-box;
+            @include imgBgFix(3.889rem 3.889rem);
+        }
+        .name{
+            margin-top: 0.667rem;
+            text-align: center;
+            font-size: 0.889rem;
+            color: #c29d6a;
+            >span{
+                font-size: 0.667rem;
+                border: 1px solid #c29d6a;
+                border-radius: 1rem;
+                padding: 0 0.4rem;
+                margin-left: 0.3rem;
+            }
+        }
+        &.act{
+            margin-top: -3rem;
+        }
+    }
+
+    .center-wrap{
+        position: relative;
+        height: px2rem(235px);
+        padding: 1.3056rem 0.667rem 0;
+        margin-top: 0.6389rem;
+        box-sizing: border-box;
+        background: #fff;
+        color: #4d4d4d;
+        margin-left: px2rem(30px);
+        margin-right: px2rem(30px);
+        border-radius: px2rem(15px);
+        margin-top: px2rem(-50px);
+        margin-bottom: px2rem(25px);
+        box-shadow: 0 px2rem(3px) px2rem(17px) px2rem(-5px) rgba(35,52,75,.1);
+        >div{
+            font-size: 0.889rem;
+            text-shadow: px2rem(1px) 0px 0px;
+            >span{
+                display: inline-block;
+                background-color: #ff9d1e;
+                width: px2rem(40px);
+                height: px2rem(40px);
+                line-height: 1.15rem;
+                text-align: center;
+                border-radius: 100%;
+                color: #fff;
+            }
+        }
+        &:before{
+            content: "￥";
+            position: absolute;
+            font-size: 1.333rem;
+            left: 3.6rem;
+            top: 3.5rem;
+        }
+        >input{
+            display: block;
+            position: relative;
+            font-size: 1rem;
+            margin-top: 0.455rem;
+            margin-left: 4.3rem;
+            width: 8.85rem;
+            color: #4d4d4d;
+            border: none;
+            letter-spacing: 0.04556rem;
+            padding: 0.35rem 0.2rem;
+            border-bottom: px2rem(1px) solid #eee;
+        }
+        input::-webkit-input-placeholder{
+            color: #ccc;
+        }
+    }
+
+    .item{
+        background: #fff;
+        color: #4d4d4d;
+        padding-left: px2rem(60px);
+        padding-right: px2rem(38px);
+        font-size: px2rem(32px);
+        >div{
+            height: px2rem(85px);
+            line-height: px2rem(85px);
+            border-bottom: px2rem(1px) solid #e0e0e0;
+            color: #4d4d4d;
+            position: relative;
+            >span{
+                font-size: px2rem(29px);
+                float: right;
+                margin-right: px2rem(5px);
+            }
+        }
+    }
+
+    div.item-content{
+        border-bottom: px2rem(1px) solid #e0e0e0;
+        border-top: px2rem(1px) solid #e0e0e0;
+        >div{
+            &:last-child{
+                >div{
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .center-discount{
+        >div{
+            height: px2rem(85px);
+            line-height: px2rem(85px);
+            color: #4d4d4d;
+            position: relative;
+            >span{
+                font-size: px2rem(29px);
+                float: right;
+                margin-right: px2rem(25px);
+            }
+        }
+    }
+
+    .center-discount1{
+        >div{
+            &:last-child{
+                &:after{
+                    content: "";
+                    position: absolute;
+                    width: 0.4rem;
+                    height: 0.4rem;
+                    right: 0.2rem;
+                    top: 1rem;
+                    margin-top: -0.025rem;
+                    border-left: 0.1rem solid #999999;
+                    border-bottom: 0.1rem solid #999999;
+                    transform: rotate(-135deg);
+                }
+                >div{
+                    float: right;
+                    margin-right: px2rem(25px);
+                }
+            }
+            >span{
+                background-color: #ffad43;
+                border-radius: px2rem(20px);
+                color: #fff;
+                height: px2rem(40px);
+                text-align: center;
+                line-height: px2rem(33px);
+                padding: px2rem(5px) px2rem(10px);
+                font-size: px2rem(27px);
+                margin-top: px2rem(22px);
+                margin-right: px2rem(30px);
+                &.active{
+                    background-color: #ccc;
+                }
+            }
+        }
+    }
+
+    .center-member{
+        >div{
+            &:after{
+                content: "";
+                position: absolute;
+                width: 0.4rem;
+                height: 0.4rem;
+                right: 0.2rem;
+                top: 1rem;
+                margin-top: -0.025rem;
+                border-left: 0.1rem solid #999999;
+                border-bottom: 0.1rem solid #999999;
+                transform: rotate(-135deg);
+            }
+            >span{
+                margin-right: px2rem(30px);
+                position: relative;
+                font-size: px2rem(29px);
+                &:nth-of-type(1){
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        width: px2rem(38px);
+                        height: px2rem(33px);
+                        top: 50%;
+                        left: px2rem(-50px);
+                        margin-top: px2rem(-15px);
+                        @include img("../assets/icons/fastPay/wx.png",px2rem(38px) px2rem(33px));
+                    }
+                }
+                &:nth-of-type(2){
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        width: px2rem(35px);
+                        height: px2rem(34px);
+                        top: 50%;
+                        left: px2rem(-48px);
+                        margin-top: px2rem(-16px);
+                        @include img("../assets/icons/fastPay/ali.png",px2rem(35px) px2rem(34px));
+                    }
+                }
+                &:nth-of-type(3){
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        width: px2rem(57px);
+                        height: px2rem(40px);
+                        top: 50%;
+                        left: px2rem(-67px);
+                        margin-top: px2rem(-19px);
+                        @include img("../assets/icons/fastPay/vip.png",px2rem(57px) px2rem(40px));
+                    }
+                }
+            }
+        }
+    }
+
+    .center-pay{
+        color: #4d4d4d;
+        padding-left: px2rem(60px);
+        padding-right: px2rem(38px);
+        height: px2rem(110px);
+        line-height: px2rem(110px);
+        font-size: px2rem(32px);
+        margin-bottom: 3.333rem;
+        >span{
+            font-size: px2rem(55px);
+            float: right;
+            margin-right: px2rem(5px);
+            color: #ff6666;
+            font-weight: 700;
+        }
+    }
+
+    .bottom-wrap{
+        position: fixed;
+        bottom: 0;
+        height: 3.333rem;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        z-index: 10;
+        border-top: px2rem(1px) solid #e0e0e0;
+        >a{
+            display: block;
+            height: 2.444rem;
+            line-height: 2.444rem;
+            margin: .444rem .667rem 0;
+            background-color: #f66;
+            color: #fff;
+            font-size: 1.056rem;
+            text-align: center;
+            letter-spacing: 2px;
+            border-radius: 5px;
+            &.processing{
+                opacity: 0.4;
+                /*background: #ccc url("../assets/icons/common/loading.gif") no-repeat 15% 48%;*/
+            }
+            &.selected{
+                opacity: 0.4;
+            }
+        }
+    }
+
+    .payment-method{
+        @include x();
+        @supports(display: -moz-box){
+            display: flex;
+            align-items: flex-end;
+        }
+        >div{
+            position: fixed;
+            bottom: 0;
+            background-color: #fff;
+            >div{
+                &:nth-of-type(1){
+                    border-top: px2rem(1px) solid #cccccc;
+                    border-bottom: px2rem(1px) solid #cccccc;
+                    >.item-title{
+                        font-size: 1rem;
+                        color: #212121;
+                        font-size: px2rem(34px);
+                        padding: px2rem(10px) px2rem(25px);
+                        border-bottom: px2rem(1px) solid #ccc;
+                    }
+                    >.item-method{
+                        margin-left: px2rem(25px);
+                        >div{
+                            color: #212121;
+                            padding: px2rem(25px) px2rem(20px) px2rem(25px) px2rem(100px);
+                            position: relative;
+                            &:nth-of-type(1){
+                                border-bottom: px2rem(1px) solid #eeeeee;
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    width: px2rem(52px);
+                                    height: px2rem(46px);
+                                    top: 50%;
+                                    left: 0.8rem;
+                                    margin-top: px2rem(-23px);
+                                    @include img("../assets/icons/fastPay/wx.png",px2rem(52px) px2rem(46px));
+                                }
+                            }
+                            &:nth-of-type(2){
+                                border-bottom: px2rem(1px) solid #eeeeee;
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    width: px2rem(45px);
+                                    height: px2rem(44px);
+                                    top: 50%;
+                                    left: 0.8rem;
+                                    margin-top: px2rem(-22px);
+                                    @include img("../assets/icons/fastPay/ali.png",px2rem(45px) px2rem(44px));
+                                }
+                            }
+                            &:nth-of-type(3){
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    width: px2rem(57px);
+                                    height: px2rem(40px);
+                                    top: 50%;
+                                    left: 0.6rem;
+                                    margin-top: px2rem(-19px);
+                                    @include img("../assets/icons/fastPay/vip.png",px2rem(57px) px2rem(40px));
+                                }
+                                >span{
+                                    font-size: px2rem(31px);
+                                    >span{
+                                        color: #ff6666;
+                                    }
+                                }
+                            }
+                            >div{
+                                width:1.028rem;
+                                height:1.028rem;
+                                @include img("../assets/icons/fastPay/8.png",1.028rem 1.028rem);
+                                top:50%;
+                                margin-top:-0.514rem;
+                                position: absolute;
+                                right: px2rem(45px);
+                                &.selected{
+                                    @include img("../assets/icons/fastPay/7.png",1.028rem 1.028rem);
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(2){
+                    height: 3.333rem;
+                    left: 0;
+                    right: 0;
+                    background-color: #e0e0e0;
+                    z-index: 10;
+                    border-top: px2rem(1px) solid #e0e0e0;
+                    >a{
+                        display: block;
+                        width: 18.666rem;
+                        height: 2.444rem;
+                        line-height: 2.444rem;
+                        margin: .444rem .667rem 0;
+                        background-color: #f66;
+                        color: #fff;
+                        font-size: 1.056rem;
+                        text-align: center;
+                        letter-spacing: 2px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

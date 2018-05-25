@@ -1,0 +1,327 @@
+@import "../common/mixin.scss";
+@-webkit-keyframes uil-default-anim {
+    0% {
+      opacity: 1
+    }
+    100% {
+      opacity: 0
+    }
+  }
+  
+  @keyframes uil-default-anim {
+    0% {
+      opacity: 1
+    }
+    100% {
+      opacity: 0
+    }
+  }
+div#not-fast-pay-list-page{
+    background-color: #eee;
+    .item-wrap{
+        height: 100%;
+        .load-over-tip{
+            font-size: 0.66667rem;
+            text-align: center;
+            color: #4d4d4d;
+            height: 2rem;
+            line-height: 3;
+        }
+        >.list-wrap{
+            height: 100%;
+            .list{
+                .item-list{
+                    margin-bottom: px2rem(20px);
+                    background-color: #fff;
+                    .time{
+                        border-bottom: 0.001rem solid #f1f1f1;
+                        padding:  0 0.6rem 0 1.6rem;
+                        >span{
+                            font-size: px2rem(26px);
+                            &:nth-of-type(1){
+                                color: #999999;
+                                position: relative;
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    width: px2rem(22px);
+                                    height: px2rem(22px);
+                                    top: 50%;
+                                    left: -.8rem;
+                                    margin-top: px2rem(-11px);
+                                    @include img("../assets/icons/fastPayCashier/icon_time.png",100% 100%);
+                                }
+                            }
+                            &:nth-of-type(2){
+                                color: #7fbdff;
+                                float: right;
+                            }
+                        }
+                    }
+                    .content{
+                        padding: .5rem 0;
+                        .item{
+                            font-size: px2rem(29px);
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+                            >div{
+                                flex: 1;
+                                color: #666666;
+                                display: inline-block;
+                                &:nth-of-type(1){
+                                    margin-left: 2rem;
+                                }
+                                >span{
+                                    color: #333333;
+                                }
+                            }
+                        }
+                    }
+                    .price{
+                        color: #666666;
+                        font-size: px2rem(27px);
+                        padding:  0 0.6rem 0 1rem;
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        span{
+                            flex: 1;
+                            &:nth-of-type(2){
+                                text-align: right;
+                            }
+                            i{
+                                color: #ff6666;
+                                font-size: px2rem(38px);
+                            }
+                        }
+                    }
+                    .btn{
+                        border-top: 0.001rem solid #e0e0e0;
+                        border-bottom: 0.001rem solid #e0e0e0;
+                        padding: .3rem .6rem;
+                        height: 2.5rem;
+                        position: relative;
+                        >div{
+                            width: px2rem(175px);
+                            display: inline-block;
+                            height: px2rem(65px);
+                            line-height: px2rem(65px);
+                            text-align: center;
+                            border-radius: px2rem(8px);
+                            float: right;
+                            font-size: 0.8rem;
+                            &:nth-of-type(2){
+                                border: 0.001rem solid #ff6666;
+                                color: #ff6666;
+                                margin-right: px2rem(20px);
+                            }
+                            &:nth-of-type(1){
+                                background-color: #ff6666;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .detail-modal{
+        .detail{
+            background-color: #eeeeee;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: px2rem(900px);
+            .title{
+                color: #212121;
+                font-size: px2rem(32px);
+                text-align: center;
+                background-color: #fafafa;
+                padding: .4rem 0;
+                border-bottom: 0.001rem solid #e0e0e0;
+                position: relative;
+                i{
+                    width: px2rem(48px);
+                    height: px2rem(48px);
+                    position: absolute;
+                    right: px2rem(20px);
+                    top: 50%;
+                    margin-top: px2rem(-24px);
+                    @include img ("../assets/icons/fastPayCashier/icon_del.png",100% 100%);
+                }
+            }
+            .list{
+                height: 19.63889rem;
+                overflow-y: auto;
+                .content{
+                    .item{
+                        background-color: #fff;
+                        width: px2rem(672px);
+                        margin: auto;
+                        border-radius: px2rem(8px);
+                        border-bottom: 0.001rem solid #dfdfdf;
+                        margin-top: px2rem(15px);
+                        padding: .2rem 0;
+                        .room{
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+                            >div{
+                                display: inline-block;
+                                color: #7997b7;
+                                font-size: 0.77778rem;
+                                letter-spacing: 0.05rem;
+                                flex: 1;
+                                margin-left: px2rem(25px);
+                                >span{
+                                    font-size: 0.67222rem;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                        .service-item{
+                            color: #666666;
+                            font-size: 0.77778rem;
+                            padding: 0 .6rem 0 1.5rem;
+                            >.name{
+                                position: relative;
+                                .price{
+                                    float: right;
+                                }
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    width: px2rem(8px);
+                                    height: px2rem(8px);
+                                    top: 50%;
+                                    left: -0.5rem;
+                                    margin-top: px2rem(-4px);
+                                    @include img("../assets/icons/fastPayCashier/circle.png",100% 100%);
+                                }
+                            }
+                            >.tech{
+                                .bell{
+                                    color: #7997b7;
+                                }
+                            }
+                        }
+                    }
+                }
+                .sale{
+                    text-align: right;
+                    padding: .2rem .5rem .2rem 0;
+                    color: #666666;
+                    font-size: 0.75778rem;
+                    border-bottom: 0.01rem dashed #e0e0e0;
+                    width: 18.66667rem;
+                    margin: auto;
+                    >.money{
+                        line-height: 2rem;
+                        >span{
+                            font-size: px2rem(34px);
+                            font-weight: 700;
+                        }
+                    }
+                    div{
+                        letter-spacing: 0.04rem;
+                        span{
+                            display: inline-block;
+                            width: px2rem(135px);
+                            color: #212121;
+                        }
+                    }
+                }
+                >.money{
+                    color: #212121;
+                    font-size: 0.75778rem;
+                    text-align: right;
+                    padding-right: 1.1rem;
+                    line-height: 2.5rem;
+                    >span{
+                        color: #ff6666;
+                        font-size: px2rem(42px);
+                        font-weight: 700;
+                    }
+                }
+            }
+            .btn{
+                background-color: #ff6666;
+                color: #fff;
+                width: 100%;
+                position: fixed;
+                text-align: center;
+                bottom: 0;
+                padding: .4rem 0;
+            }
+        }
+    }
+
+    div.loading-wrap{
+        position: relative;
+        width: 2.125rem;
+        height: 2.125rem;
+        left: 50%;
+        margin-left: -1.0625rem;
+        transform: scale(0.12,0.12);
+        >div{
+          position: absolute;
+          border-radius: 10px;
+          top: 80px;
+          left: 93px;
+          width: 14px;
+          height: 40px;
+          background: #fb5549;
+          animation: uil-default-anim 1s linear infinite;
+          &:nth-of-type(1){
+            transform: rotate(0deg) translate(0,-60px);
+            animation-delay: -0.5s;
+          }
+          &:nth-of-type(2){
+            transform: rotate(30deg) translate(0,-60px);
+            animation-delay: -0.41667s;
+          }
+          &:nth-of-type(3){
+            transform: rotate(60deg) translate(0,-60px);
+            animation-delay: -0.33333s;
+          }
+          &:nth-of-type(4){
+            transform: rotate(90deg) translate(0,-60px);
+            animation-delay: -0.25s;
+          }
+          &:nth-of-type(5){
+            transform: rotate(120deg) translate(0,-60px);
+            animation-delay: -0.16667s;
+          }
+          &:nth-of-type(6){
+            transform: rotate(150deg) translate(0,-60px);
+            animation-delay: -0.08333s;
+          }
+          &:nth-of-type(7){
+            transform: rotate(180deg) translate(0,-60px);
+            animation-delay: 0s;
+          }
+          &:nth-of-type(8){
+            transform: rotate(210deg) translate(0,-60px);
+            animation-delay: 0.08333s;
+          }
+          &:nth-of-type(9){
+            transform: rotate(240deg) translate(0,-60px);
+            animation-delay: 0.16667s;
+          }
+          &:nth-of-type(10){
+            transform: rotate(270deg) translate(0,-60px);
+            animation-delay: 0.25s;
+          }
+          &:nth-of-type(11){
+            transform: rotate(300deg) translate(0,-60px);
+            animation-delay: 0.33333s;
+          }
+          &:nth-of-type(12){
+            transform: rotate(330deg) translate(0,-60px);
+            animation-delay: 0.41667s;
+          }
+        }
+      }
+}

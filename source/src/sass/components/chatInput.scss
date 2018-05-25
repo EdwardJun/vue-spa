@@ -1,0 +1,388 @@
+@import "../common/mixin.scss";
+
+div.chat-input-wrap{
+    display: block;
+    position: absolute;
+    width: 20rem;
+    left: 50%;
+    margin-left: -10rem;
+    bottom: 0;
+    background-color: #f0f0f0;
+    border-top:1px solid #d9d9d9;
+    padding-top: px2rem(15px);
+    @include transition(bottom 0.3s);
+
+  div.input{
+    position: relative;
+    margin-left:0.667rem;
+    margin-right:0.667rem;
+    >div{
+      background-color: #fff;
+      width:14.611rem;
+      line-height: 1.2rem;
+      min-height:1.806rem;
+      border:1px solid #97979f;
+      border-radius: 0.222rem;
+      padding:0.303rem 0.333rem;
+      font-size:0.778rem;
+      color:#4d4d4d;
+      word-break: break-all;
+      -webkit-user-modify: read-write-plaintext-only;
+      img{
+        width:1.2rem;
+        height:1.2rem;
+        vertical-align:middle;
+      }
+      &:focus{
+        outline: none;
+      }
+    }
+    >span{
+      position: absolute;
+      top:0.25rem;
+      left:0.5rem;
+      font-size:0.778rem;
+      color:#838389;
+      width: 14rem;
+    }
+    >a{
+      position: absolute;
+      bottom:0;
+      right:0;
+      width:3.556rem;
+      height:1.778rem;
+      line-height: 1.778rem;
+      padding-left:0.9rem;
+      text-align: center;
+      background-color: #fb5549;
+      color:#fff;
+      font-size:0.778rem;
+      border-radius: 0.222rem;
+      box-sizing: border-box;
+      &::after{
+        content : "";
+        position: absolute;
+        display: block;
+        width:1.056rem;
+        height:0.972rem;
+        top:45%;
+        margin-top:-0.486rem;
+        left:0.35rem;
+        @include img("../assets/icons/chat/send.png",1.056rem 0.972rem);
+      }
+      &.disabled{
+        background-color: #ccc;
+      }
+    }
+  }
+
+  div.menu{
+    padding:0.5rem 0 0.2rem;
+    margin-left:-0.2rem;
+    height:2.144rem;
+    >div{
+      float: left;
+      width:3rem;
+      height:1.444rem;
+      @include imgBgFix(1.444rem 1.444rem);
+      background-position: 0.778rem 0;
+      &.pic{
+        position: relative;
+        background-image: url("../assets/icons/chat/pic.png");
+        overflow: hidden;
+        form,input{
+          display: block;
+          position: absolute;
+          width:3rem;
+          height:1.444rem;
+          left:0;
+          top:0;
+          opacity: 0;
+        }
+      }
+      &.expression{
+        background-image: url("../assets/icons/chat/expression.png");
+        &.active{
+          background-image: url("../assets/icons/chat/expression_active.png");
+        }
+      }
+      &.reward{
+        background-image: url("../assets/icons/chat/reward.png");
+      }
+      &.coupon{
+        position: relative;
+        background-image: url("../assets/icons/chat/coupon.png");
+        &.active{
+          background-image: url("../assets/icons/chat/coupon_active.png");
+        }
+        >ul{
+          position: absolute;
+          list-style-type: none;
+          margin:0;
+          padding:0;
+          bottom:2rem;
+          left:-2rem;
+          opacity: 0;
+          @include scale(1,0);
+          @include transition(all 0.4s);
+          @include tOrigin(50% 100%);
+          max-height: 16.8rem;
+          overflow: auto;
+          width: 7rem;
+          >li{
+            background-color: #fff;
+            height:1.8rem;
+            width:6.611rem;
+            margin:0;
+            line-height: 1.8rem;
+            border-left:1px solid #f66;
+            border-right:1px solid #f66;
+            border-bottom:1px solid #f66;
+            text-align: center;
+            color:#666;
+            font-size:0.667rem;
+            letter-spacing: 1px;
+            @include sl();
+            &:first-child{
+              border-top:1px solid #fb5549;
+            }
+            &:last-child{
+              position: relative;
+              overflow: visible;
+              &:before,&:after{
+                content : "";
+                display: block;
+                position: absolute;
+                height:0;
+                left:2.8rem;
+                border-left:10px solid transparent;
+                border-right:10px solid transparent;
+                border-top:10px solid #fff;
+              }
+              &:before{
+                border-top-color:#fb5549;
+                bottom:-10px;
+              }
+              &:after{
+                bottom:-8px;
+              }
+            }
+          }
+        }
+        &.active{
+          >ul{
+            opacity: 1;
+            @include scale(1,1);
+          }
+        }
+      }
+      &.gift{
+        background-image: url("../assets/icons/chat/gift.png");
+        &.active{
+          background-image: url("../assets/icons/chat/gift_active.png");
+        }
+      }
+      &.service{
+        background-image: url("../assets/icons/common/service3.png");
+      }
+    }
+  }
+
+  div.swiper-container{
+    height:5.146rem;
+    margin-top:0.5rem;
+    border-top:1px solid #d9d9d9;
+  }
+
+  div.swiper-slide{
+    padding:0.7rem 0 0;
+    >div{
+      float: left;
+      width:2.857rem;
+      height:1rem;
+      padding:0.2rem 0.7285rem;
+      margin-bottom:1rem;
+      position: relative;
+      >div{
+        width:1.4rem;
+        height:1.4rem;
+        @include imgBgFix(1.4rem 1.4rem);
+      }
+    }
+  }
+
+  div.exp-wrap-0>div{
+    &:nth-of-type(1)>div{
+      background-image: url("../assets/icons/chat/expression/1.png");
+    }
+    &:nth-of-type(2)>div{
+      background-image: url("../assets/icons/chat/expression/2.png");
+    }
+    &:nth-of-type(3)>div{
+      background-image: url("../assets/icons/chat/expression/3.png");
+    }
+    &:nth-of-type(4)>div{
+      background-image: url("../assets/icons/chat/expression/4.png");
+    }
+    &:nth-of-type(5)>div{
+      background-image: url("../assets/icons/chat/expression/5.png");
+    }
+    &:nth-of-type(6)>div{
+      background-image: url("../assets/icons/chat/expression/6.png");
+    }
+    &:nth-of-type(7)>div{
+      background-image: url("../assets/icons/chat/expression/7.png");
+    }
+    &:nth-of-type(8)>div{
+      background-image: url("../assets/icons/chat/expression/8.png");
+    }
+    &:nth-of-type(9)>div{
+      background-image: url("../assets/icons/chat/expression/9.png");
+    }
+    &:nth-of-type(10)>div{
+      background-image: url("../assets/icons/chat/expression/10.png");
+    }
+    &:nth-of-type(11)>div{
+      background-image: url("../assets/icons/chat/expression/11.png");
+    }
+    &:nth-of-type(12)>div{
+      background-image: url("../assets/icons/chat/expression/12.png");
+    }
+    &:nth-of-type(13)>div{
+      background-image: url("../assets/icons/chat/expression/13.png");
+    }
+    &:nth-of-type(14)>div{
+      background-image: url("../assets/icons/chat/expression/14.png");
+    }
+  }
+
+  div.exp-wrap-1>div{
+    &:nth-of-type(1)>div{
+      background-image: url("../assets/icons/chat/expression/15.png");
+    }
+    &:nth-of-type(2)>div{
+      background-image: url("../assets/icons/chat/expression/16.png");
+    }
+    &:nth-of-type(3)>div{
+      background-image: url("../assets/icons/chat/expression/17.png");
+    }
+    &:nth-of-type(4)>div{
+      background-image: url("../assets/icons/chat/expression/18.png");
+    }
+    &:nth-of-type(5)>div{
+      background-image: url("../assets/icons/chat/expression/19.png");
+    }
+    &:nth-of-type(6)>div{
+      background-image: url("../assets/icons/chat/expression/20.png");
+    }
+    &:nth-of-type(7)>div{
+      background-image: url("../assets/icons/chat/expression/21.png");
+    }
+    &:nth-of-type(8)>div{
+      background-image: url("../assets/icons/chat/expression/22.png");
+    }
+    &:nth-of-type(9)>div{
+      background-image: url("../assets/icons/chat/expression/23.png");
+    }
+    &:nth-of-type(10)>div{
+      background-image: url("../assets/icons/chat/expression/24.png");
+    }
+    &:nth-of-type(11)>div{
+      background-image: url("../assets/icons/chat/expression/25.png");
+    }
+    &:nth-of-type(12)>div{
+      background-image: url("../assets/icons/chat/expression/26.png");
+    }
+    &:nth-of-type(13)>div{
+      background-image: url("../assets/icons/chat/expression/27.png");
+    }
+    &:nth-of-type(14)>div{
+      background-image: url("../assets/icons/chat/expression/28.png");
+    }
+  }
+
+  div.swiper-pagination{
+    bottom:-4px;
+  }
+  span.swiper-pagination-bullet-active{
+    background: rgba(0,0,0,0.4);
+  }
+
+  div.gift-list{
+    position: relative;
+    height:8.389rem;
+    background-color: #fff;
+    border-top:1px solid #bdbdbd;
+    overflow-y: hidden;
+    div.list{
+      margin:1.139rem 0 1rem;
+      height:4.8rem;
+      overflow-x: auto;
+      width:20rem;
+      >div{
+        height: 100%;
+      }
+    }
+    div.info{
+      position: relative;
+      height:1.4rem;
+      width:20rem;
+      left:0;
+      bottom:0;
+      line-height: 1.4rem;
+      padding-left:0.694rem;
+      color:#8b6d3e;
+      font-size:0.889rem;
+      margin-left: 0;
+      background-color: #fef7e4;
+      >b{
+        margin:0 0.2rem;
+      }
+      >span{
+        position: absolute;
+        left:0.3rem;
+        top:0.2rem;
+      }
+    }
+
+    div.gift-item{
+      position: relative;
+      width:5rem;
+      height:100%;
+      float: left;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 6rem;
+      &:before{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0.556rem;
+        height: 0.556rem;
+        right: 0.667rem;
+        top: 0;
+        @include img("../assets/icons/chat/check.png",0.556rem 0.556rem);
+      }
+      >img{
+        max-width: 3.8rem;
+      }
+      >div{
+        position: absolute;
+        height:1rem;
+        line-height:1rem;
+        font-size:0.778rem;
+        width: 5rem;
+        bottom:0;
+        color:#616161;
+        >span{
+          color:#f66;
+        }
+      }
+      &.active{
+        &:before{
+          background-image: url("../assets/icons/chat/check_active.png");
+        }
+      }
+    }
+  }
+}

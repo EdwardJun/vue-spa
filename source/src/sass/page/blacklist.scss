@@ -1,0 +1,136 @@
+@import "../common/mixin.scss";
+
+.page-blacklist {
+  width:100%;
+  height:100%;
+  background-color: #fff;
+  .list {
+    width: 20rem;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding-bottom: 3rem;
+    .club-name {
+      position: relative;
+      width: 100%;
+      padding: 0 .6777rem;
+      margin-top: -1px;
+      border-top: 1px solid #d9d9d9;
+      border-bottom: 1px solid #d9d9d9;
+      background-color: #f5f5f5;
+      color: #616161;
+      font-size: .778rem;
+      @include sl();
+    }
+    .list-item {
+      padding: 0 .667rem;
+      @include sx();
+      > div {
+        &:nth-of-type(1) {
+          width: 2.444rem;
+          height: 2.444rem;
+          @include imgBgFix(2.444rem 2.444rem);
+          margin-right: .667rem;
+          border-radius: 50%;
+        }
+        &:nth-of-type(2) {
+          padding: .667rem 0;
+          border-bottom: 1px solid #eee;
+          @include boxFlex(1);
+          position: relative;
+          > div {
+            &:nth-of-type(1) {
+              @include sx();
+              > div {
+                &:nth-of-type(1) {
+                  @include boxFlex(1);
+                  @include sl();
+                  @include sx();
+                  > div {
+                    &:nth-of-type(1) {
+                      max-width: 10rem;
+                      @include sl();
+                      font-size: .889rem;
+                      color: #4d4d4d;
+                      margin-right: .3rem;
+                    }
+                    &:nth-of-type(2) {
+                      min-width: 2.433rem;
+                      max-width: 3.5rem;
+                      height: .722rem;
+                      text-align: center;
+                      font-size: .556rem;
+                      color: #999;
+                      border: 1px solid #999;
+                      border-radius: .361rem;
+                      line-height: 0.755rem;
+                      box-sizing: content-box;
+                      &.none {
+                        display: none;
+                      }
+                      &.manager {
+                        border-color: #ff6666;
+                        color: #ff6666;
+                      }
+                    }
+                  }
+                }
+                &:nth-of-type(2) {
+                  font-size: .611rem;
+                  color: #999;
+                }
+              }
+            }
+            &:nth-of-type(2) {
+              @include sx();
+              > div {
+                &:nth-of-type(1) {
+                  @include boxFlex(1);
+                  @include sl();
+                  font-size: .722rem;
+                  color: #999;
+                  margin-right: .5rem;
+                }
+                &:nth-of-type(2) {
+                  width: 1rem;
+                  height: 1rem;
+                  line-height: 1rem;
+                  text-align: center;
+                  background-color: #ff6666;
+                  color: #fff;
+                  font-size: .7rem;
+                  border-radius: 50%;
+                }
+              }
+            }
+            &:nth-of-type(3) {
+              position: absolute;
+              right: 0.5rem;
+              top: 35%;
+              width: 1.056rem;
+              height: 1.056rem;
+              background-color: #f66;
+              color: #fff;
+              opacity: 0;
+              font-size: .989rem;
+              text-align: center;
+              line-height: 1rem;
+              margin-left: .667rem;
+              border-radius: 50%;
+              box-sizing: content-box;
+              transform: scale(0, 0);
+              transition: transform .3s ease, opacity .3s;
+              &.active {
+                opacity: 1;
+                transform: scale(1, 1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,554 @@
+@import "../common/mixin.scss";
+
+// 背景光的旋转
+@keyframes light-rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+// 礼物盒子
+@keyframes box-swing {
+  0%{
+    opacity: 1;
+    transform: scale(0.35,0.35);
+  }
+  30%{
+    transform: scale(1,1);
+  }
+  40%{
+    transform: rotate(-20deg);
+  }
+  55%{
+    transform: rotate(20deg);
+  }
+  75%{
+    transform: rotate(-18deg);
+  }
+  87%{
+    transform: rotate(18deg);
+  }
+  95%{
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+div#invite-activity-share-page{
+  background-color: #14105f;
+  padding-bottom: px2rem(20px);
+  .page-title{
+    background: #ededed;
+    >div{
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      padding-right: px2rem(22px);
+      line-height: 2.611rem;
+      font-size: px2rem(28px);
+    }
+  }
+  .top-wrap{
+    @include img("../assets/icons/inviteActivityShare/1.jpg", 20rem 20rem);
+  }
+
+  .club-info{
+    position: relative;
+    padding-left: px2rem(105px);
+    color: #fff;
+    height: px2rem(80px);
+    line-height: px2rem(80px);
+    font-size: px2rem(32px);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.05));
+    >div{
+      position: absolute;
+      width: px2rem(60px);
+      height: px2rem(60px);
+      left: px2rem(24px);
+      top: 50%;
+      margin-top: px2rem(-30px);
+      border-radius: 50%;
+      border:2px solid #918fab;
+      @include imgBgFix(px2rem(60px) px2rem(60px));
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      width: 0.4rem;
+      height: 0.4rem;
+      right: 0.5rem;
+      top: 50%;
+      margin-top:-0.225rem;
+      border-left: 0.1rem solid #fff;
+      border-bottom: 0.1rem solid #fff;
+      @include rotate(-135deg);
+    }
+  }
+
+  .gift-info{
+    width: px2rem(720px);
+    height: px2rem(375px); 
+    margin-top: px2rem(240px);
+    margin-bottom: px2rem(36px);
+    text-align: center;
+    @include img("../assets/icons/inviteActivityShare/6.png", 100% 100%);
+  }
+
+  .gift-title{
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-size: 1rem;
+    height: px2rem(60px);
+    padding: 0 px2rem(26px);
+    z-index: 0;
+    margin-top: px2rem(-20px); 
+    margin-bottom: px2rem(32px);
+    >div{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; 
+      z-index: -1;
+      background: #869dff; 
+      border-radius: px2rem(8px);
+      transform: skewX(-10deg);
+    }
+    &:before, &:after{
+      content: "";
+      position: absolute;
+    }
+    &:before{
+      width: px2rem(60px);
+      height: px2rem(73px);
+      left: px2rem(-50px);
+      top: px2rem(-10px);
+      @include img("../assets/icons/inviteActivityShare/7.png", 100% 100%);
+    }
+    &:after{
+      width: px2rem(66px);
+      height: px2rem(72px);
+      right: px2rem(-40px);
+      top: px2rem(-10px);
+      @include img("../assets/icons/inviteActivityShare/8.png", 100% 100%);
+    }
+  }
+
+  .gift-content{
+    display: flex;
+    height: px2rem(204px);
+    width: px2rem(632px);
+    margin: 0 auto;
+    justify-content: flex-start;
+    align-items: center;
+    >div{
+      &:nth-of-type(1) {
+        width: px2rem(158px);
+        height: px2rem(158px);
+        border-radius: px2rem(8px);
+        @include imgBgFix(100% 100%);
+        border: 1px solid #ccc;
+        margin-right: px2rem(35px);
+        margin-left: px2rem(24px);
+      }
+      &:nth-of-type(2) {
+        height: px2rem(170px);
+        width: px2rem(400px);
+        border: 1px dashed #bbb;
+        border-radius: px2rem(8px);
+        padding-left: px2rem(8px);
+        padding-top: px2rem(8px);
+        text-align: left;
+        >div{
+          &:nth-of-type(1) {
+            color: #333;
+            font-size: px2rem(36px);
+            margin-bottom: px2rem(5px);
+          }
+          &:nth-of-type(2) {
+            color: #333;
+            font-size: px2rem(28px);
+            line-height: 1.55;
+          }
+          &:nth-of-type(3) {
+            font-size: px2rem(22px);
+            color: #757575;
+            >div{
+              position: relative;
+              display: inline-block;
+              background: #ffb7b7;
+              height: px2rem(22px);
+              width: px2rem(182px);
+              border-radius: 1rem;
+              overflow: hidden;
+              margin-left: px2rem(4px);
+              >div{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+              }
+              >div:nth-of-type(1){
+                width: 50%;
+                background: #f66;
+              }
+              >div:nth-of-type(2){
+                width: 100%;
+                color: #fff;
+                font-size: px2rem(20px);
+                line-height: px2rem(22px);
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .gift-time{
+    color: #ef1c75;
+    font-size: px2rem(28px);
+    line-height: px2rem(75px);
+    text-align: center;
+    width: px2rem(632px);
+    margin: 0 auto;
+  }
+
+  .get-btn{
+    height: px2rem(80px);
+    width: px2rem(480px);
+    line-height: px2rem(80px);
+    color: #fff;
+    font-size: px2rem(36px);
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: px2rem(42px);
+    letter-spacing: 1px;
+    background: #ffa31e;
+    background: linear-gradient(to bottom, #ffa31e, #d25238);
+    &.expired{
+      background: #999;
+      background: linear-gradient(to bottom, #999, #aaa);
+      color: #f0f0f0;
+    }
+  }
+
+  .desc-wrap{
+    margin: px2rem(35px) px2rem(24px) 0;
+    background: #fff;
+    color: #0d74c4;
+    border-radius: px2rem(12px);
+    padding: px2rem(32px) px2rem(27px);
+    h3{
+      text-align: center;
+      font-weight: bold;
+      margin: 0 0 px2rem(22px);
+      font-size: px2rem(36px);
+    }
+    >div{
+      position: relative;
+      font-size: px2rem(28px);
+      line-height: 1.5;
+      margin-bottom: px2rem(20px);
+      padding-left: px2rem(51px);
+      >div{
+        position: absolute;
+        top: px2rem(6px);
+        left: 0;
+        color: #fff;
+        background: #f66;
+        width: px2rem(32px);
+        height: px2rem(32px);
+        border-radius: 50%;
+        line-height: px2rem(32px);
+        text-align: center;
+        &:after{
+          position: absolute;
+          content: "";
+          display: block;
+          width: 0;
+          height: 0;
+          border-top: px2rem(6px) solid transparent;
+          border-left: px2rem(14px) solid #f66;
+          border-bottom: px2rem(6px) solid transparent;
+          right: px2rem(-8px);
+          bottom: px2rem(4px);
+        }
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .qrcode-pop-wrap{
+    >div:nth-of-type(1){
+      width: px2rem(680px);
+      height: px2rem(647px);
+      top: 35%;
+      @include img("../assets/icons/inviteActivityShare/3.png", px2rem(680px) px2rem(647px));
+      >div{
+        color: #fff;
+        font-size: px2rem(32px);
+        text-align: center;
+        &:nth-of-type(1) {
+          width: px2rem(326px);
+          height: px2rem(326px);
+          margin: px2rem(180px) auto 0;
+          padding: px2rem(20px);
+          background: #fff;
+          >img{
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &:nth-of-type(2){
+          margin-top: px2rem(140px);
+        }
+        &:nth-of-type(3){
+          box-sizing: content-box;
+          color: #fff;
+          width: px2rem(60px);
+          height: px2rem(60px);
+          border-radius: 50%;
+          text-align: center;
+          line-height: px2rem(60px);
+          border: 1px solid #fff;
+          font-size: px2rem(50px);
+          margin: px2rem(15px) auto 0;
+        }
+      }
+    }
+  }
+
+  .bind-tel-pop-wrap,.no-gift-pop-wrap, .no-newer-pop-wrap, .get-failed-pop-wrap{
+    >div:nth-of-type(1){
+      height: px2rem(314px);
+      width: px2rem(624px);
+      background: #fff;
+      border-radius: px2rem(12px);
+      top: 45%;
+      &:before{
+        content: "";
+        display: block;
+        width: px2rem(227px);
+        height: px2rem(139px);
+        @include img("../assets/icons/inviteActivityShare/2.png", px2rem(227px) px2rem(139px));
+        margin: px2rem(-100px) auto 0;
+      }
+      >div{
+        &:nth-of-type(1){
+          text-align: center;
+          color: #616161;
+          font-size: px2rem(28px);
+          padding: 0 px2rem(16px);
+        }
+        &:nth-of-type(2){
+          height: px2rem(80px);
+          width: px2rem(480px);
+          border-radius: px2rem(40px);
+          text-align: center;
+          line-height: px2rem(80px);
+          margin: px2rem(40px) auto 0;
+          background: linear-gradient(to bottom, #ff990e, #ffa531);
+          color: #fff;
+          font-size: px2rem(40px);
+        }
+      }
+    }
+  }
+
+  .bind-tel-pop-wrap,.no-gift-pop-wrap, .no-newer-pop-wrap, .get-failed-pop-wrap{
+    >div:nth-of-type(2){
+      position: absolute;
+      color: #fff;
+      width: px2rem(60px);
+      height: px2rem(60px);
+      border-radius: 50%;
+      text-align: center;
+      line-height: px2rem(60px);
+      border: 1px solid #fff;
+      font-size: px2rem(50px);
+      left: 50%;
+      top: 82%;
+      transform: translateX(-50%);
+      box-sizing: content-box;
+    }
+  }
+
+  .bind-tel-pop-wrap{
+    >div:nth-of-type(1){
+      &:before{
+        content: '提示';
+        margin: 0 auto;
+        background: none;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        text-align: center;
+        color: #000;
+      }
+      >div{
+        &:nth-of-type(1){
+          padding-left: 0.8rem;
+          padding-right: 0.8rem;
+        }
+        &:nth-of-type(2){
+          margin-top: 0.35rem;
+        }
+      }
+    }
+  }
+
+  .no-gift-pop-wrap{
+    >div:nth-of-type(1){
+      >div:nth-of-type(1){
+        &:before{
+          content: "";
+          display: block;
+          width: px2rem(276px);
+          height: px2rem(54px);
+          @include img("../assets/icons/inviteActivityShare/4.png", px2rem(276px) px2rem(54px));
+          margin: px2rem(8px) auto px2rem(12px);
+        }
+      }
+    }
+  }
+
+  .no-newer-pop-wrap, .get-failed-pop-wrap{
+    >div:nth-of-type(1){
+      height: px2rem(350px);
+      >div:nth-of-type(1){
+        &:before{
+          content: "";
+          display: block;
+          width: px2rem(258px);
+          height: px2rem(56px);
+          @include img("../assets/icons/inviteActivityShare/5.png", px2rem(258px) px2rem(56px));
+          margin: px2rem(8px) auto px2rem(12px);
+        }
+      }
+      >div:nth-of-type(2){
+        margin-top: px2rem(10px);
+      }
+    }
+  }
+
+  .gift-get-success-pop-wrap{
+    >div:nth-of-type(2){
+        position: absolute;
+        width: px2rem(480px);
+        height: px2rem(80px);
+        border-radius: px2rem(50px);
+        text-align: center;
+        line-height: px2rem(80px);
+        font-size: px2rem(40px);
+        left: 50%;
+        top: 78%;
+        transform: translateX(-50%);
+        background: #ff9d1a;
+        color: #fff;
+    }
+  }
+
+  .gift-get-success-pop-wrap{
+    display: none;
+    transform: scale(1,1);
+    >div:nth-of-type(1){
+      top: 45%;
+      width: px2rem(720px);
+      height: px2rem(670px);
+      >div{
+        position: absolute;
+      }
+      div.light{
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        @include img("../assets/icons/inviteActivity/16.png", px2rem(720px) px2rem(670px));
+        animation: light-rotate 3s linear infinite;
+        animation-play-state:paused;
+      }
+      div.box{
+        top: 50%;
+        left: 50%;
+        width: px2rem(348px);
+        height: px2rem(381px);
+        margin-top: px2rem(-190px);
+        margin-left: px2rem(-174px);
+        @include img("../assets/icons/inviteActivity/18.png", px2rem(348px) px2rem(381px));
+        transform-origin: 50% 50%;
+        animation: box-swing 1.8s linear;
+        animation-fill-mode: forwards;
+        animation-play-state:paused;
+      }
+      div.star-box{
+        top: 50%;
+        left: 0;
+        width: px2rem(720px);
+        height: px2rem(643px);
+        margin-top: px2rem(-321.5px);
+        @include img("../assets/icons/inviteActivity/17.png", px2rem(720px) px2rem(643px));
+        opacity: 0;
+        transition: opacity 0.2s 1.7s;
+      }
+      div.tip{
+        width: px2rem(589px);
+        height: px2rem(343px);
+        left: 50%;
+        bottom: 0;
+        margin-left: px2rem(-294.5px);
+        text-align: center;
+        @include img("../assets/icons/inviteActivity/19.png", px2rem(589px) px2rem(343px));
+        opacity: 0;
+        transform: scale(0.2,0.2);
+        transition: opacity 0.2s 1.8s, transform 0.6s 1.8s ease-out;
+        transform-origin: 50% 0;
+        >div{
+          &:nth-of-type(1){
+            padding-left: px2rem(50px);
+            margin-top: px2rem(10px);
+            font-size: px2rem(32px);
+            color: #ff5203;
+            font-weight: bold;
+            margin-bottom: px2rem(5px);
+          }
+          &:nth-of-type(2){
+            margin: 0 px2rem(76px);
+            padding-left: px2rem(50px);
+            color: #6b6b6b;
+            line-height: 1.5;
+            font-size: px2rem(26px);
+            @include sl();
+          }
+        }
+      }
+    }
+    &.active{
+      >div:nth-of-type(1){
+        div.box, div.light{
+          animation-play-state:running;
+        }
+        div.star-box{
+          opacity: 1;
+        }
+        div.tip{
+          opacity: 1;
+          transform: scale(1,1);
+        }
+      }
+    }
+  }
+
+}

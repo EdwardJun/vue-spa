@@ -1,0 +1,29 @@
+@import "../common/mixin.scss";
+
+div#one-yuan-explain-page{
+  background-color: #efeff4;
+  div.item{
+    margin-bottom: .5rem;
+    >div{
+      padding: 0 .667rem;
+      background-color: #fafafa;
+      font-size: .889rem;
+      color: #5f4c25;
+      border-bottom: 1px solid #E0E0E0;
+      line-height: 2;
+    }
+    >ul{
+      padding: .5rem .667rem;
+      background-color: #fff;
+      font-size: .722rem;
+      color: #666;
+      line-height: 1.65;
+      >li{
+        margin-bottom: 0.2rem;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

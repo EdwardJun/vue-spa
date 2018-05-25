@@ -1,0 +1,330 @@
+@import "../common/mixin.scss";
+
+div#discount-mall-page{
+  background: #eee;
+  //padding-bottom: 3.5rem;
+  .search-wrap{
+    display: -webkit-flex;
+    display: flex;
+    padding: 0.3056rem 0 0.3056rem 0.5556rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    >a{
+      display: block;
+      position: absolute;
+      width: 0.9167rem;
+      height: 0.9167rem;
+      top:50%;
+      right:3.8rem;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      @include img("../assets/icons/discountMall/1.png",0.9167rem 0.9167rem);
+      &:before{
+        content: "";
+        position: absolute;
+        top: -0.45rem;
+        left: -0.45rem;
+        bottom: -0.45rem;
+        right: -0.45rem;
+      }
+    }
+    >input{
+      display: block;
+      height: 1.722rem;
+      width: 16.222rem;
+      padding-right: 1.778rem;
+      padding-left: 0.5rem;
+      background: #fff;
+      font-size: 0.778rem;
+      border-radius: 4px;
+      border: none;
+      color: #4c4c4c;
+    }
+    >div{
+      height: 1.778rem;
+      width: 2.778rem;
+      border-left: 1px solid #e0e0e0;
+      margin-left: 0.3889rem;
+      font-size: 0.667rem;
+      color: #616161;
+      text-align: center;
+      line-height: 1.388;
+      &:before{
+        content: "";
+        display: block;
+        width: 0.889rem;
+        height: 0.889rem;
+        margin: 0 auto;
+        @include img("../assets/icons/discountMall/2.png",0.889rem 0.889rem);
+      }
+    }
+  }
+
+  .tab{
+    color:#212121;
+    display: flex;
+    justify-content: center;
+    padding: px2rem(12px) 0;
+    background: #fff;
+    margin-bottom: px2rem(13px);
+    position: relative;
+    &.hide{
+      display: none;
+    }
+    &:after{
+      position: absolute;
+      bottom: 0;
+      width: 33%;
+      height: 2px;
+      background: #f66;
+      left: 0;
+      transition: transform 0.3s ease-out;
+    }
+    &.act_1{
+      &:after{
+        transform: translateX(0)
+      }
+      >li:nth-of-type(1){
+        color: #f66
+      }
+    }
+    &.act_2{
+      &:after{
+        transform: translateX(100%)
+      }
+      >li:nth-of-type(2){
+        color: #f66
+      }
+    }
+    &.act_3{
+      &:after{
+        transform: translateX(200%)
+      }
+      >li:nth-of-type(3){
+        color: #f66
+      }
+    }
+    >li{
+      height: px2rem(62px);
+      line-height: px2rem(62px);
+      font-size: px2rem(28px);
+      flex: 1;
+      text-align: center;
+      border-right: 1px solid #e0e0e0;
+      &:last-child{
+        border-right-width: 0;
+      }
+    }
+  }
+
+  .result-list{
+    padding: 0.2778rem 0 0 0.6111rem;
+    background: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    >div.tip{
+      font-size: 0.778rem;
+      color: #757575;
+    }
+    >div.more-tip{
+      margin-left: -0.611rem;
+      font-size: 0.944rem;
+      line-height: 2.2rem;
+      background: #eee;
+      text-align: center;
+      color: #616161;
+    }
+    >div.zone-title{
+      position: relative;
+      height: px2rem(45px);
+      width: px2rem(470px);
+      line-height: px2rem(45px);
+      margin: px2rem(15px) auto;
+      text-align: center;
+      color: #f73e14;
+      font-size: px2rem(32px);
+      >div{
+        display: inline-block;
+        width: px2rem(32px);
+        height: px2rem(32px);
+        margin-right: px2rem(18px);
+        @include imgBgFix(100% 100%);
+        vertical-align: middle;
+        margin-top: px2rem(-7px);
+      }
+      &:before, &:after{
+        content: "";
+        position: absolute;
+        width: px2rem(120px);
+        height: 1px;
+        background: #f5241e;
+        top: 50%;
+        margin-top: -0.5px;
+      }
+      &:before{
+        left: 0;
+      }
+      &:after{
+        right: 0;
+      }
+      &.item-card{
+        >div{
+          background-image: url("../assets/icons/discountMall/6.png");
+        }
+      }
+      &.package-card{
+        >div{
+          background-image: url("../assets/icons/discountMall/10.png");
+        }
+      }
+      &.credit-card{
+        >div{
+          background-image: url("../assets/icons/discountMall/8.png");
+        }
+      }
+    }
+    ul{
+      padding-top: 0.25rem;
+      &:after{
+        content: "";
+        display: block;
+        height: px2rem(20px);
+        width: 20rem;
+        background: #eee;
+        margin-left: -0.611rem;
+      }
+      &.credit-card{
+        &:after{
+          height: px2rem(10px);
+        }
+      }
+      &.res-card{
+        &:after{
+          height: 0;
+        }
+      }
+    }
+    li.itemCard{
+      float: left;
+      position: relative;
+      width: 9.0278rem;
+      height: 11.9444rem;
+      margin-bottom: 0.833rem;
+      margin-right: 0.667rem;
+      border-radius: 3px;
+      box-shadow: 0 0 0.3rem 0 #e0e0e0;
+      overflow: hidden;
+    }
+    &.no-more{
+      div.zone-title, ul.item-card, ul.package-card, ul.credit-card{
+        display: none;
+      }
+    }
+  }
+}
+
+div.discount-mall-page-wrap{
+  div.service-item-selector{
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    top: 2.4rem;
+    left:0;
+    z-index: 11;
+    overflow: visible;
+    @include scale(1,0);
+    @include tOrigin(top center);
+    @include transition(transform .3s ease);
+    @include gpu();
+    &.active{
+      @include scale(1,1);
+    }
+    &:before{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0.389rem;
+      height: 0.389rem;
+      border-left: 1px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
+      top: -0.21rem;
+      right: 1.2rem;
+      background: #fff;
+      @include tOrigin();
+      @include rotate(135deg);
+    }
+    >div.pop-content{
+      height: 22.111rem;
+      padding: 0.611rem 0 3.8056rem;
+      background: #fff;
+      overflow-y: auto;
+      border-top: 1px solid #e0e0e0;
+      >div.service-list>div{
+        margin-left: 0.667rem;
+        line-height: 1.35;
+        margin-bottom: 0.26rem;
+        font-size: 0.889rem;
+        color: #212121;
+      }
+      >ul{
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 0.611rem;
+      }
+    }
+    ul{
+      margin-left: 0.667rem;
+    }
+    li{
+      height: 1.889rem;
+      width: 4.167rem;
+      float: left;
+      margin-right: 0.639rem;
+      margin-bottom: 0.611rem;
+      padding: 0 0.2rem;
+      line-height: 1.889rem;
+      text-align: center;
+      font-size: 0.778rem;
+      color: #616161;
+      border: 1px solid #999;
+      border-radius: 0.222rem;
+      @include sl();
+      &.disabled{
+        color: #b2b2b2;
+        border-color: #e1e1e1;
+      }
+      &.active{
+        color: #f66;
+        border-color: #f66;
+      }
+    }
+    >div.btn-wrap{
+      position: absolute;
+      top: 18.333rem;
+      left: 0;
+      width: 100%;
+      height: 3.8056rem;
+      padding-top: 0.972rem;
+      border-top: 1px solid #e0e0e0;
+      background: #fff;
+      >div{
+        float: left;
+        height: 2.444rem;
+        width: 9rem;
+        line-height: 2.444rem;
+        margin-left: 0.667rem;
+        text-align: center;
+        border-radius: 0.2rem;
+        color: #fff;
+        font-size: 0.889rem;
+        &:nth-of-type(1){
+          background: #bbb;
+        }
+        &:nth-of-type(2){
+          background: #f66;
+        }
+      }
+    }
+  }
+}

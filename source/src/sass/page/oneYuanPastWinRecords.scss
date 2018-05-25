@@ -1,0 +1,66 @@
+@import "../common/mixin.scss";
+
+div#one-yuan-past-win-records-page{
+  .list{
+    overflow-y: auto;
+  }
+  .list-item{
+    margin-bottom: .5rem;
+    >div{
+      &:nth-of-type(1){
+        padding: 0 .667rem;
+        background-color: #fafafa;
+        font-size: .889rem;
+        color: #5f4c25;
+        border-bottom: 1px solid #e0e0e0;
+        line-height: 2;
+      }
+      &:nth-of-type(2){
+        padding: .5rem .667rem;
+        background-color: #fff;
+        @include sx();
+        >div{
+          &:nth-of-type(1){
+            width: 2.722rem;
+            height: 2.722rem;
+            border-radius: 50%;
+            margin-right: .5rem;
+            border: 1px solid #e0e0e0;
+            box-sizing: content-box;
+            @include imgBgFix(2.722rem  2.722rem);
+          }
+          &:nth-of-type(2){
+            @include boxFlex(1);
+            font-size: .778rem;
+            color: #999;
+            line-height: 1.5;
+            >div{
+              &:nth-of-type(1){
+                >span{
+                  color: #212121;
+                  margin-left: .9rem;
+                }
+              }
+              &:nth-of-type(2){
+                >span{
+                  &:nth-of-type(1){
+                    color: #f66;
+                  }
+                  &:nth-of-type(2){
+                    color: #616161;
+                    margin-left: .1rem;
+                  }
+                }
+              }
+              &:nth-of-type(3){
+                >span{
+                  color: #616161;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

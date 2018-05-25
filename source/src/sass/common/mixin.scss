@@ -1,0 +1,315 @@
+@mixin zy(){
+  display: -webkit-box;
+  display:-moz-box;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+}
+@mixin z(){
+  display: -webkit-box;
+  display:-moz-box;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+}
+@mixin y(){
+  display: -webkit-box;
+  display:-moz-box;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+}
+@mixin sx(){
+  display: -webkit-box;
+  display:-moz-box;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+}
+@mixin s(){
+  display: -webkit-box;
+  display:-moz-box;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+}
+@mixin x(){
+  display: -webkit-box;
+  display:-moz-box;
+  -webkit-box-align: end;
+  -moz-box-align: end;
+}
+@mixin wq(){
+  display: -webkit-box;
+  display:-moz-box;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+}
+@mixin sxgd(){
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+@mixin zygd(){
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+@mixin wqgd(){
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+@mixin mask(){
+  position: fixed;
+  width: 20rem;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  margin-left:-10rem;
+  background:rgba(100,100,100,0.7);
+}
+@mixin gpu(){
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -ms-transition-property: -ms-transform;
+  transition-property: transform;
+}
+@mixin syzj(){
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  >*{
+    -webkit-flex-shrink: 0;
+    -ms-flex: 0 0 auto;
+    flex-shrink: 0;
+  }
+}
+@mixin imgBgFix($size){
+  -webkit-background-size:$size;
+  -moz-background-size:$size;
+  -o-background-size:$size;
+  background-size:$size;
+  background-repeat: no-repeat;
+}
+@mixin img($url,$size: 100% 100%){
+  -webkit-background-size:$size;
+  -moz-background-size:$size;
+  -o-background-size:$size;
+  background-size:$size;
+  background-image: url($url);
+  background-repeat: no-repeat;
+}
+@mixin imgRepeat($url,$size){
+  -webkit-background-size:$size;
+  -moz-background-size:$size;
+  -o-background-size:$size;
+  background-size:$size;
+  background-image: url($url);
+  background-repeat: repeat;
+}
+@mixin translate($x,$y){//cs3位移
+  -webkit-transform: translate($x,$y);
+  -moz-transform: translate($x,$y);
+  -o-transform: translate($x,$y);
+  -ms-transform: translate($x,$y);
+  transform: translate($x,$y);
+}
+@mixin jb($xs,$ys,$cs,$xe,$ye,$ce){
+  background:-webkit-gradient(linear, $xs $ys, $xe $ye, from($cs), to($ce));
+  background: -moz-linear-gradient(top, $ce $ye, $cs $ys);
+}
+@mixin ty($x,$y,$z,$s,$c){
+  -webkit-box-shadow:$x $y $z $s $c;
+  -moz-box-shadow:$x $y $z $s $c;
+  -ms-shadow:$x $y $z $s $c;
+  -o-shadow:$x $y $z $s $c;
+  box-shadow:$x $y $z $s $c;
+}
+@mixin dhqx($fun){
+  animation-timing-function: $fun;
+  -webkit-animation-timing-function: $fun;
+  -moz-animation-timing-function: $fun;
+  -ms-animation-timing-function: $fun;
+  -o-animation-timing-function: $fun;
+}
+@mixin dhcs($count){
+  animation-iteration-count: $count;
+  -webkit-animation-iteration-count: $count;
+  -moz-animation-iteration-count: $count;
+  -ms-animation-iteration-count: $count;
+  -o-animation-iteration-count: $count;
+}
+
+@mixin boxFlex($flex){
+  -moz-box-flex: $flex;
+  -webkit-box-flex: $flex;
+  box-flex:$flex;
+}
+
+@mixin dhyc($time){
+  transition-duration: $time;
+  -webkit-transition-duration: $time;
+  -moz-transition-duration: $time;
+  -ms-transition-duration: $time;
+  -o-transition-duration: $time;
+}
+@mixin dhtc($time){
+  -webkit-animation-delay: $time;
+  -moz-animation-delay: $time;
+  -ms-animation-delay: $time;
+  -o-animation-delay: $time;
+  animation-delay: $time;
+}
+@mixin dhzt($state){
+  -webkit-animation-play-state: $state;
+  -moz-animation-play-state: $state;
+  -ms-animation-play-state: $state;
+  -o-animation-play-state: $state;
+  animation-play-state: $state;
+}
+@mixin wy($x,$y,$z){
+  -webkit-transform: translate3d($x,$y,$z);
+  -moz-transform: translate3d($x,$y,$z);
+  -o-transform: translate($x,$y);
+  -ms-transform: translate3d($x,$y,$z);
+  transform: translate3d($x,$y,$z);
+}
+@mixin yd($v){
+  -webkit-transform-origin: $v;
+  -moz-transform-origin: $v;
+  -o-transform-origin: $v;
+  -ms-transform-origin: $v;
+  transform-origin: $v;
+}
+@mixin dhz($name,$time){
+  animation:$name $time;
+  -moz-animation:$name $time;
+  -webkit-animation:$name $time;
+  -o-animation:$name $time;
+  -ms-animation:$name $time;
+}
+@mixin sl(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin slh($line){
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: block-axis;
+  word-break: break-all;
+}
+@mixin rotate($s){
+  -webkit-transform: rotate($s);
+  -moz-transform: rotate($s);
+  -ms-transform: rotate($s);
+  transform: rotate($s);
+}
+@mixin scale($sx,$sy){
+  -webkit-transform: scale($sx,$sy);
+  -moz-transform: scale($sx,$sy);
+  -o-transform: scale($sx,$sy);
+  -ms-transform: scale($sx,$sy);
+  transform: scale($sx,$sy);
+}
+@mixin tOrigin($p:center){
+  -webkit-transform-origin:$p;
+  -moz-transform-origin:$p;
+  -ms-transform-origin:$p;
+  transform-origin:$p;
+}
+@mixin transition($content){
+  -webkit-transition: $content;
+  -moz-transition: $content;
+  -ms-transition: $content;
+  transition: $content;
+}
+
+@mixin transform($prop...){
+  -webkit-transform: $prop;
+  -moz-transform: $prop;
+  -o-transform: $prop;
+  -ms-transform: $prop;
+  transform: $prop;
+}
+
+@mixin keyframes($animation_name) {
+  @-webkit-keyframes #{$animation_name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation_name} {
+    @content;
+  }
+  @-o-keyframes #{$animation_name} {
+    @content;
+  }
+  @keyframes #{$animation_name} {
+    @content;
+  }
+}
+
+@mixin arrow($color:#999,$w:.43rem,$h:.43rem,$rotate:-135deg){
+  width: $w;
+  height: $h;
+  border-left: .1rem solid $color;
+  border-bottom: .1rem solid $color;
+  -webkit-transform: rotate($rotate) translate(($w * .167),($w * -.167));
+  -moz-transform: rotate($rotate) translate(($w * .167),($w * -.167));
+  -ms-transform: rotate($rotate) translate(($w * .167),($w * -.167));
+  transform: rotate($rotate) translate(($w * .167),($w * -.167));
+}
+
+@mixin arrowUp($color:#999,$w:.43rem,$h:.43rem){
+  @include arrow($color,$w,$h,135deg);
+}
+@mixin arrowRight($color:#999,$w:.43rem,$h:.43rem){
+  @include arrow($color,$w,$h,-135deg);
+}
+@mixin arrowDown($color:#999,$w:.43rem,$h:.43rem){
+  @include arrow($color,$w,$h,-45deg);
+}
+@mixin arrowLeft($color:#999,$w:.43rem,$h:.43rem){
+  @include arrow($color,$w,$h,45deg);
+}
+
+@function px2rem($num){
+  @return $num / 1px / 36 * 1rem;
+}
+
+.clearfix{
+display: inline-block;
+&:after{
+    display: block;
+    content: ".";
+    height: 0;
+    line-height: 0;
+    clear: both;
+    visibility: hidden;
+}
+}
+
+//border=1px
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5) {
+.border-1px {
+    &::after {
+        -webkit-transform: scaleY(0.7);
+        transform: scaleY(0.7);
+    }
+}
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2) {
+    .border-1px {
+        &::after {
+            -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+        }
+    }
+}

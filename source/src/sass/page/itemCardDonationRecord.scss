@@ -1,0 +1,197 @@
+@import "../common/mixin.scss";
+div#item-card-donation-record-page{
+    div.page-title{
+        position: relative;
+        div.helf{
+            width: px2rem(48px);
+            height: px2rem(48px);
+            display: inline-block;
+            @include imgBgFix(px2rem(48px) px2rem(48px));
+            background-position: center center;
+            background-image: url("../assets/icons/itemCardDonationRecord/ic_helf_s.png");
+            position: absolute;
+            top: 50%;
+            margin-top: px2rem(-24px);
+            right: px2rem(24px);
+        }
+    }
+    div.spa-name{
+        position: relative;
+        height: px2rem(80px);
+        line-height: px2rem(80px);
+        color: #fff;
+        padding-left: 2.5rem;
+        background-color: rgba(23, 21, 21, .8);
+        font-size: .889rem;
+        >div{
+            >div{
+                position: absolute;
+                width: 1.389rem;
+                height: 1.389rem;
+                left: 0.667rem;
+                top: 50%;
+                margin-top: -0.6945rem;
+                border-radius: 50%;
+                @include imgBgFix(1.489rem 1.489rem);
+                background-position: center center;
+                border: px2rem(2px) solid rgba(250, 248, 248, 0.5019607843137255);
+            }
+        }
+        >i{
+            position: absolute;
+            font-size: 16px;
+            right: 0.66667rem;
+            margin-top: px2rem(-40px);
+            top: 50%;
+            &:before{
+                content: "";
+                position: absolute;
+                width: px2rem(28px);
+                height: px2rem(28px);
+                @include imgBgFix(px2rem(28px) px2rem(28px));
+                top: 50%;
+                margin-top: -0.3rem;
+                left: -1rem;
+                background-image: url("../assets/icons/itemCardOrderDetail/tishishuom.png");
+            }
+        }
+    }
+
+    div.item-list{
+        background-color: #fff;
+        >div.item{
+            padding: 0.52222rem 0.66667rem;
+            height: px2rem(200px);
+            display: block;
+            overflow-y: auto;
+            border-bottom: 1px solid #eee;
+            >div{
+                float: left;
+                &:nth-of-type(1){/*图片*/
+                    width: px2rem(147px);
+                    height: px2rem(147px);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    @include imgBgFix(px2rem(169px) px2rem(147px));
+                    border-radius: px2rem(10px);
+                    position: relative;
+                }
+                &:nth-of-type(2){
+                    margin-left: px2rem(20px);
+                    @include boxFlex(1);
+                    position: relative;
+                    >div{
+                        >div{
+                            &:nth-of-type(1){
+                                @include boxFlex(1);
+                                >div{
+                                    color: #212121;
+                                    font-size: px2rem(32px);
+                                }
+                            }
+                            &:nth-of-type(2){
+                                color: #616161;
+                                @include boxFlex(1);
+                                display: inline-block;
+                                font-size: px2rem(26px);
+                                margin-top: -4px;
+                                >div{
+                                    color: #212121;
+                                    display: inline-block;
+                                    font-size: px2rem(26px);
+                                }
+                            }
+                            &:nth-of-type(3){
+                                color: #616161;
+                                font-size: px2rem(26px);
+                                @include boxFlex(1);
+                                margin-top: -5px;
+                                >div{
+                                    display: inline-block;
+                                    &:nth-of-type(1){
+                                        width: px2rem(20px);
+                                        height: px2rem(20px);
+                                        @include imgBgFix(px2rem(20px) px2rem(20px));
+                                        background-image: url("../assets/icons/itemCardDonationRecord/ic_time_s.png");
+                                    }
+                                    &:nth-of-type(2){
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(3){
+                    float: right;
+                    font-size: px2rem(26px);
+                    color: #616161;
+                }
+            }
+        }
+    }
+
+    div.card-package-pop-wrap{
+        div.center-wrap{
+            width: px2rem(570px);
+            height: 26.2rem;
+            background-color: #fff;
+            border-radius: px2rem(10px);
+            top: 53%;
+            div.center-header{
+                text-align: center;
+                background-color: #eee;
+                border-bottom: 1px solid #d9d9d9;
+                color: #4d4d4d;
+                padding: px2rem(20px) 0;
+                position: relative;
+                >span{
+                    width: px2rem(49px);
+                    height: px2rem(49px);
+                    @include imgBgFix(px2rem(49px) px2rem(49px));
+                    background-image: url("../assets/icons/itemCardDonationRecord/ic_close_s.png");
+                    position: absolute;
+                    right: px2rem(30px);
+                    top: px2rem(22px);
+                }
+            }
+            div.center-content{
+                padding: px2rem(20px) px2rem(30px);
+                div.pop-content{
+                    >div{
+                        font-size: px2rem(26px);
+                        &:nth-of-type(1){//序号
+                            color: #212121;
+                            display: inline-block;
+                            padding: px2rem(5px) 0;
+                        }
+                        &:nth-of-type(2){//标题
+                            color: #212121;
+                            display: inline-block;
+                        }
+                        &:nth-of-type(3){//内容
+                            color: #616161;
+                            margin-left: px2rem(25px);
+                            >div{
+                                position: relative;
+                                line-height: px2rem(45px);
+                                padding: px2rem(5px) 0;
+                                .rule::before{
+                                    content: "";
+                                    display: inline-block;
+                                    background-color: #616161;
+                                    border-radius: px2rem(5px);
+                                    display: inline-block;
+                                    width: px2rem(10px);
+                                    height: px2rem(10px);
+                                    position: absolute;
+                                    left: px2rem(-15px);
+                                    top: px2rem(23px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

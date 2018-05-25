@@ -1,0 +1,10 @@
+/build/
+/config/
+/dist/
+/*.js
+/test/unit/coverage/
+src/libs/easemob/h.websdk-1.4.13.js
+src/libs/t.webim.js
+src/libs/spark-md5.js
+src/libs/h.webim.config.js
+src/libs/h.websdk.js

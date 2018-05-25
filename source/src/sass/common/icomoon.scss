@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'spa-icon';
+  src:  url('./assets/fonts/spa-icon.eot?ey4gsi');
+  src:  url('./assets/fonts/spa-icon.eot?ey4gsi#iefix') format('embedded-opentype'),
+    url('./assets/fonts/spa-icon.ttf?ey4gsi') format('truetype'),
+    url('./assets/fonts/spa-icon.woff?ey4gsi') format('woff'),
+    url('./assets/fonts/spa-icon.svg?ey4gsi#spa-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'spa-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before {
+  content: "\e918";
+}
+.icon-edit:before {
+  content: "\e906";
+}
+.icon-site:before {
+  content: "\e903";
+}
+.icon-telephone:before {
+  content: "\e904";
+}
+.icon-star:before {
+  content: "\e905";
+}
+.icon-ask:before {
+  content: "\e901";
+}
+.icon-more:before {
+  content: "\e902";
+}
+.icon-blacklist:before {
+  content: "\1f300";
+}
+.icon-close-outline:before {
+  content: "\e900";
+}
+.icon-arrow-down:before {
+  content: "\e90c";
+}
+.icon-arrow-left:before {
+  content: "\e90d";
+}
+.icon-arrow-right:before {
+  content: "\e90e";
+}
+.icon-arrow-up:before {
+  content: "\e90f";
+}
+.icon-clock:before {
+  content: "\e8b5";
+}

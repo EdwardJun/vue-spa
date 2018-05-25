@@ -1,0 +1,263 @@
+@import "../common/mixin.scss";
+
+div.club-list-page {
+  div.search{
+    position: relative;
+    font-size: .778rem;
+    padding: 0 .667rem;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  div.list{
+    overflow-y: auto;
+  }
+  div.search-title{
+    >input{
+      position: absolute;
+      height: 1.6rem;
+      width: 13.278rem;
+      left: 45%;
+      top: 50%;
+      padding: 0 .5rem 0 1.5rem;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transform: translate(-50%,-50%);
+      font-size: .667rem;
+      @include img('../assets/icons/clubList/search2.png',.778rem .75rem);
+      background-position: .3rem center;
+    }
+    >div{
+      position: absolute;
+      top: 50%;
+      right: .667rem;
+      height: 1.6rem;
+      padding: 0 .7rem;
+      margin-top:-0.8rem;
+      line-height: 1.6rem;
+      border-radius: 5px;
+      background-color: #fb5549;
+      color: #fff;
+      font-size: .778rem;
+    }
+  }
+
+  div.tags{
+    background-color: #fff;
+    margin-bottom: .667rem;
+    >div{
+      padding: 0 .667rem;
+      height: 1.722rem;
+      line-height: 1.722rem;
+      font-size: .778rem;
+      color: #616161;
+      border-bottom: 1px solid #d8d8d8;
+    }
+    >ul{
+      padding: 1.056rem .667rem .389rem;
+      >li{
+        display: inline-block;
+        text-align: center;
+        height: 1.722rem;
+        line-height: 1.722rem;
+        margin-right: .667rem;
+        margin-bottom: .667rem;
+        padding: 0 .5rem;
+        border: 1px solid #d2d2d2;
+        border-radius: .833rem;
+        font-size: .833rem;
+        color: #4d4d4d;
+        float: left;
+      }
+    }
+  }
+}
+
+div#club-list-all-page{
+  padding-top: 2.417rem;
+  div.filter-title{
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    @include sx();
+    height: 2.417rem;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #fafafa;
+    color: #616161;
+    > div {
+      text-align: center;
+      height: 1.778rem;
+      font-size: .778rem;
+      color: #616161;
+      border-right: 1px solid #e0e0e0;
+      > div {
+        @include imgBgFix(.889rem .889rem);
+        background-position: left center;
+        display: inline-block;
+        padding-left: 1rem;
+        line-height: 1.778rem;
+      }
+      &:nth-of-type(1) {
+        @include boxFlex(1);
+        > div {
+          background-image: url('../assets/icons/clubList/table_icon.png');
+          &.active {
+            background-image: url('../assets/icons/clubList/table_selected_icon.png');
+            color: #f66;
+          }
+        }
+      }
+      &:nth-of-type(2) {
+        @include boxFlex(1);
+        > div {
+          background-image: url('../assets/icons/clubList/list_icon.png');
+          &.active {
+            background-image: url('../assets/icons/clubList/list_selected_icon.png');
+            color: #f66;
+          }
+        }
+      }
+      &:nth-of-type(3) {
+        @include boxFlex(1);
+        > div {
+          background-image: url('../assets/icons/clubList/filter_icon.png');
+          &.active {
+            background-image: url('../assets/icons/clubList/filter_selected_icon.png');
+            color: #f66;
+          }
+        }
+      }
+      &:nth-of-type(4) {
+        width: 2.361rem;
+        border-right: none;
+        @include img('../assets/icons/clubList/search_icon.png', .889rem .889rem);
+        background-position: center;
+      }
+    }
+  }
+
+  div.filter-pop{
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    top: 2.417rem;
+    left:0;
+    z-index: 11;
+    overflow: visible;
+    @include scale(1,0);
+    @include tOrigin(top center);
+    @include transition(transform .3s ease);
+    @include gpu();
+    &.active{
+      @include scale(1,1);
+    }
+    ul{
+      display: none;
+      position: relative;
+      &.active{
+        display: block;
+      }
+      &:before{
+        position: absolute;
+        content: ' ';
+        background-color: #fff;
+        display: block;
+        box-sizing: border-box;
+        width: .6rem;
+        height: .6rem;
+        border-top: 1px solid #eee;
+        border-right: 1px solid #eee;
+        transform: rotate(-45deg);
+        transform-origin: center;
+        top: -.3rem;
+        left: 5rem;
+        z-index: -1;
+      }
+      >li{
+        background: #fff;
+        height: 2.222rem;
+        line-height: 2.222rem;
+        border-bottom: 1px solid #eee;
+        padding-left: 1.944rem;
+        position: relative;
+        font-size: .889rem;
+        color: #212121;
+        &.selected{
+          &:before{
+            position: absolute;
+            content: ' ';
+            display: block;
+            height: .367rem;
+            width: .611rem;
+            box-sizing: border-box;
+            border-left: 1px solid #f66;
+            border-bottom: 1px solid #f66;
+            transform-origin: center top;
+            transform: rotate(-45deg);
+            left: .667rem;
+            top: .8rem;
+          }
+          color: #f66;
+        }
+      }
+      &.distance{
+        &:before{
+          left: 3rem;
+        }
+      }
+      &.sort{
+        &:before{
+          left: 9.3rem;
+        }
+      }
+      &.filter{
+        &:before{
+          left: 15rem;
+        }
+      }
+    }
+  }
+}
+
+div#club-list-search-page{
+  overflow-y: auto;
+  div.club-list,div.tech-list{
+    background-color: #fff;
+    border-bottom:1px solid #e0e0e0;
+  }
+  div.club-list{
+    margin-bottom:0.667rem;
+    div.finish-load-tip{
+      border-top:1px solid #e0e0e0;
+    }
+  }
+  div.list-title{
+    height: 2.222rem;
+    line-height: 2.222rem;
+    font-size: .889rem;
+    color: #616161;
+    padding-left: .667rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  div.view-more{
+    height: 1.944rem;
+    line-height: 1.944rem;
+    margin-top:-0.222rem;
+    text-align: center;
+    background-color: #fff;
+    >span{
+      display: inline-block;
+      padding-left:1.5rem;
+      color: #5a6c7e;
+      font-size: .778rem;
+      @include img('../assets/icons/clubList/search2.png',.778rem .75rem);
+      background-position: 0 center;
+    }
+    &.loading-data{
+      >span{
+        @include img('../assets/icons/common/loading.gif',.778rem .778rem);
+      }
+    }
+  }
+}

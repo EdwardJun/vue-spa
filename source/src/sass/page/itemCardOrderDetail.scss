@@ -1,0 +1,513 @@
+@import "../common/mixin.scss";
+
+div#item-card-order-detail-page{
+    div.page-title{
+        position: relative;
+        >a{
+            display: block;
+            position: absolute;
+            font-size: 15px;
+            right: px2rem(24px);
+            margin-top: px2rem(-47px);
+            top: 50%;
+        }
+    }
+  .title{
+    position: relative;
+    height: px2rem(80px);
+    line-height: px2rem(80px);
+    padding-left: 2.5rem;
+    font-size: .889rem;
+    color: #fff;
+    background-color: rgba(23, 21, 21, .8);
+    >div{
+      position: absolute;
+      width: 1.389rem;
+      height: 1.389rem;
+      left: 0.667rem;
+      top: 50%;
+      margin-top: -0.6945rem;
+      border-radius: 50%;
+      @include imgBgFix(1.489rem 1.489rem);
+      background-position: center center;
+      border: px2rem(2px) solid rgba(250, 248, 248, 0.5019607843137255);
+    }
+    >a{
+      position: absolute;
+      font-size: 16px;
+      right: 0.66667rem;
+      margin-top: px2rem(-40px);
+      top: 50%;
+      &:before{
+        content: "";
+        position: absolute;
+        width: px2rem(32px);
+        height: px2rem(32px);
+        background-size: px2rem(32px) px2rem(32px);
+        left: -1.25rem;
+        top: 50%;
+        margin-top: px2rem(-16px);
+        background-image: url("../assets/icons/itemCardOrderDetail/zsjl.png");
+      }
+    }
+  }
+
+  .service-item{
+    position: relative;
+    height: 3.833rem;
+    padding: 0.556rem 0 0.861rem 5.056rem;
+    background: #fff;
+    box-sizing: content-box;
+    >div{
+      &:nth-of-type(1){
+        position: absolute;
+        top: 0.556rem;
+        left: 0.694rem;
+        width: 3.833rem;
+        height: 3.833rem;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        @include imgBgFix(3.833rem 3.833rem);
+        &:after{
+          position: absolute;
+          color: #fff;
+          height: 0.944rem;
+          top:0;
+          left: 0;
+          padding: 0 0.15rem;
+          line-height: 0.944rem;
+          background: #61be32;
+          text-align: center;
+          font-size: 0.611rem;
+          border-top-left-radius: 4px;
+          border-bottom-right-radius: 4px;
+        }
+        &.item_card{
+          &:after{
+            content: "次卡";
+            background: #fbaa52;
+          }
+        }
+        &.item_package{
+          &:after{
+            content: "套餐";
+          }
+        }
+        &.credit_gift{
+          &:after{
+            content: "积分";
+          }
+        }
+      }
+      &:nth-of-type(2){
+        font-size: 0.944rem;
+        color: #212121;
+      }
+      &:nth-of-type(3){
+        font-size: 0.778rem;
+        color: #757575;
+        line-height: 1.56;
+        >span{
+          color: #616161;
+          font-size: 0.889rem;
+          margin-right: 0.1rem;
+        }
+      }
+      &:nth-of-type(4){
+        font-size: 0.778rem;
+        color: #757575;
+        padding-right: 0.722rem;
+      }
+    }
+  }
+
+  .service-item,.item>h4{
+    &:after{
+      content: "";
+      position: absolute;
+      width: 0.4rem;
+      height: 0.4rem;
+      right: 0.5rem;
+      top: 50%;
+      margin-top:-0.225rem;
+      border-left: 0.1rem solid #808080;
+      border-bottom: 0.1rem solid #808080;
+      @include rotate(-135deg);
+    }
+  }
+
+  .ope-wrap{
+    margin-top: 0.556rem;
+    height: 2.222rem;
+    line-height: 2.222rem;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    >div{
+      height: 100%;
+      // width: px2rem(180px);
+      font-size: 0.889rem;
+      text-align: center;
+      color: #999;
+      padding: 0 0.3rem;
+      &.active{
+        color: #f66;
+        border-bottom: 3px solid #f66;
+      }
+      &:nth-of-type(1){
+        margin-right: px2rem(50px);
+      }
+      &:nth-of-type(2){
+        margin-left: px2rem(50px);
+      }
+    }
+  }
+
+  .list{
+    background: #fff;
+    margin-bottom: 0.5rem;
+    .no-data{
+      text-align: center;
+      font-size: 0.833rem;
+      color: #212121;
+      line-height: 5;
+      border-top: 1px solid #eee;
+    }
+  }
+
+  .item{
+    >h4{
+      position: relative;
+      height: 2.4167rem;
+      margin:0;
+      border-top: 1px solid #eee;
+      line-height: 2.4167rem;
+      padding-left: 0.556rem;
+      font-size: 0.889rem;
+      color: #333;
+      border-bottom: 1px solid #f6f6f6;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-right: 1.5rem;
+      &:before{
+        content: "";
+        display: inline-block;
+        width: 2px;
+        height: 0.9rem;
+        margin-right: 0.5rem;
+        background-color: #f66;
+        vertical-align: -0.15rem;
+      }
+      &:after{
+        transition: transform 0.3s ease-out;
+        @include rotate(-45deg);
+      }
+    }
+    >div.coupon{
+      position: relative;
+      display: none;
+      &:last-child{
+        border-bottom-width: 0;
+      }
+      .item-coupon{
+          height: px2rem(50px);
+          padding-bottom: px2rem(10px);
+          margin-top: px2rem(-13px);
+          position: relative;
+          div{
+              margin: 0 auto;
+              &:nth-of-type(1){
+                  display: inline-block;
+                  .item-icon{
+                      width: px2rem(32px);
+                      height: px2rem(32px);
+                      display: inline-block;
+                      background-size: px2rem(26px) px2rem(26px);
+                      background-image: url("../assets/icons/itemCardDetail/ic_time.png");
+                      background-repeat: no-repeat;
+                      background-position-y: px2rem(9px);
+                      padding-right: px2rem(35px);
+                  }
+                  span{
+                      font-size: 0.833rem;
+                      display: inline-block;
+                      position: absolute;
+                      width: px2rem(70px);
+                      height: px2rem(40px);
+                      top: px2rem(0px);
+                      color: #212121;
+                  }
+              }
+              &:nth-of-type(2){
+                  display: inline-block;
+                  margin-left: px2rem(25px);
+                  color: #fff;
+                  .hours{
+                      display: inline-block;
+                      width: px2rem(38px);
+                      height: px2rem(37px);
+                      line-height: px2rem(37px);
+                      background-color: #83838b;
+                      border-radius: px2rem(5px);
+                  }
+                  .minutes{
+                      width: px2rem(38px);
+                      height: px2rem(37px);
+                      line-height: px2rem(37px);
+                      background-color: #83838b;
+                      border-radius: px2rem(5px);
+                  }
+                  .seconds{
+                      width: px2rem(38px);
+                      height: px2rem(37px);
+                      line-height: px2rem(37px);
+                      background-color: #83838b;
+                      border-radius: px2rem(5px);
+                  }
+                  .colon{
+                      color: #83838b;
+                      padding: 0 px2rem(5px);
+                  }
+              }
+
+          }
+      }
+      div.item-friends{
+          height: px2rem(65px);
+          background-color: #fff4e1;
+          margin-right: 0.444rem;
+          position: relative;
+          display:flex;
+          justify-content:center;
+          div{
+              &:nth-of-type(1){
+                  width: px2rem(49px);
+                  height: px2rem(49px);
+                  display: inline-block;
+                  border-radius: 50%;
+                  background-color: #202020;
+                  @include imgBgFix(px2rem(49px) px2rem(49px));
+                  background-position: center center;
+                  background-image: url("../assets/icons/itemCardDonationRecord/spa_icon.png");
+                  border: px2rem(1px) solid #f3f3f3;
+                  margin-top: px2rem(8px);
+              }
+              &:nth-of-type(2){
+                  height: px2rem(49px);
+                  font-size: 18px;
+                  color: #a37f42;
+                  line-height: px2rem(49px);
+                  margin-top: px2rem(8px);
+                  display: inline-block;
+                  margin-left: px2rem(5px);
+              }
+          }
+      }
+      .item-check{
+          position: absolute;
+          top: 50%;
+          right: px2rem(90px);
+          margin-top: px2rem(-75px);
+          >div{
+              width: px2rem(48px);
+              height: px2rem(48px);
+              border: 1px solid #ccc;
+              border-radius: px2rem(5px);
+              &.active {
+                  background-size: px2rem(48px) px2rem(48px);
+                  background-image: url("../assets/icons/itemCardOrderDetail/check.png");
+              }
+          }
+      }
+      .item-status{
+          position: absolute;
+          width: px2rem(111px);
+          height: px2rem(100px);
+          line-height: 3.25556rem;
+          color: #fff;
+          text-align: center;
+          right: -0.13rem;
+          top: 0;
+          background-size: px2rem(112px) px2rem(110px);
+          background-image: url("../assets/icons/itemCardDetail/status.png");
+          i{
+              width: px2rem(85px);
+              height: px2rem(100px);
+              font-size: 0.573rem;
+              margin-top: px2rem(-50px);
+              transform:rotate(45deg);
+              position: absolute;
+              top: px2rem(35px);
+              left: px2rem(38px);
+          }
+      }
+      img{
+        &.active{
+          opacity: .3;
+        }
+      }
+    }
+    &.active{
+      >h4{
+        &:after{
+          @include rotate(135deg);
+        }
+      }
+      >div.coupon{
+        display: block;
+      }
+    }
+    &.expired{
+      >h4{
+        opacity: 0.6;
+      }
+      >div.coupon{
+        opacity: 0.6;
+        padding-bottom: 0.6rem;
+        &:before{
+          position: absolute;
+          display: block;
+          content: "已过期";
+          width: px2rem(92px);
+          height: px2rem(92px);
+          top: px2rem(60px);
+          right: px2rem(125px);
+          line-height: px2rem(90px);
+          padding: 2px;
+          background-clip: content-box;
+          text-align: center;
+          font-size: px2rem(24px);
+          color: #4d4d4d;
+          background-color: #eee;
+          border-radius: 50%;
+          @include rotate(-30deg);
+          border: 1px solid #eee;
+        }
+        &:after{
+          display: block;
+          content: "* 此二维码优惠码已超过使用期限，无法进行核销";
+          font-size: px2rem(26px);
+          text-align: center;
+          color: #f66;
+        }
+      }
+    }
+  }
+  .item-last{
+      height: px2rem(97px);
+    }
+  .coupon{
+    position: relative;
+    margin-left: 0.444rem;
+    padding: 1.667rem 0;
+    border-bottom: 1px solid #eee;
+    >img{
+      display: block;
+      width: 6.389rem;
+      height: 6.389rem;
+      line-height: 6.389rem;
+      text-align: center;
+      margin: 0 auto 0.2rem;
+      font-size: 0.889rem;
+    }
+    >div{
+      text-align: center;
+      &:nth-of-type(1){
+        position: absolute;
+        height: 1.111rem;
+        line-height: 1.111rem;
+        padding: 0 0.694rem;
+        top: 1.5rem;
+        left: -0.444rem;
+        font-size: 0.833rem;
+        color: #4d4d4d;
+        background: #eee;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
+      &:nth-of-type(2){
+        font-size: 0.833rem;
+        color: #212121;
+        line-height: 1.4;
+        margin-top: 0.5rem;
+        >span{
+          font-size: 1rem;
+        }
+      }
+      &:nth-of-type(3){
+        color: #b0b0b0;
+        font-size: 0.998rem;
+        &.active{
+          opacity: .3;
+        }
+      }
+      &:nth-of-type(4){
+        color: #ff9520;
+        font-size: 0.778rem;
+       }
+    }
+  }
+
+  .used{
+    .coupon{
+      >img{
+        opacity: 0.8;
+      }
+      >div:nth-of-type(2){
+        color: #999;
+      }
+    }
+  }
+  .btn-footer{
+      position: fixed;
+      bottom:0;
+      left: 0;
+      height: 3.167rem;
+      padding: 0 .667rem;
+      background-color: #e1e1e1;
+      width: 100%;
+      >div{
+          height: 100%;
+          @include sx();
+          >div{
+              @include boxFlex(1);
+              line-height: 2.444rem;
+              font-size: 1rem;
+              text-align: center;
+              border-radius: .3rem;
+          }
+          .btn-give{
+              width: 6.056rem;
+              height: 2.444rem;
+              border: 1px solid #f66;
+              color: #f66;
+              margin-right: .5rem;
+              background-color: #fff;
+              &.active{
+                  width: 9.056rem;
+                  height: 2.444rem;
+              }
+          }
+          .btn-super{
+              width: 12.056rem;
+              height: 2.444rem;
+              background-color: #f66;
+              color: #fff;
+          }
+          .btn-confirm{
+              width: 9.056rem;
+              height: 2.444rem;
+              background-color: #ccc;
+              color: #fff;
+              &.active{
+                  background-color: #f66;
+              }
+          }
+      }
+  }
+    .footer{
+        background-color: #f66;
+    }
+}

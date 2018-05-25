@@ -1,0 +1,86 @@
+@import "../common/mixin.scss";
+
+div#lucky-detail-page{
+  .club-name{
+    line-height: 2.444rem;
+    background: #fff0d9;
+    color: #666;
+    text-align: center;
+    font-size: 0.889rem;
+    @include sl();
+  }
+  .prize-wrap{
+    background: #fff;
+    padding: 0.667rem 0.667rem 0.3rem;
+    >div{
+      &:nth-of-type(1){
+        color: #4d4d4d;
+        font-size: 1.167rem;
+        margin-bottom: 0.2rem;
+        >span{
+          float: right;
+          color: #f66;
+          font-size: 0.889rem;
+        }
+      }
+      &:nth-of-type(2){
+        color: #999;
+        font-size: 0.778rem;
+      }
+    }
+  }
+
+  .code-wrap{
+    margin-top: 0.666rem;
+    padding: 0.694rem 0.886rem 0.722rem;
+    background: #fff;
+    border-top: 1px solid #d9d9d9;
+    >div{
+      color: #4d4d4d;
+      &:nth-of-type(1){
+        font-size: 0.778rem;
+        margin-bottom: 0.25rem;
+      }
+      &:nth-of-type(2){
+        text-align: center;
+        font-size: 0.889rem;
+        &.big{
+          margin-top: 0.2rem;
+          line-height: 2;
+          color: #4a4a4a;
+          font-size: 2.056rem;
+          border-radius: 0.35rem;
+          border:1px dashed #d7d7d7;
+        }
+      }
+    }
+    >img{
+      display: block;
+      margin: 0.5rem auto;
+      width: 6.444rem;
+      height: 6.444rem;
+    }
+  }
+
+  .desc-wrap{
+    background: #fff;
+    border-top: 1px solid #d9d9d9;
+    margin-top: 0.666rem;
+    padding: 0.3rem 0 0.5rem 1rem;
+    >div{
+      &:nth-of-type(1){
+        color: #ff9c0a;
+        font-size: 0.889rem;
+        border-bottom: 1px solid #d9d9d9;
+        line-height: 2.0;
+      }
+      &:nth-of-type(2){
+        font-size: 0.833rem;
+        color: #616161;
+        line-height: 1.8rem;
+        padding-top: 0.2rem;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+}

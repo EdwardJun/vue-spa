@@ -1,0 +1,117 @@
+@import "../common/mixin.scss";
+
+div#integral-detail-page{
+  overflow-y: hidden;
+  div.total{
+    padding:1.111rem 1.111rem 1.111rem 0.889rem;
+    border-bottom:1px solid #e0e0e0;
+    background-color: #fff;
+    >div{
+      color:#616161;
+      font-size:0.889rem;
+      line-height: 1;
+      >a{
+        float: right;
+        font-size:0.778rem;
+        color:#9e9e9e;
+        line-height: 1;
+      }
+      >i{
+        display: block;
+        float: right;
+        width:0.778rem;
+        height:0.778rem;
+        margin-right:0.2rem;
+        @include img('../assets/icons/integral/integral-rule.png',0.778rem 0.778rem);
+      }
+    }
+    >b{
+      display: block;
+      margin-top:0.889rem;
+      color:#212121;
+      font-size:1.778rem;
+      font-weight: normal;
+      line-height: 1;
+      >span{
+        margin-left:0.3rem;
+        font-size:0.778rem;
+        color:#9e9e9e;
+      }
+    }
+  }
+  div.tip{
+    line-height: 2.556rem;
+    font-size:0.778rem;
+    color:#616161;
+    text-align: center;
+    >a{
+      color:#00aaee;
+      text-decoration: underline;
+    }
+  }
+  div.title{
+    height:2rem;
+    line-height: 2rem;
+    font-size: 0.778rem;
+    color:#616161;
+    padding-left:0.889rem;
+  }
+
+  div.list{
+    overflow-y: auto;
+  }
+
+  div.list-item{
+    border-top:1px solid #e0e0e0;
+    background-color: #fff;
+    padding:0.889rem 0.889rem 0.778rem;
+    &:last-child{
+      border-bottom:1px solid #e0e0e0;
+    }
+    >div:nth-of-type(1){
+      height:0.889rem;
+      line-height: 0.889rem;
+      font-size:0.889rem;
+      color:#212121;
+      >div{
+        float: right;
+        font-size:0.778rem;
+        &.add{
+          color:#0abe07;
+        }
+      }
+    }
+    >div:nth-of-type(2){
+      position: relative;
+      margin-top:0.444rem;
+      padding-left:1.222rem;
+      height:0.889rem;
+      line-height: 0.889rem;
+      color:#9e9e9e;
+      font-size:0.667rem;
+      >div:nth-of-type(1){
+        position: absolute;
+        width:0.889rem;
+        height:0.889rem;
+        top:0;
+        left:0;
+        border-radius: 50%;
+        margin-right:0.333rem;
+        @include imgBgFix(0.889rem 0.889rem);
+        visibility: hidden;
+        &.active{
+          visibility: visible;
+        }
+      }
+      >span{
+        position: absolute;
+        right:0;
+        top:0;
+      }
+    }
+  }
+
+  div.finish-load-tip{
+    border-top:1px solid #e0e0e0;
+  }
+}

@@ -1,0 +1,163 @@
+@import "../common/mixin.scss";
+div#item-donation-detail{
+    div.page-title{
+        background-color: #fff;
+    }
+
+    div.item-friends{
+        height: px2rem(65px);
+        background-color: #fff4e1;
+        >div{
+            float: left;
+            margin-left: px2rem(18px);
+            &:nth-of-type(1){
+                width: px2rem(49px);
+                height: px2rem(49px);
+                border-radius: 50%;
+                background-color: #202020;
+                @include imgBgFix(px2rem(49px) px2rem(49px));
+                background-position: center center;
+                background-image: url("../assets/icons/itemCardDonationRecord/spa_icon.png");
+                border: px2rem(1px) solid #f3f3f3;
+                margin-top: px2rem(8px);
+            }
+            &:nth-of-type(2){
+                height: px2rem(49px);
+                font-size: 18px;
+                color: #a37f42;
+                line-height: px2rem(49px);
+                margin-top: px2rem(8px);
+            }
+        }
+    }
+
+    div.card-info{
+        padding: px2rem(24px) px2rem(24px);
+        border-radius: px2rem(10px);
+        >div{
+            padding: px2rem(10px) px2rem(20px);
+            background-color: #fff;
+            border-radius: px2rem(5px);
+            >div{
+                /*标题*/
+                &:nth-of-type(1){
+                    color: #212121;
+                    font-size: 18px;
+                    padding-bottom: px2rem(10px);
+                    border-bottom: 1px solid #eee;
+                }
+            }
+            /*内容*/
+            .item-content{
+                display: block;
+                overflow-y: auto;
+                padding: px2rem(19px) 0;
+                position: relative;
+                >div{
+                    float: left;
+                    &:nth-of-type(1){/*图片*/
+                        width: px2rem(136px);
+                        height: px2rem(136px);
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        @include imgBgFix(px2rem(136px) px2rem(136px));
+                        border-radius: px2rem(10px);
+                        position: relative;
+                    }
+                    &:nth-of-type(2){
+                        margin-left: px2rem(20px);
+                        @include boxFlex(1);
+                        >div{
+                            >div{
+                                height: px2rem(75px);
+                                line-height: px2rem(60px);
+                                &:nth-of-type(1){
+                                    @include boxFlex(1);
+                                    >div{
+                                        color: #212121;
+                                        font-size: 18px;
+                                    }
+                                }
+                                &:nth-of-type(2){
+                                    color: #616161;
+                                    @include boxFlex(1);
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-of-type(3){
+                        font-size: 22px;
+                        color: #ff6666;
+                        position: absolute;
+                        right: 0;
+                        bottom: px2rem(40px);
+                    }
+                }
+            }
+        }
+    }
+
+    div.ex-info{
+        background-color: #fff;
+        >div{
+            padding: px2rem(24px) px2rem(24px);
+            .donation-info{
+                color: #212121;
+                font-size: 18px;
+                border-bottom: 1px solid #eee;
+                padding-bottom: px2rem(24px);
+            }
+            >ul{
+                >div{
+                    &:nth-of-type(1){
+                        >li{
+                            color: #fbab52;
+                        }
+                    }
+                    >li{
+                        display: inline-block;
+                        font-size: 16px;
+                        color: #616161;
+                        line-height: px2rem(50px);
+                        padding: px2rem(10px) 0;
+                        float: left;
+                        width: 17.66667rem;
+                    }
+                    >div{
+                        float: left;
+                        display: inline-block;
+                        width: px2rem(10px);
+                        height: px2rem(10px);
+                        background-color: #616161;
+                        border-radius: px2rem(6px);
+                        margin: 0.76667rem 0.26878rem 0;
+                    }
+                }
+
+            }
+        }
+    }
+
+    div.donation-btn{
+        position: fixed;
+        bottom: 0;
+        height: 3.333rem;
+        left: 0;
+        right: 0;
+        background-color: #e1e1e1;
+        z-index:10;
+        >a{
+            display: block;
+            height: 2.444rem;
+            line-height: 2.444rem;
+            margin: .444rem .667rem 0;
+            background-color: #fb5549;
+            color: #fff;
+            font-size: 1.056rem;
+            text-align: center;
+            letter-spacing: 2px;
+            border-radius: 5px;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+@import "../common/mixin.scss";
+
+div#one-yuan-join-records-page{
+  .all-list{
+    overflow-y: auto;
+    padding: 0 .667rem;
+    background-color: #fff;
+  }
+  .item{
+    padding: .556rem 0;
+    border-bottom: 1px solid #eee;
+    line-height: 1;
+    @include sx();
+    >div{
+      &:nth-of-type(1){
+        width: 2.222rem;
+        height: 2.222rem;
+        border-radius: 50%;
+        margin-right: .5rem;
+        border: 1px solid #e0e0e0;
+        box-sizing: content-box;
+        @include imgBgFix(2.222rem 2.222rem);
+      }
+      &:nth-of-type(2){
+        @include boxFlex(1);
+        >div{
+          &:nth-of-type(1){
+            margin-top: .222rem;
+            font-size: .778rem;
+            @include sx();
+            >div{
+              &:nth-of-type(1){
+                @include boxFlex(1);
+                @include sl();
+                color: #212121;
+              }
+              &:nth-of-type(2){
+                margin-left: .5rem;
+                color: #999;
+                >span{
+                  color: #f66;
+                }
+              }
+            }
+          }
+          &:nth-of-type(2){
+            margin: .389rem 0 .167rem;
+            font-size: .722rem;
+            color: #999;
+          }
+        }
+      }
+    }
+  }
+}

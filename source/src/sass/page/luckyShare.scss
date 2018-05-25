@@ -1,0 +1,322 @@
+@import "../common/mixin.scss";
+
+div#lucky-share-page{
+  padding-bottom: px2rem(40px);
+  background: url("../assets/icons/luckyShare/3.jpg") no-repeat, linear-gradient(to bottom, #0bf1dd 0%, #0bf1dd 30%, #0bf1dd 30%, #0495c5 60%, #006191 100%);
+  background-size: px2rem(720px) px2rem(597px), cover;
+
+  .club-title{
+    background: -webkit-linear-gradient(top,rgba(0,0,0,.2),transparent);
+    background: linear-gradient(to bottom,rgba(0,0,0,.2),transparent);
+    >div:nth-of-type(2){
+      color: #fff;
+    }
+    &:after{
+      border-left-color: #fff;
+      border-bottom-color: #fff;
+    }
+  }
+
+  .gift-wrap{
+    position: relative;
+    margin: px2rem(480px) px2rem(25px) 0;
+    background: rgba(22,165,240,0.8);
+    border-radius: px2rem(8px);
+    padding-bottom: px2rem(12px);
+    &:before{
+      content: "";
+      position: absolute;
+      width: px2rem(85px);
+      height: px2rem(60px);
+      right: px2rem(-9px);
+      top: px2rem(-8px);
+      @include img("../assets/icons/luckyShare/4.png");
+    }
+    >div{
+      &:nth-of-type(1){
+        position: relative;
+        height: px2rem(80px);
+        line-height: px2rem(80px);
+        width: px2rem(562px);
+        margin: 0 auto;
+        @include sl();
+        text-align: center;
+        color: #fff;
+        font-size: px2rem(42px);
+        box-sizing: border-box;
+        padding: 0 px2rem(38px);
+        &:before, &:after{
+          content: "";
+          position: absolute;
+          width: px2rem(33px);
+          height: px2rem(33px);
+          top: 50%;
+          margin-top: px2rem(-16.5px);
+          @include img("../assets/icons/luckyShare/5.png");
+        }
+        &:before{
+          left: 0;
+        }
+        &:after{
+          right: 0;
+        }
+      }
+      &:nth-of-type(3), &:nth-of-type(4){
+        color: #fff;
+        text-align: center;
+        font-size: px2rem(28px);
+        line-height: 1.8;
+      }
+      &:nth-of-type(3){
+        margin-top: px2rem(10px);
+      }
+      &:nth-of-type(4){
+        color: #fe0;
+      }
+    }
+  }
+
+  .prize{
+    text-align: center;
+    font-size: px2rem(28px);
+    color: #4d4d4d;
+    box-sizing: border-box;
+    @include sl();
+    padding-left: px2rem(10px);
+    padding-right: px2rem(10px);
+    &:before{
+      content: "";
+      display: block;
+      width: px2rem(120px);
+      height: px2rem(120px);
+      @include imgBgFix(px2rem(120px) px2rem(120px));
+      margin: 0 auto;
+    }
+    &.prize0{
+      &:before{
+        background-image: url("../assets/icons/luckyShare/6.png");
+      }
+      >span{
+        color: #fd9311;
+        margin-right: px2rem(6px);
+      }
+    }
+    &.prize1{
+      &:before{
+        background-image: url("../assets/icons/luckyShare/7.png");
+      }
+    }
+    &.prize2, &.prize5{
+      &:before{
+        background-image: url("../assets/icons/luckyShare/8.png");
+      }
+    }
+    &.prize3{
+      &:before{
+        background-image: url("../assets/icons/luckyShare/9.png");
+      }
+    }
+  }
+
+  .list{
+    width: px2rem(630px);
+    background: #fff;
+    margin: 0 auto;
+    box-sizing: border-box;
+    &:after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    &.list4,&.list5, &.list6{
+      position: relative;
+      padding: px2rem(22px) px2rem(25px);
+      >div{
+        float: left;
+      }
+    }
+    &.list4{
+      >div{
+        width: 50%;
+        &:nth-of-type(1), &:nth-of-type(3){
+          border-right: 1px solid #e0e0e0;
+        }
+        &:nth-of-type(1), &:nth-of-type(2){
+          border-bottom: 1px solid #e0e0e0;
+          margin-bottom: px2rem(8px);
+        }
+      }
+      &:before{
+        content: "";
+        position: absolute;
+        width: px2rem(62px);
+        height: px2rem(62px);
+        background: #fff;
+        top: 50%;
+        left: 50%;
+        margin-top: px2rem(-31px);
+        margin-left: px2rem(-31px);
+        border-radius: 50%;
+      }
+    }
+    &.list5, &.list6{
+      >div{
+        width: 33.3%;
+        &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(4), &:nth-of-type(5),{
+          border-right: 1px solid #e0e0e0;
+        }
+        &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3){
+          border-bottom: 1px solid #e0e0e0;
+          margin-bottom: px2rem(8px);
+        }
+      }
+      &:before,>i{
+        content: "";
+        display: block;
+        position: absolute;
+        width: px2rem(52px);
+        height: px2rem(52px);
+        background: #fff;
+        top: 50%;
+        margin-top: px2rem(-26px);
+        margin-left: px2rem(-26px);
+        border-radius: 50%;
+      }
+      &:before{
+        left: 34.5%;
+      }
+      >i{
+        left: 65%;
+      }
+    }
+    &.list3, &.list2{
+      padding: px2rem(26px) 0;
+      >div{
+        width: 33.3%;
+        float: left;
+        border-right: 1px solid #e0e0e0;
+        &:last-child{
+          border-right-width: 0;
+        }
+      }
+    }
+    &.list2>div{
+      width: 50%;
+    }
+    &.list1{
+      width: px2rem(211px);
+      padding: px2rem(10px) 0 px2rem(6px);
+    }
+  }
+
+  .loc-wrap{
+    background: #e0f4ff;
+    border-radius: px2rem(8px);
+    margin: px2rem(32px) px2rem(25px) px2rem(37px);
+    padding: px2rem(9px) px2rem(8px);
+    box-sizing: content-box;
+    >div{
+      border: 3px solid #b5e3fd;
+      padding: 0 px2rem(20px);
+      >div{
+        >div{
+          float: left;
+          &:nth-of-type(1){
+            width: px2rem(490px);
+            font-size: px2rem(28px);
+            color: #0173c1;
+            line-height: 1.6;
+          }
+          &:nth-of-type(2){
+            width: px2rem(109px);
+            border-left: 1px solid #b5e3fd;
+          }
+        }
+        &:nth-of-type(1){
+          height: px2rem(93px);
+          padding: px2rem(23px) 0;
+          box-sizing: content-box;
+          >div:nth-of-type(1){
+            @include slh(2);
+          }
+          >div:nth-of-type(2){
+            height: 100%;
+            @include img("../assets/icons/luckyShare/11.png", px2rem(93px) px2rem(93px));
+            background-position: center center;
+            color: #1d6ffc;
+            font-size: px2rem(22px);
+            text-align: center;
+            box-sizing: border-box;
+            padding-top: px2rem(50px);
+          }
+        }
+
+        &:nth-of-type(2){
+          box-sizing: border-box;
+          border-top: 1px solid #b5e3fd;
+          height: px2rem(75px);
+          padding-top: px2rem(14px);
+          margin-bottom: px2rem(12px);
+          >div:nth-of-type(1){
+            line-height: 2.0;
+            @include sl();
+          }
+          >div:nth-of-type(2){
+            height: px2rem(60px);
+            @include img("../assets/icons/luckyShare/12.png", px2rem(47px) px2rem(56px));
+            background-position: center center;
+          }
+        }
+      }
+    }
+  }
+
+  .code-wrap{
+    width: px2rem(343px);
+    height: px2rem(343px);
+    background: #fff;
+    margin: 0 auto px2rem(40px);
+    border-radius: px2rem(12px);
+    padding: px2rem(10px);
+    box-sizing: border-box;
+    >img{
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+
+  .bottom-wrap{
+    position: relative;
+    height: px2rem(80px);
+    width: px2rem(560px);
+    line-height: px2rem(80px);
+    margin-left: px2rem(138px);
+    text-align: center;
+    background: #e0f4ff;
+    border-radius: px2rem(12px);
+    color: #0173c1;
+    font-size: px2rem(32px);
+    &:before, &:after{
+      content: "";
+      position: absolute;
+      display: block;
+    }
+    &:before{
+      width: px2rem(80px);
+      height: px2rem(80px);
+      @include img("../assets/icons/luckyShare/13.png");
+      left: px2rem(-113px);
+    }
+    &:after{
+      width: px2rem(26px);
+      height: px2rem(26px);
+      background: #e0f4ff;
+      border-radius: 4px;
+      top: 50%;
+      margin-top: px2rem(-13px);
+      left: px2rem(-12px);
+      @include rotate(45deg);
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "../common/mixin.scss";
+
+div#qrpay-code-page{
+  height: 100%;
+  background: #c2c2be url("../assets/icons/qrPay/bg_icon.png");
+  background-size: 15rem;
+
+  div.page-title{
+    background-color: #ededed;
+  }
+
+  div.qrcode-wrap{
+    padding-top:3.667rem;
+    >div{
+      margin:0 auto;
+      width: 16.722rem;
+      height: 19.333rem;
+      background-color: #f2f2f2;
+      border-radius: 8px;
+      box-shadow: 0 0 1rem 0 #aaa;
+      >div{
+        &:nth-of-type(1){
+          background-color: #fff;
+          border-radius: 8px;
+          height: 16.722rem;
+          padding: 1rem;
+          >canvas,img{
+            border: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &:nth-of-type(2){
+          height: 2.611rem;
+          line-height: 2.611rem;
+          text-align: center;
+          >span{
+            padding-left: 1.111rem;
+            font-size: .778rem;
+            color: #616161;
+            @include img('../assets/icons/qrPay/icon_refresh.png',.667rem .667rem);
+            background-position: left center;
+          }
+        }
+
+        &.processing{
+          background: #ccc url("../assets/icons/common/loading.gif") no-repeat 24% 50%;
+        }
+      }
+    }
+  }
+}

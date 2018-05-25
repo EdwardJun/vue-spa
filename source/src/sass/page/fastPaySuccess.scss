@@ -1,0 +1,484 @@
+@import "../common/mixin.scss";
+div#fast-pay-success-page{
+    background-color: #ededed;
+    div.item-discri{
+        height: px2rem(335px);
+        padding-top: px2rem(60px);
+        >div{
+            &:nth-of-type(1){
+                width: px2rem(105px);
+                height: px2rem(105px);
+                border-radius: 100%;
+                background-color: #09ba07;
+                margin: auto;
+                color: #fff;
+                background-position: center;
+                background-size: px2rem(75px) px2rem(75px);
+                background-repeat: no-repeat;
+                background-image: url("../assets/icons/fastPay/9.png");
+                padding-top: px2rem(55px);
+            }
+            &:nth-of-type(2){
+                color: #333333;
+                font-size: px2rem(38px);
+                text-align: center;
+                margin-top: px2rem(45px);
+                letter-spacing: 0.05333rem;
+            }
+        }
+    }
+    div.item-get{
+        padding: px2rem(60px) px2rem(25px) 0 px2rem(25px);
+        margin-bottom: 1rem;
+        >div{
+            &:nth-of-type(1){
+                width: px2rem(214px);
+                height: px2rem(183px);
+                margin: auto;
+                color: #fff;
+                background-position: center;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-image: url("../assets/icons/fastPay/11.png");
+                padding-top: px2rem(55px);
+            }
+            &:nth-of-type(2){
+                color: #333333;
+                font-size: px2rem(38px);
+                text-align: center;
+                margin-top: px2rem(25px);
+                letter-spacing: 0.05rem;
+            }
+            &:nth-of-type(3){
+                text-align: center;
+                font-size: px2rem(30px);
+                color: #666666;
+                letter-spacing: 0.07rem;
+            }
+        }
+    }
+
+    div.item-code{
+        background-color: #fff;
+        padding: px2rem(20px) 0;
+        margin-bottom: .5rem;
+        >div{
+            &:nth-of-type(1){
+                width: px2rem(279px); 
+                height: px2rem(282px);
+                margin: auto;
+                background-color: rgba(0, 0, 0, .3);
+                >img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &:nth-of-type(2){
+                color: #666666;
+                font-size: px2rem(29px);
+                letter-spacing: 0.06rem;
+                text-align: center;
+                margin-top: 0.3rem;
+            }
+        }
+    }
+
+    div.item-phone{
+        margin: 0 px2rem(25px);
+        border-bottom: 0.1rem solid #e0e0e0;
+        padding-bottom: px2rem(30px);
+        >span{
+            font-size: px2rem(30px);
+            color: #7d7d7d;
+        }
+        >input{
+            width: 18.5rem;
+            height: px2rem(80px);
+            font-size: 0.9rem;
+            color: #999999;
+            letter-spacing: 0.05rem;
+            text-align: center;
+            border-radius: 0.3rem;
+            margin-top: 0.3rem;
+            border: 0.06rem solid #e0e0e0;
+        }
+        >div{
+            width: 18.57rem;
+            height: px2rem(80px);
+            background-color: #f66;
+            color: #fff;
+            line-height: px2rem(80px);
+            font-size: 0.9rem;
+            text-align: center;
+            border-radius: .3rem;
+            letter-spacing: 0.1rem;
+            margin: 0.6rem auto 0;
+        }
+    }
+
+    div.coupons-area{
+        padding: 0 px2rem(25px);
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        >.item-title{
+            font-size: px2rem(30px);
+            color: #333333;
+            letter-spacing: 0.05333rem;
+        }
+        div.item-content{
+            font-size: px2rem(28px);
+            color: #616161;
+            margin-top: px2rem(15px);
+            >.item-container{
+                width: 100%;
+                height: px2rem(202px);
+                >.coupon-left{
+                    width: px2rem(214px);
+                    height: px2rem(202px);
+                    background-size: px2rem(214px) px2rem(202px);
+                    background-repeat: no-repeat;
+                    border-radius: px2rem(8px);
+                    display: inline-block;
+                    position: absolute;
+                    background-image: url("../assets/icons/oClockCoupon/9.png");
+                    box-shadow: 0 0 0.03rem rgba(100, 100, 100, 0.5);
+                    >div{
+                        &:nth-of-type(1){
+                            height: px2rem(45px);
+                            text-align: center;
+                            padding-bottom: px2rem(60px);
+                            padding-top: px2rem(50px);
+                            >span{
+                                color: #333333;
+                                font-weight: 700;
+                                &:nth-of-type(2){
+                                    font-size: 1.6rem;
+                                }
+                            }
+                        }
+                        &:nth-of-type(2){
+                            padding-top: px2rem(2px);
+                            text-align: center;
+                            color: #333333;
+                            border-top: 0.06556rem  solid rgba(0, 0, 0, .2);
+                            margin-left: px2rem(35px);
+                            margin-right: px2rem(35px);
+                        }
+                    }
+                }
+                .money,.coupon,.discount,.cash{
+                    background-image: url("../assets/icons/oClockCoupon/8.png");
+                }
+                .paid{
+                    background-image: url("../assets/icons/oClockCoupon/4.png");
+                }
+                .gift{
+                    background-color: #fff;
+                    background-size: px2rem(158px) px2rem(156px);
+                    background-position: center center;
+                    background-image: url("../assets/icons/home/serviceItem_default.jpg");
+                }
+                >.coupon-right{
+                    display: inline-block;
+                    width: px2rem(459px);
+                    height: px2rem(202px);
+                    background-color: #fff;
+                    margin-left: px2rem(214px);
+                    border-radius: px2rem(8px);
+                    position: absolute;
+                    padding: px2rem(17px);
+                    box-shadow: 0 0 0.03rem rgba(100, 100, 100, 0.5);
+                    >div{
+                        border: px2rem(2px) dashed #f6bab9;
+                        border-radius: px2rem(8px);
+                        height: px2rem(168px);
+                        padding: px2rem(5px) px2rem(10px);
+                        >div{
+                            &:nth-of-type(1){
+                                font-size: px2rem(37px);
+                                color: #333333;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                width: 11.3rem;
+                            }
+                            &:nth-of-type(2){
+                                font-size: px2rem(28px);
+                                color: #333333;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            &:nth-of-type(3){
+                                font-size: px2rem(28px);
+                                color: #333333;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            &:nth-of-type(4){
+                                font-size: px2rem(28px);
+                                color: #333333;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            &:nth-of-type(5){
+                                font-size: px2rem(28px);
+                                color: #333333;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            &:nth-of-type(6){
+                                font-size: px2rem(28px);
+                                color: #333333;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            &:nth-of-type(7){
+                                font-size: px2rem(28px);
+                                color: #333333;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            &:last-child{
+                                font-size: 0.56rem;
+                                color: #757575;
+                            }
+                        }
+                    }
+                    .money1,.coupon1,.discount1,.cash1{
+                        border: px2rem(2px) dashed #ffd37f;
+                    }
+                    .gift1{
+                        border: px2rem(2px) dashed #bbbbbb;
+                    }
+                    .paid1{
+                        border: px2rem(2px) dashed #f6bab9;
+                    }
+                    &:after{
+                        content: "";
+                        width: px2rem(25px);
+                        height: px2rem(25px);
+                        border-radius: 100%;
+                        background-color: #eee;
+                        position: absolute;
+                        left: -0.370rem;
+                        bottom: -0.26667rem;
+                    }
+                    &:before{
+                        content: "";
+                        width: px2rem(25px);
+                        height: px2rem(25px);
+                        line-height: px2rem(20px);
+                        border-radius: 100%;
+                        background-color: #eee;
+                        position: absolute;
+                        left: -0.370rem;
+                        top: -0.26667rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-footer{
+        height: 3.167rem;
+        width: 100%;
+        margin: px2rem(15px) 0;
+        padding: 0 px2rem(25px);
+        @include sx();
+        >div{
+            @include boxFlex(1);
+            line-height: 2.444rem;
+            font-size: 1rem;
+            text-align: center;
+            border-radius: .3rem;
+        }
+        .btn-give{
+            width: 7.556rem;
+            height: 2.444rem;
+            border: 1px solid #f66;
+            color: #f66;
+            margin-right: .5rem;
+            background-color: #fff;
+        }
+        .btn-confirm{
+            width: 7.556rem;
+            height: 2.444rem;
+            background-color: #f66;
+            color: #fff;
+        }
+    }
+
+    .m-b-16{
+        margin-bottom: .444rem;
+        .b-b{
+            border-bottom: 1px solid #eee;
+        }
+        .item-header{
+            height: 2.444rem;
+            background-color: #fff;
+            padding: 0 .667rem;
+            @include sx();
+            >div{
+                @include boxFlex(1);
+                @include sx();
+                line-height:1.2;
+                &:before{
+                    content: "";
+                    display: block;
+                    height: .889rem;
+                    width: .111rem;
+                    border-radius: .056rem;
+                    background-color: #f66;
+                    margin-right: .444rem;
+                }
+                >div{
+                    &:nth-of-type(1){
+                        @include boxFlex(1);
+                        @include sl();
+                        color: #333;
+                        font-size: .833rem;
+                    }
+                    &:nth-of-type(3){
+                        @include arrowRight(#666);
+                    }
+                }
+            }
+        }
+        .lucky-list{
+            background-color: #fff;
+            overflow: hidden;
+            >div{
+                &.lucky-item{
+                    padding: .667rem;
+                    &.image{
+                      >div{
+                        position: relative;
+                        height: 5.444rem;
+                        @include img('../assets/icons/activities/lucky-bg.png',cover);
+                        >div{
+                          &:nth-of-type(1){
+                            position: absolute;
+                            left: -.3rem;
+                            top: -.3rem;
+                            min-width: 10.556rem;
+                            max-width: 13.956rem;
+                            padding-right: .6rem;
+                            height: 1.4rem;
+                            line-height: 1.2rem;
+                            color: #fff;
+                            font-size: .667rem;
+                            padding-left: .3rem;
+                            box-sizing: content-box;
+                            @include img('../assets/icons/activities/lucky-tip-bg.png',100% 1.4rem);
+                          }
+                          &:nth-of-type(2){
+                            position: absolute;
+                            width: 100%;
+                            bottom: 0;
+                            height: 1.111rem;
+                            line-height: 1;
+                            padding-right: .667rem;
+                            @include sx();
+                            @include y();
+                            color: #fff;
+                            font-size: .778rem;
+                            background-color: rgba(0, 0, 0, .2);
+                          }
+                        }
+                      }
+                    }
+                    &.default{
+                      border-top: 1px solid #e0e0e0;
+                      font-size: .889rem;
+                      color: #212121;
+                      line-height: 1;
+                      >div{
+                        @include sx();
+                        font-size: .722rem;
+                        >div{
+                          &:nth-of-type(2){
+                            @include boxFlex(1);
+                            @include sl();
+                          }
+                        }
+                        &:nth-of-type(2){
+                          margin-top: .444rem;
+                        }
+                      }
+                    }
+                }
+            }
+        }
+    }
+
+    .item-integral{
+        background-color: #fff;
+        border-radius: px2rem(4px);
+        height: px2rem(205px);
+        margin-top: px2rem(15px);
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: px2rem(296px) px2rem(236px);
+        background-image: url("../assets/icons/fastPay/10.png");
+        position: relative;
+        box-shadow: 0 0 0.03rem rgba(100, 100, 100, 0.5);
+        >div{
+            color: #faad00;
+            font-weight: 700;
+            font-size: px2rem(55px);
+            position: absolute;
+            right: px2rem(50px);
+            height: px2rem(60px);
+            line-height: px2rem(60px);
+            margin-top: px2rem(72px);
+            >span{
+                color: #333333;
+                font-size: px2rem(28px);
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .time-limit-list,.one-yuan-list{
+        overflow: hidden;
+        background: #fff;
+    }
+
+    .has-more{
+        .item-more{
+          @include wq();
+        }
+    }
+
+    .item-more{
+        height: 1.667rem;
+        border-top: 1px solid #eee;
+        background-color: #fff;
+        display: none;
+        >div{
+          &:nth-of-type(1){
+            font-size: .722rem;
+            color: #4d4d4d;
+            margin-right: .444rem;
+          }
+          &:nth-of-type(2){
+            @include arrowDown(#4d4d4d);
+          }
+        }
+        &.expanded{
+          >div:nth-of-type(2){
+            @include arrowUp(#4d4d4d);
+          }
+        }
+        &.oneLine{
+          border-top-width: 0;
+        }
+    }
+
+}

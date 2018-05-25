@@ -1,0 +1,63 @@
+@import "../common/mixin.scss";
+
+div#map-page{
+  width:20rem;
+  height:100%;
+}
+
+div[n='moveElement']>div:nth-of-type(3)>div:nth-of-type(4)>div>div:nth-last-child(1){
+  display: none !important;
+}
+
+div.map-page-wrap{
+  height: 100%;
+
+  div.gd_marker{
+    width:30px;
+    height:40px;
+    @include img('../assets/icons/map/marker_icon.png', 30px 40px);
+    color: #fff;
+    text-align: center;
+    line-height:30px;
+    font-size:14px;
+  }
+
+  div.gd_infoWin{
+    min-height:2.971rem;
+    color:#616161;
+    border-radius:0.222rem;
+    >h3{
+      padding:0;
+      margin:0;
+      font-size:0.888rem;
+      font-weight: normal;
+    }
+    >span{
+      font-size:0.666rem;
+    }
+    >a{
+      display: block;
+      width:2.972rem;
+      position: absolute;
+      color: #fff;
+      background-color: #fd9b33;
+      border-radius: 0.222rem;
+      font-size:0.666rem;
+      text-align: center;
+      right:0.1rem;
+      top:0;
+      text-indent: 0.68rem;
+      &:before{
+        content: "";
+        position: absolute;
+        display: block;
+        width:0.88rem;
+        height:0.77rem;
+        top:50%;
+        margin-top:-0.385rem;
+        left:0.28rem;
+        @include img('../assets/icons/map/nav_icon.png', 0.88rem 0.77rem);
+      }
+    }
+  }
+}

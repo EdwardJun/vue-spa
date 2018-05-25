@@ -1,0 +1,174 @@
+@import "../common/mixin.scss";
+
+#group-buy-act-join-success-page{
+  padding-bottom: px2rem(96px);
+  .top-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: px2rem(260px);
+    background: #fff;
+    flex-direction: column;
+    >div{
+      &:nth-of-type(1){
+        display: flex;
+        color: #333;
+        font-size: px2rem(38px);
+        justify-content: center;
+        align-items: center;
+        &:before{
+          content: "";
+          display: block;
+          width: px2rem(69px);
+          height: px2rem(70px);
+          @include img("../assets/icons/groupBuy/11.png", 100% 100%);
+          margin-right: px2rem(20px);
+        }
+      }
+      &:nth-of-type(2){
+        color: #666;
+        font-size: px2rem(28px);
+        margin-top: px2rem(6px);
+        >span>span{
+          color: #ff9400;
+        }
+      }
+      &:nth-of-type(3){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: px2rem(26px);
+        color: #666;
+        &:before, &:after{
+          content: "";
+          display: block;
+          background: #e0e0e0;
+          height: 1px;
+          width: px2rem(110px);
+        }
+        &:before{
+          margin-right: px2rem(21px);
+        }
+        &:after{
+          margin-left: px2rem(21px);
+        }
+        >div{
+          margin: 0 px2rem(6px);
+          color: #333;
+          >span{
+            display: inline-block;
+            height: px2rem(30px);
+            width: px2rem(36px);
+            line-height: px2rem(30px);
+            border: 1px solid #999;
+            color: #fb5549;
+            text-align: center;
+            margin: 0 px2rem(5px);
+            border-radius: px2rem(3px);
+          }
+        }
+      }
+    }
+  }
+  .act-info{
+    display: flex;
+    align-items: center;
+    margin-top: px2rem(16px);
+    height: px2rem(203px);
+    background: #fff;
+    padding: 0 px2rem(24px);
+    >div{
+      &:nth-of-type(1){
+        position: relative;
+        width: px2rem(138px);
+        height: px2rem(138px);
+        border-radius: px2rem(8px);
+        // border: 1px solid #f0f0f0;
+        margin-right: px2rem(20px);
+        @include imgBgFix(100% 100%);
+        flex: none;
+        &:before{
+          content: "";
+          position: absolute;
+          width: px2rem(71px);
+          height: px2rem(71px);
+          top: px2rem(-12px);
+          left: px2rem(-10px);
+          @include img('../assets/icons/groupBuy/12.png', 100% 100%);
+        }
+      }
+      &:nth-of-type(2){
+        flex: none;
+        width: 13rem;
+        >div{
+          &:nth-of-type(1){
+            font-size: px2rem(34px);
+            color: #212121;
+            line-height: 1.5;
+            margin-bottom: px2rem(8px);
+            @include sl();
+            >span{
+              font-size: px2rem(30px);
+              color: #616161;
+            }
+          }
+          &:nth-of-type(2){
+            font-size: px2rem(24px);
+            color: #333;
+            line-height: 1.4;
+            >span{
+              font-size: px2rem(28px);
+              color: #fb5549;
+            }
+          }
+          &:nth-of-type(3){
+            font-size: px2rem(24px);
+            color: #333;
+            line-height: 1.4;
+            >span{
+              font-size: px2rem(28px);
+              color: #666;
+            }
+          }
+        }
+      }
+      &:nth-of-type(3){
+        font-size: px2rem(28px);
+        color: #666;
+      }
+    }
+  }
+  .share-btn{
+    position: fixed;
+    width: 20rem;
+    left: 50%;
+    margin-left: -10rem;
+    bottom: 0;
+    height: px2rem(96px);
+    line-height: px2rem(96px);
+    text-align: center;
+    color: #fff;
+    font-size: px2rem(38px);
+    background: #f66;
+  }
+  .qrcode-wrap{
+    background: #fff;
+    padding: px2rem(30px) 0 px2rem(42px);
+    margin-top: px2rem(16px);
+    margin-bottom: px2rem(96px);
+    img{
+      display: block;
+      width: px2rem(280px);
+      height: px2rem(280px);
+      //border: 1px solid #eee;
+      margin: 0 auto;
+    }
+    div{
+      margin-top: px2rem(15px);
+      text-align: center;
+      color: #333;
+      font-size: px2rem(30px);
+      line-height: 1.4;
+    }
+  }
+}

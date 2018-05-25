@@ -1,0 +1,160 @@
+@import "../common/mixin.scss";
+
+div#rob-project-success-page{
+  div.club-info{
+    background-color: #FEF7E3;
+    padding: .333rem .667rem;
+    border-bottom: 1px solid #e0e0e0;
+    @include sx();
+    >div{
+      &:nth-of-type(1){
+        width: 1.556rem;
+        height: 1.556rem;
+        margin-right: .722rem;
+        border-radius: 50%;
+        @include imgBgFix(1.556rem 1.556rem);
+      }
+      &:nth-of-type(2){
+        @include boxFlex(1);
+        font-size: .833rem;
+        color: #4a4a4a;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      &:nth-of-type(3){
+        width: .611rem;
+        height: .611rem;
+        border-left: .1rem solid #666;
+        border-bottom: .1rem solid #666;
+        @include rotate(-135deg);
+      }
+    }
+  }
+
+  div.success-tip{
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 1.111rem;
+    >div{
+      line-height: 1;
+      &:nth-of-type(1){
+        height: 5.944rem;
+        @include img('../assets/icons/robProject/success.png',8.694rem 5.944rem);
+        background-position: center;
+      }
+      &:nth-of-type(2){
+        font-size: 1rem;
+        margin-top: .833rem;
+        color: #616161;
+        margin-bottom: 1.4rem;
+      }
+    }
+  }
+
+  div.paid-info{
+    background-color: #fff;
+    margin-top: .667rem;
+    padding: .944rem .667rem;
+    line-height: 1;
+    >div{
+      &:nth-of-type(1){
+        @include sx();
+        >div{
+          &:nth-of-type(1){
+            @include boxFlex(1);
+            font-size: .944rem;
+            color: #616161;
+            >span{
+              color: #212121;
+            }
+          }
+          &:nth-of-type(2){
+            font-size: .778rem;
+            color: #666;
+          }
+          &:nth-of-type(3){
+            width: .472rem;
+            height: .472rem;
+            border-left: .1rem solid #666;
+            border-bottom: .1rem solid #666;
+            @include rotate(-135deg);
+          }
+        }
+      }
+      &:nth-of-type(2){
+        font-size: .778rem;
+        margin-top: .667rem;
+        color: #999;
+      }
+    }
+  }
+
+  div.tech-list{
+    background-color: #fff;
+    margin-top: .667rem;
+    padding-bottom: .2rem;
+    >div:nth-of-type(1){
+      padding: .444rem .667rem;
+      border-bottom:.056rem solid #e0e0e0;
+      @include sx();
+      >div{
+        &:nth-of-type(1){
+          @include boxFlex(1);
+          font-size: .889rem;
+          color: #4a4a4a;
+        }
+        &:nth-of-type(2){
+          font-size: .722rem;
+          color: #666;
+        }
+      }
+      &:after{
+        content : "";
+        display: block;
+        width: .4rem;
+        height: .4rem;
+        margin-top: -0.12rem;
+        border-left: .1rem solid #666;
+        border-bottom: .1rem solid #666;
+        @include rotate(-135deg);
+      }
+    }
+  }
+
+  .club-techs{
+    padding:.667rem 0 0.667rem;
+    height: 6.0009rem;
+    margin-left: 0.278rem;
+    .swiper-slide{
+      position: relative;
+      margin:0 .278rem;
+      width: 4.667rem;
+      height: 4.667rem;
+      >div{
+        &:nth-of-type(1){
+          width: 4.667rem;
+          height: 4.667rem;
+          margin-bottom: .556rem;
+          @include imgBgFix(4.667rem 4.667rem);
+          border-radius: .333rem;
+        }
+        &:nth-of-type(2){
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 0.889rem;
+          line-height: 0.889rem;
+          color: #fff;
+          font-size: 0.556rem;
+          background: rgba(0,0,0,0.2);
+          text-align: center;
+          @include sl();
+          border-bottom-right-radius: 0.333rem;
+          border-bottom-left-radius: 0.333rem;
+        }
+      }
+    }
+  }
+}

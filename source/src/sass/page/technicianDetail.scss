@@ -1,0 +1,676 @@
+@import "../common/mixin.scss";
+
+div#technician-detail-page {
+  padding-bottom: 2.667rem;
+  &.no-padding{
+      padding-bottom: 3.5rem;
+  }
+  .top {
+    position: relative;
+    min-height: px2rem(497px);
+    padding-top: px2rem(160px);
+    padding-left: px2rem(46px);
+    margin-bottom: px2rem(20px);
+    @include img("../assets/icons/technicianDetail/0.jpg", 100% px2rem(497px));
+    background-color: #fff;
+    .home, .blacklist{
+        position: absolute;
+        top: px2rem(25px);
+        width: px2rem(64px);
+        height: px2rem(64px);
+        border-radius: 50%;
+        @include imgBgFix(100% 100%);
+    }
+    .home{
+        right: px2rem(102px);
+        background-image: url("../assets/icons/technicianDetail/1.png");
+        &.right{
+            right: px2rem(24px);
+        }
+    }
+    .blacklist{
+        right: px2rem(24px);
+        background-image: url("../assets/icons/technicianDetail/0.png");
+    }
+
+    .header {
+        position: relative;
+        width: px2rem(190px);
+        height: px2rem(190px);
+        border-radius: 50%;
+        border: 2px solid #fff;
+        @include imgBgFix(100%);
+        box-shadow:0 8px 4px -4px rgba(212,226,242,0.8);
+        >div{
+            position: absolute;
+            height: px2rem(46px);
+            width: px2rem(46px);
+            right: 0;
+            bottom: 0;
+            line-height: px2rem(46px);
+            text-align: center;
+            font-size: px2rem(28px);
+            color: #fff;
+            background-color: #6c6;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px #fff;
+            &.busy{
+                background-color: #f66;
+            }
+            &.rest{
+                background-color: #8197a9;
+            }
+        }
+    }
+
+    .name {
+        margin-top: px2rem(25px);
+        font-size: px2rem(38px);
+        color: #212121;
+        >span{
+            padding: 0 px2rem(16px);
+            margin-left: px2rem(20px);
+            font-size: px2rem(28px);
+            line-height: px2rem(28px);
+            border-radius: px2rem(30px);
+            box-shadow:0 0 0 1px #7e7e7e;
+        }
+    }
+
+    .desc {
+        font-size: px2rem(28px);
+        color: #616161;
+        max-width: 14.5rem;
+        line-height: 1.2;
+        margin-top: px2rem(6px);
+        @include sl();
+    }
+
+    .collect-btn{
+        position: absolute;
+        top: px2rem(240px);
+        width: px2rem(80px);
+        right: px2rem(66px);
+        >div{
+            &:nth-of-type(1){
+                height: px2rem(80px);
+                border: 1px solid #e6e6e6;
+                border-radius: 50%;
+                @include imgBgFix(px2rem(40px) px2rem(36px));
+                background-position: center center;
+            }
+            &:nth-of-type(2){
+                text-align: center;
+                font-size: px2rem(24px);
+                color: #666;
+            }
+        }
+        >span{
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translateX(50%);
+            height: px2rem(28px);
+            color: #fff;
+            background: #f66;
+            border-radius: px2rem(22px);
+            padding: 0 px2rem(8px);
+            font-size: px2rem(21px);
+            line-height: px2rem(28px);
+        }
+    }
+    .collect-btn{
+        >div:nth-of-type(1){
+            background-image: url("../assets/icons/technicianDetail/10.png");
+        }
+        &.collected{
+            >div:nth-of-type(1){
+                background-image: url("../assets/icons/technicianDetail/2.png");
+            }
+            >div:nth-of-type(2){
+                color: #f66;
+            }
+        }
+    }
+  }
+
+  .pics {
+      margin-top: px2rem(22px);
+      width: px2rem(636px);
+      padding-bottom: px2rem(14px);
+      >div{
+          float: left;
+          width: px2rem(200px);
+          height: px2rem(280px);
+          margin-right: px2rem(12px);
+          margin-bottom: px2rem(12px);
+          background-size: cover;
+          background-position: center center;
+      }
+  }
+
+  .view {
+      display: flex;
+      height: px2rem(120px);
+      margin-top: px2rem(20px);
+      background: #fff;
+      justify-content: flex-start;
+      align-items: center;
+      padding:0 px2rem(25px);
+      &:before,&:after{
+          content: "";
+          display: block;
+      }
+      &:before{
+          width: px2rem(39px);
+          height: px2rem(39px);
+          margin-right: px2rem(10px);
+          @include img('../assets/icons/technicianDetail/5.png', 100% 100%);
+      }
+      &:after{
+          width: px2rem(58px);
+          height: px2rem(28px);
+          @include img('../assets/icons/technicianDetail/9.png', 100% 100%);
+      }
+      >div.tip{
+          height: 100%;
+          display: flex;
+          flex-grow: 1;
+          justify-content: flex-start;
+          align-items: center;
+          color: #212121;
+          font-size: px2rem(32px);
+      }
+      >div.other-tech{
+          width: px2rem(70px);
+          height: px2rem(70px);
+          border-radius: 50%;
+          @include imgBgFix(100% 100%);
+          margin-right: px2rem(8px);
+      }
+  }
+
+  div.service-item {
+    margin-top: 0.667rem;
+    background: #fff;
+    color: #4d4d4d;
+    font-size: .778rem;
+    .title {
+        height: px2rem(80px);
+        border-bottom: 1px solid #e0e0e0;
+        line-height: px2rem(80px);
+        padding-left: px2rem(24px);
+        font-size: px2rem(32px);
+        color: #212121;
+        &:before{
+            content: "";
+            display: inline-block;
+            width: px2rem(39px);
+            height: px2rem(39px);
+            vertical-align: middle;
+            margin-right: px2rem(12px);
+            margin-top: px2rem(-4px);
+            @include img("../assets/icons/technicianDetail/4.png", 100% 100%);
+        }
+    }
+
+    div.wrap {
+      padding-left: px2rem(25px);
+      > div:first-child {
+        border-top-width: 0;
+      }
+    }
+    div.item {
+      border-top: 1px solid #f0f0f0;
+      padding: px2rem(23px) 0;
+      height: px2rem(186px);
+      > div {
+        float: left;
+        &:nth-of-type(1) {
+          width: px2rem(138px);
+          height: px2rem(138px);
+          margin-right: px2rem(20px);
+          @include imgBgFix(100% 100%);
+          border-radius: px2rem(8px);
+        }
+        &:nth-of-type(2) {
+          width: px2rem(386px);
+          >div{
+              &:nth-of-type(1){
+                  font-size: px2rem(34px);
+                  color: #212121;
+                  @include sl();
+              }
+              &:nth-of-type(2),&:nth-of-type(3){
+                  font-size: px2rem(28px);
+                  color: #616161;
+                  line-height: 1.55;
+              }
+              &:nth-of-type(3){
+                  >span{
+                      display: inline-block;
+                      width: px2rem(67px);
+                      height: px2rem(38px);
+                      margin-left: px2rem(10px);
+                      vertical-align: middle;
+                      margin-top: px2rem(-2px);
+                      @include img("../assets/icons/technicianDetail/8.png", 100% 100%);
+                  }
+              }
+          }
+        }
+        &:nth-of-type(3){
+            width: px2rem(120px);
+            height: px2rem(60px);
+            line-height: px2rem(60px);
+            text-align: center;
+            color: #f66;
+            border-radius: px2rem(10px);
+            border: 1px solid #f66;
+            font-size: px2rem(28px);
+            margin-top: px2rem(42px);
+        }
+      }
+    }
+  }
+
+  .comments-wrap{
+    margin-top: px2rem(21px);
+    background: #fff;
+  }
+
+  .no-comments{
+    line-height: 2.8;
+    font-size: 0.778rem;
+    text-indent: 0.667rem;
+    color: #9d9d9d;
+  }
+
+  .comments-wrap_h{
+    display: flex;
+    line-height: px2rem(80px);
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 px2rem(20px);
+    align-items: center;
+    color: #212121;
+    font-size: px2rem(32px);
+    &:before{
+      content: "";
+      display: block;
+      width: px2rem(46px);
+      height: px2rem(46px);
+      margin-right: px2rem(10px);
+      @include img('../assets/icons/technicianDetail/13.png', 100% 100%);
+    }
+  }
+  .comments-item{
+    padding: px2rem(20px) px2rem(18px);
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .comments-item_h{
+    display: flex;
+    align-items: center;
+    >div{
+      &:nth-of-type(1){
+        flex: none;
+        width: px2rem(55px);
+        height: px2rem(55px);
+        border-radius: 50%;
+        margin-right: px2rem(18px);
+        background-size: 100% 100%;
+      }
+      &:nth-of-type(2){
+        font-size: px2rem(30px);
+        color: #666;
+        flex: 1;
+      }
+      &:nth-of-type(3){
+        flex: none;
+        color: #999;
+        font-size: px2rem(26px);
+      }
+    }
+  }
+  .comments-item_bd{
+    font-size: px2rem(30px);
+    color: #212121;
+    line-height: 1.45;
+    margin: px2rem(12px) 0;
+  }
+  .comments-item_ft{
+    display: flex;
+    flex-wrap: wrap;
+    >div{
+      display: flex;
+      flex: none;
+      // width: 33.3%;
+      color: #666;
+      justify-content: center;
+      font-size: px2rem(28px);
+      align-items: center;
+      margin-right: px2rem(40px);
+      >label{
+        margin-right: px2rem(7px);
+      }
+      >div{
+        position: relative;
+        display: flex;
+        width: px2rem(61px);
+        height: px2rem(30px);
+        align-items: center;
+        justify-content: center;
+        background: #ffe4c6;
+        border-radius: px2rem(4px);
+        color: #ff8909;
+        font-size: px2rem(22px);
+        padding-left: px2rem(22px);
+        &:before{
+          position: absolute;
+          content: "";
+          display: block;
+          width: px2rem(22px);
+          height: px2rem(22px);
+          top: 50%;
+          transform: translateY(-50%);
+          left: px2rem(10px);
+          @include img('../assets/icons/technicianDetail/11.png', 100% 100%);
+        }
+        >div{
+          position: absolute;
+          width: 0;
+          height: px2rem(22px);
+          left: px2rem(10px);
+          @include img('../assets/icons/technicianDetail/12.png', px2rem(22px) px2rem(22px));
+        }
+      }
+    }
+  }
+}
+
+div.tech-detail-footer-wrap {
+  position: fixed;
+  height: px2rem(97px);
+  width: 20rem;
+  bottom: 0;
+  left: 50%;
+  margin-left: -10rem;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > a {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 1px;
+      height: 100%;
+      color: #212121;
+      font-size: px2rem(34px);
+      border-right: 1px solid #e0e0e0;
+      &:nth-of-type(1),&:nth-of-type(2){
+          &:before{
+              content: "";
+              display: inline-block;
+              width: px2rem(40px);
+              height: px2rem(40px);
+              @include imgBgFix(100% 100%);
+              margin-right: px2rem(5px);
+          }
+      }
+      &:nth-of-type(1){
+          &:before{
+              background-image: url("../assets/icons/technicianDetail/6.png");
+          }
+      }
+      &:nth-of-type(2){
+          &:before{
+              background-image: url("../assets/icons/technicianDetail/7.png");
+          }
+      }
+      &:nth-of-type(3){
+          border-right-width: 0;
+          background: linear-gradient(to right, #f28e3f, #ff6765);
+          color: #fff;
+          >b{
+              font-weight: normal;
+              font-size: px2rem(38px);
+              margin-left: 1px;
+          }
+          &.unable{
+              background: #bbb;
+          }
+      }
+  }
+}
+
+div.club-coupon {
+  position: fixed;
+  height: 1.528rem;
+  line-height: 1.528rem;
+  right: 0;
+  bottom: 7rem;
+  padding: 0 .4rem 0 .689rem;
+  background-color: #ff9d09;
+  border: 1px solid #805005;
+  border-right: none;
+  color: #581b00;
+  font-size: .778rem;
+  text-align: right;
+  box-shadow: 0 .028rem .139rem 0 rgba(0, 0, 0, .5);
+  opacity: .8;
+  > div {
+    position: absolute;
+    top: -1.9rem;
+    left: -2.4rem;
+    width: 3.139rem;
+    height: 3.806rem;
+    transform-origin: center 65%;
+    @include img('../assets/icons/technicianDetail/coupon.png', 3.139rem 3.806rem);
+    @include dhz(couponAni, 600ms ease-in-out 5);
+  }
+}
+
+div.coupon-list {
+  @include mask();
+  @include wy(0, 100%, 0);
+  @include transition(all 0.3s);
+  opacity: 0;
+  &.active {
+    opacity: 1;
+    @include wy(0, 0, 0);
+  }
+  > div {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    bottom: 0;
+  }
+
+  div.list {
+    height: 100%;
+    overflow-y: auto;
+    background-color: #f2f2f2;
+    padding: 2.167rem 1rem 1rem;
+  }
+
+  div.title {
+    height: 2.167rem;
+    line-height: 2.167rem;
+    color: #fff;
+    background-color: #fc8282;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    top: -.2rem;
+    > div {
+      position: absolute;
+      right: .667rem;
+      top: 50%;
+      width: 1.333rem;
+      height: 1.333rem;
+      line-height: 1.2rem;
+      text-align: center;
+      font-size: 1.5rem;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      box-sizing: content-box;
+      @include wy(0, -50%, 0);
+    }
+  }
+
+  div.coupon-title {
+    padding: .778rem 0 .389rem;
+    line-height: 1;
+    font-size: .889rem;
+    color: #616161;
+  }
+
+  div.coupon-item {
+    background-color: #fff;
+    border-radius: .139rem;
+    border-bottom: .167rem solid #d95b61;
+    display: table;
+    height: 4.278rem;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 5px 0 #e0e0e0;
+    margin-bottom: .556rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:after, &:before {
+      content: '';
+      display: inline-block;
+      width: .639rem;
+      height: .639em;
+      background-color: #f2f2f2;
+      border-radius: 50%;
+      position: absolute;
+      right: 33.2%;
+      margin-right: -.3195rem;
+    }
+    &:before {
+      margin-top: -.3195rem;
+    }
+    &:after {
+      bottom: 0;
+      margin-bottom: -.3195rem;
+    }
+    > div {
+      display: table-cell;
+      vertical-align: middle;
+      &:nth-of-type(1) {
+        width: 66.8%;
+        > div {
+          padding-left: .833rem;
+          &:nth-of-type(1) {
+            color: #a04441;
+            font-size: 1.111rem;
+          }
+          &:nth-of-type(2) {
+            color: #424242;
+            font-size: .778rem;
+          }
+        }
+      }
+      &:nth-of-type(2) {
+        width: 33.2%;
+        border-left: .056rem dashed #dcdcdc;
+        text-align: center;
+        > div {
+          &:nth-of-type(1) {
+            font-size: .889rem;
+            color: #000;
+          }
+          &:nth-of-type(2) {
+            display: inline-block;
+            width: 80%;
+            min-width: 4.139rem;
+            background-color: #f66;
+            font-size: .778rem;
+            color: #fff;
+            border-radius: .3rem;
+            margin-top: .3rem;
+            &.processing {
+              background-color: #e0e0e0 !important;
+              color: #bdbdbd !important;
+              background-image: url("../assets/icons/common/loading.gif");
+              background-repeat: no-repeat;
+              background-position: .2rem 45%;
+              padding-left: .8rem;
+            }
+            &.disabled {
+              background-color: #e0e0e0 !important;
+              color: #bdbdbd !important;
+            }
+          }
+        }
+      }
+    }
+
+    &.ordinary {
+      border-bottom-color: #65a9dd;
+      > div {
+        &:nth-of-type(1) {
+          > div:nth-of-type(1) {
+            color: #355d6d;
+          }
+        }
+        &:nth-of-type(2) {
+          > div:nth-of-type(2) {
+            background-color: #7ec6f6;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .4);
+  top: 0;
+  left: 0;
+  color: #333;
+  &.fade-enter-active, &.fade-leave-active {
+    transition: all .5s
+  }
+  &.fade-leave-active, &.fade-enter {
+    opacity: 0;
+  }
+  .horizontal-wrap {
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: .2rem;
+    .title {
+      padding: px2rem(40px) 5%;
+      font-size: px2rem(28px);
+      line-height: 1.25em;
+    }
+    .footer {
+      display: flex;
+      width: 100%;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      border-top: 1px solid #ccc;
+      & > div {
+        flex: 1;
+        text-align: center;
+      }
+      .submit {
+        color: #e64340;
+        border-right: 1px solid #ccc;
+      }
+    }
+  }
+}

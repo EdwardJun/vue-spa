@@ -1,0 +1,609 @@
+@import "../common/mixin.scss";
+
+div#lucky-wheel-page{
+  position: relative;
+  z-index:0;
+  padding:2.8rem 0 1.1389rem;
+  background-color: #f66;
+  .page-title{
+    background: #eee;
+  }
+  
+  .club-title{
+    z-index: 9;
+  }
+
+  .light-bg{
+    position: absolute;
+    width:42rem;
+    height:42rem;
+    left:50%;
+    top:0;
+    margin-left:-21rem;
+    margin-top:-5rem;
+    z-index:-1;
+    opacity: 0;
+    transform: rotate(-45deg) scale(0,0);
+    transition: opacity 0.45s, transform 0.8s ease-out;
+    &.act{
+      opacity: 1;
+      transform: rotate(0deg) scale(1,1);
+    }
+  }
+
+  .title{
+    height:4.972rem;
+    @include img('../assets/icons/luckyWheel/2.png',16.528rem 4.972rem);
+    background-position: center center;
+    opacity: 0;
+    transform: translateY(-4rem) scaleY(0.1);
+    transition: opacity 0.3s 0.7s, transform 0.3s 0.7s ease-out;
+    &.act{
+      opacity: 1;
+      transform: translateY(0rem) scaleY(1);
+    }
+  }
+
+  .counter-desc{
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-2rem);
+    transition: opacity 0.4s 1.5s, transform 0.5s 1.5s;
+    >div{
+      position: relative;
+      display: inline-block;
+      height:1.611rem;
+      line-height: 1.611rem;
+      padding:0 1.528rem;
+      color:#fff;
+      font-size:1rem;
+      margin:0 auto;
+      background: rgba(0,0,0,0.1);
+      border-radius: 1rem;
+      >span{
+        color:#ffed74;
+        margin:0 .3rem;
+        font-size:1.111rem;
+      }
+      &:before,&:after{
+        content: "";
+        position: absolute;
+        width:5px;
+        height:5px;
+        background: #fff;
+        border-radius: 50%;
+        top:50%;
+        margin-top:-2.5px;
+      }
+      &:before{
+        left: .556rem
+      }
+      &:after{
+        right: .556rem;
+      }
+    }
+    &.act{
+      opacity:1;
+      transform: translateY(0)
+    }
+  }
+
+  .wheel{
+    position: relative;
+    height:18.388rem;
+    margin-top:1.361rem;
+    z-index:0;
+    opacity: 0;
+    transform: scale(0,0) rotate(-360deg);
+    transform-origin: 50% 50%;
+    transition: opacity 0.4s 0.8s, transform 0.7s 0.8s ease-out;
+    >canvas{
+      display: block;
+      &:nth-of-type(1){
+        width:18.388rem;
+        height:100%;
+        margin:0 auto;
+        transform: rotate(0deg);
+        transition: transform 5s ease-out;
+      }
+      &:nth-of-type(2){
+        position: absolute;
+        width: 4.3889rem;
+        height:5.8333rem;
+        left: 50%;
+        top:50%;
+        margin-left:-2.19445rem;
+        margin-top:-2.91665rem;
+        opacity: 0;
+        transform: rotate(360deg) scale(0,0);
+        transition: opacity 0.4s 1.6s ease-out, transform 0.6s 1.6s ease-out;
+      }
+    }
+    &:before{
+      z-index:-1;
+      content: "";
+      position: absolute;
+      width:20rem;
+      height:9.667rem;
+      @include img("../assets/icons/luckyWheel/3.png", 20rem 9.667rem);
+      opacity: 0;
+      transition: opacity 0.5s 1.5s;
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      width:8.611rem;
+      height:0.444rem;
+      left:50%;
+      bottom: -0.9rem;
+      margin-left:-4.3055rem;
+      background: rgba(0,0,0,0.4);
+      border-radius: 50% / 50%;
+      opacity: 0;
+      transition: opacity 0.5s 1.5s;
+    }
+    &.act{
+      opacity: 1;
+      transform: scale(1,1) rotate(0deg);
+      &:before, &:after{
+        opacity:1
+      }
+      >canvas:nth-of-type(2){
+        opacity: 1;
+        transform: rotate(0deg) scale(1,1);
+      }
+    }
+  }
+
+  .records{
+    margin:1.2rem 0.667rem 0;
+    text-align: right;
+    opacity: 0;
+    transform: translateX(-20rem);
+    transition: opacity 0.5s 2s, transform 0.7s 2s;
+    >a{
+      padding:0.1rem 0.889rem;
+      background: rgba(0,0,0,0.2);
+      color:#fff;
+      text-decoration: underline;
+      font-size:0.833rem;
+      border-radius: 1rem;
+    }
+    &.act{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .list-wrap{
+    background: #fff;
+    margin: 0.333rem 0.583rem 0;
+    padding: 0.9444rem 1.1389rem;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateX(5rem);
+    transition: opacity 0.5s 1.7s, transform 0.7s 1.7s;
+    >h3{
+      position: relative;
+      text-align: center;
+      line-height: 1.0;
+      font-weight: bold;
+      color:#f66;
+      font-size:1.333rem;
+      >span{
+        color:#fea70e;
+      }
+      &:before,&:after{
+        content: "";
+        position: absolute;
+        width:4.6389rem;
+        height:1px;
+        background: #f66;
+        top:50%;
+      }
+      &:before{
+        left:0;
+      }
+      &:after{
+        right:0;
+      }
+    }
+    &.act{
+      opacity:1;
+      transform: translateX(0);
+    }
+  }
+
+  .winning-list{
+    margin-top:0.4rem;
+    padding-bottom:0.2rem;
+    >ul{
+      >li{
+        padding:0.4rem 0;
+        border-bottom:1px dashed #eee;
+        >div{
+          &:nth-of-type(1){
+            font-size: 0.833rem;
+            color:#999;
+            >span{
+              color:#fea70e;
+              margin-right:0.1rem;
+            }
+          }
+          &:nth-of-type(2){
+            font-size: 0.888rem;
+            color:#616161;
+          }
+        }
+        &:last-child{
+          border-bottom-width:0;
+        }
+      }
+    }
+  }
+
+  .desc-list{
+    ul,div{
+      padding-top:0.7rem;
+      li{
+        color:#616161;
+        font-size:0.8333rem;
+        padding: 0.1rem 0;
+      }
+    }
+    >div{
+      margin-top:0.4rem;
+      color:#616161;
+      font-size:0.8333rem;
+      padding: 0.1rem 0;
+      >p{
+        position: relative;
+        padding-left: 0.7rem;
+        &:before{
+          content: "";
+          position: absolute;
+          display: block;
+          width: 0.3rem;
+          height: 0.3rem;
+          top: 0.65rem;
+          left: 0;
+          border-radius: 50%;
+          background-color: #616161;
+        }
+      }
+    }
+  }
+
+  .pop-modal{
+    .top-wrap{
+      padding-top:10.556rem;
+      background-clip: content-box;
+      text-align: center;
+      &:after{
+        content: "";
+        display: block;
+        height:0.5rem;
+      }
+      &:before{
+        content: "";
+        display: block;
+        width:20rem;
+        height:10.556rem;
+        margin-top:-10rem;
+        @include imgBgFix(20rem 10.556rem);
+      }
+      >h3{
+        margin-top:-4rem;
+        font-size:1.167rem;
+      }
+      >h4{
+        margin:0.45rem 0 0.3rem;
+        font-size:0.833rem;
+      }
+      >div.btn{
+        height:2.389rem;
+        width:12.361rem;
+        background: #cb274e;
+        border-radius: 2rem;
+        margin: 0 auto;
+        &:after{
+          display: block;
+          height:2.222rem;
+          line-height: 2.222rem;
+          border-radius: 2rem;
+          letter-spacing: 2px;
+        }
+      }
+    }
+    .split-line{
+      display: block;
+      width:100%;
+      height:1.2222rem;
+      margin:-0.1rem 0;
+    }
+    .close-btn{
+      position: absolute;
+      width:1.667rem;
+      height:1.667rem;
+      left:50%;
+      margin-left:-0.8335rem;
+      bottom: -2rem;
+      background: #fff;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 1.667rem;
+      color:#f66;
+      font-size:1.3rem;
+    }
+    >div.center-wrap{
+      transform: translateY(-50%);
+    }
+  }
+
+  .pop-modal.winning{
+    >div.center-wrap{
+      width:17.083333rem;
+      left:1.52778rem;
+    }
+    .top-wrap{
+      background-color: #f66;
+      &:before{
+        margin-left: -1.52778rem;
+        background-image: url("../assets/icons/luckyWheel/4.png");
+      }
+      >h3,>h4{
+        color:#fff;
+      }
+      >h2{
+        color:#fdf327;
+        font-size:1.333rem;
+        text-shadow: 2px -2px rgba(0,0,0,0.2);
+      }
+      >div.btn{
+        margin-top:1rem;
+        &:after{
+          content: "炫耀一下";
+          background: linear-gradient(to bottom, #fffc59 0%, #ffce01 100%);
+          color:#cb2741;
+        }
+      }
+      >div.coupon{
+        position: relative;
+        height:3.7222rem;
+        width:13.8333rem;
+        margin: 1.1rem auto 0.4rem;
+        padding-left:0.444rem;
+        padding-top:0.5rem;
+        border:1px solid #d9d9d9;
+        border-radius: 2px;
+        background: #fff;
+        box-shadow: 0 0 0 0.4167rem rgba(255,255,255,0.5);
+        text-align: left;
+        overflow: hidden;
+        >div{
+          &:nth-of-type(1){
+            color:#4d4d4d;
+            font-size:0.889rem;
+            line-height: 1.4;
+            width:10.2rem;
+            @include sl();
+          }
+          &:nth-of-type(2){
+            color:#666;
+            font-size:0.611rem;
+            line-height: 1.5;
+          }
+          &:nth-of-type(3){
+            color:#a1a1a1;
+            font-size:0.5556rem;
+            line-height: 1.25;
+            @include sl();
+          }
+          &:nth-of-type(4){
+            position: absolute;
+            top:0.8333rem;
+            right:0.472rem;
+            color: #f24f52;
+            font-size:0.667rem;
+            line-height: 1;
+          }
+        }
+        &.no-condition{
+          padding-top:0.7rem;
+          >div:nth-of-type(3){
+            margin-top:0.4rem;
+          }
+        }
+        &:before{
+          content : "";
+          position: absolute;
+          top:0;
+          left:0;
+          width:100%;
+          height:0.25rem;
+          @include imgRepeat("../assets/icons/luckyWheel/5.png", 0.25rem 0.25rem)
+        }
+      }
+    }
+    .act-desc{
+      padding:0.5rem 1rem 0.6rem;
+      color:#fff;
+      font-size:0.778rem;
+      background: #f66;
+      border-radius: 0 0 0.5rem 0.5rem;
+      &:before{
+        content: "活动说明";
+        display: block;
+        font-size:0.889rem;
+      }
+      >li{
+        line-height: 1.5;
+        margin-top:0.3rem;
+        >a{
+          text-decoration: underline;
+          color:#fdf327;
+        }
+        &:first-child{
+          margin-top: 0.1rem;
+        }
+      }
+    }
+
+    &.again{
+      div.top-wrap{
+        border-radius: 0 0 0.4rem 0.4rem;
+        &:after{
+          height:1rem;
+        }
+        >div.btn{
+          &:after {
+            content: "再抽一次";
+          }
+        }
+      }
+    }
+  }
+
+  .pop-modal.no-winning{
+    >div.center-wrap{
+      width:17.138889rem;
+      left:1.38889rem;
+    }
+    .top-wrap{
+      background-color: #fff;
+      &:before{
+        margin-left: -1.38889rem;
+        background-image: url("../assets/icons/luckyWheel/6.png");
+      }
+      >h3{
+        color:#212121;
+      }
+      >h4{
+        color:#616161;
+      }
+      >div.cry{
+        width:3.472rem;
+        height:5.972rem;
+        margin: 0.3rem auto 0.5rem;
+        @include img("../assets/icons/luckyWheel/7.png", 3.472rem 5.972rem);
+      }
+      >div.tip{
+        color:#212121;
+        >b{
+          color:#f66;
+          margin: 0 0.2rem;
+      }
+    }
+    >div.attention-tip{
+      margin-top: -3rem;
+      color: #616161;
+      font-size: 0.889rem;
+    }
+    >div.qrCode{
+      width: 10.4167rem;
+      height: 10.4167rem;
+      margin: 0.5rem auto 0;
+      >img{
+        width: inherit;
+        height: inherit;
+        }
+      }
+      >div.btn{
+        margin-top: 0.444rem;
+        &:after{
+          content: "立即分享";
+          background: linear-gradient(to bottom, #fe7b7b 0%, #e74e4e 100%);
+          color:#fff;
+        }
+        &.again{
+          &:after{
+            background: linear-gradient(to bottom, #fe7b7b 0%, #e74e4e 100%);
+            content: '再抽一次'
+          }
+        }
+      }
+    }
+    .act-desc{
+      text-align: center;
+      background: #fff;
+      border-radius: 0 0 0.5rem 0.5rem;
+      font-size: 0.778rem;
+      color:#999;
+      padding-bottom:0.5rem;
+    }
+  }
+
+  div.page-error{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    background: #f8f8f8;
+    >.error{
+      position: absolute;
+      width:12.638rem;
+      height:15.694rem;
+      left:50%;
+      top:40%;
+      transform: translate(-50%,-50%);
+      @include img("../assets/icons/luckyWheel/over.png",12.638rem 15.694rem);
+    }
+    >.notStart{
+      position: absolute;
+      width:12.638rem;
+      height:15.694rem;
+      left:50%;
+      top:40%;
+      transform: translate(-50%,-50%);
+      @include img("../assets/icons/luckyWheel/nstart.jpg",12.638rem 15.694rem);
+    }
+    // &:before{
+    //   content: "";
+    //   position: absolute;
+    //   width:12.638rem;
+    //   height:15.694rem;
+    //   left:50%;
+    //   top:40%;
+    //   transform: translate(-50%,-50%);
+    //   @include img("../assets/icons/luckyWheel/over.png",12.638rem 15.694rem);
+    // }
+    >div{
+      position: absolute;
+      height:2.222rem;
+      width:16.444rem;
+      background: #cb274e;
+      border-radius: 1rem;
+      left:50%;
+      transform: translateX(-50%);
+      bottom:3.056rem;
+      &:before{
+        content: "更多活动";
+        position: absolute;
+        width:16.444rem;
+        height:2.222rem;
+        left:0;
+        top:-0.222rem;
+        border-radius: 1rem;
+        padding-left:5.388rem;
+        color:#fff;
+        line-height: 2.222rem;
+        letter-spacing: 2px;
+        font-size:1rem;
+        background: linear-gradient(to bottom, #fe7b7b, #e64e4f);
+        box-sizing: border-box;
+      }
+      &:after{
+        content: "";
+        position: absolute;
+        width:0.556rem;
+        height:0.778rem;
+        top:0.5rem;
+        left:10.4rem;
+        @include img("../assets/icons/luckyWheel/8.png",0.556rem 0.778rem);
+      }
+    }
+  }
+}

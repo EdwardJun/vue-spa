@@ -1,0 +1,40 @@
+@import "../common/mixin.scss";
+
+div#invite-code-page{
+
+  div.code-input{
+    margin-top:0.583rem;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding:0.417rem 0 0.417rem 0.69rem;
+    border-bottom: 1px solid #d9d9d9;
+    >input{
+      height:2.083rem;
+      width:8.889rem;
+      border:1px solid #d7d7d7;
+      box-sizing: border-box;
+      border-radius: 4px;
+      padding-left: 0.694rem;
+      font-size: 0.889rem;
+      color:#4c4c4c;
+    }
+    >input:nth-of-type(1){
+      margin-right:0.667rem;
+    }
+  }
+
+  div.submit-btn{
+    margin:2.222rem auto 0;
+    width:18.667rem;
+    height:2.444rem;
+    line-height: 2.444rem;
+    letter-spacing: 0.667rem;
+    color:#fff;
+    background-color: #ccc;
+    border-radius: 0.3rem;
+    text-align: center;
+    &.active{
+      background-color: #fb5549;
+    }
+  }
+}

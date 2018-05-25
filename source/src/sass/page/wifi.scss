@@ -1,0 +1,21 @@
+@import "../common/mixin.scss";
+
+div#wifi-page{
+  overflow-y: hidden;
+  background: #f5f5f5;
+
+  div.list{
+    overflow-y: auto;
+  }
+
+  div.list-item{
+    border-top:1px solid #e0e0e0;
+    background-color: #fff;
+    padding:0.778rem 0.889rem;
+    color:#666;
+    font-size:0.889rem;
+    &:nth-of-type(1){
+      border-top-width:0;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import "../common/mixin.scss";
+
+div#club-profile-page{
+  height: 100%;
+  div.profile-swipe,div.swiper-wrapper{
+    height:100%;
+  }
+  div.swiper-slide{
+    height: auto;
+    overflow-y: auto;
+  }
+
+  div.profile-top{
+    background: #fff;
+    padding-top: 0.667rem;
+    >div{
+      &:nth-of-type(1) {
+        padding:0.667rem 0.667rem 0;
+        color: #fb5549;
+        font-size: 1.3rem;
+        line-height: 1.584rem;
+        border-top: 1px solid #f0f0f0;
+        margin-top: 3.028rem;
+      }
+      &:nth-of-type(2) {
+        padding:0 0.667rem;
+        margin-top: 0.889rem;
+        color: #666;
+        font-size: 1rem;
+        line-height: 1rem;
+        margin-bottom: 0.889rem;
+      }
+      &:nth-of-type(3) {
+        height: 12.139rem;
+        @include imgBgFix(20rem 12.139rem);
+      }
+    }
+  }
+
+  div.profile-rich-text{
+    border-top: 1px solid #d9d9d9;
+    background: #eee;
+    padding-bottom:2rem;
+  }
+}
+
+div.club-profile-page-num{
+  position: fixed;
+  width: 3.778rem;
+  height: 1.333rem;
+  border-radius: .556rem;
+  line-height: 1.333rem;
+  z-index: 3;
+  left: 50%;
+  top: .861rem;
+  transform: translateX(5.3rem);
+  background: #ff9d09;
+  color: #fff;
+  text-align: center;
+}

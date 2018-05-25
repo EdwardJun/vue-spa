@@ -1,0 +1,990 @@
+@import "../common/mixin.scss";
+
+div#one-yuan-detail-page{
+  overflow-y: auto;
+  .disabled{
+    opacity: .3;
+  }
+
+  .banner{
+    position: relative;
+    height: 10rem;
+    @include imgBgFix(20rem 10rem);
+  }
+  .act-rule{
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    padding-right: .667rem;
+    @include sx();
+    @include y();
+    background: linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,.2));
+    &:before{
+      content: "";
+      display: block;
+      width: .806rem;
+      height: .806rem;
+      border-radius: 50%;
+      background-color: #fff;
+      font-size: .556rem;
+      color: #333;
+      text-align: center;
+      line-height: .806rem;
+      @include img('../assets/icons/oneYuan/rules-tip.png',.806rem .806rem);
+    }
+    >div{
+      margin-left: .5rem;
+      font-size: .778rem;
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+
+  .act-processing{
+    padding: .5rem .667rem;
+    background-color: #fff;
+    .price{
+      color: #999;
+      >span{
+        &:nth-of-type(1){
+          color: #f66;
+          font-size: 1.222rem;
+          margin-right: .2rem;
+          >span{
+            font-size: 1rem;
+          }
+        }
+        &:nth-of-type(2){
+          font-size: .722rem;
+          margin-left: .2rem;
+        }
+      }
+    }
+    >div{
+      &:nth-of-type(1){
+        @include sx();
+        >div{
+          &:nth-of-type(1){
+            width: 2.633rem;
+            height: 1.044rem;
+            line-height: 1.144rem;
+            color: #ff935f;
+            font-size: .667rem;
+            border-radius: .2rem;
+            border: 1px solid;
+            text-align: center;
+            box-sizing: content-box;
+          }
+          &:nth-of-type(2){
+            @include boxFlex(1);
+            @include sl();
+            margin-left: .5rem;
+            font-size: .944rem;
+            color: #212121;
+            line-height: 1.4;
+            >span{
+              font-size: .667rem;
+              color: #999;
+              margin-left: .5rem;
+            }
+          }
+          &:nth-of-type(3){
+            display: none;
+          }
+        }
+      }
+      &:nth-of-type(2){
+        >div{
+          &:nth-of-type(1){
+            @include sx();
+            >div{
+              &:nth-of-type(1){
+                @include boxFlex(2);
+              }
+              &:nth-of-type(2){
+                @include boxFlex(1);
+                text-align: right;
+                font-size: .722rem;
+                color: #333;
+                >span{
+                  color: #FF9A0C;
+                }
+              }
+            }
+          }
+          &:nth-of-type(2){
+            height: .444rem;
+            border-radius: .222rem;
+            background-color: #f2f0f0;
+            >div{
+              height: 100%;
+              border-radius: .222rem;
+              background: linear-gradient(to right, #ffce60,#ffb241);
+              @include transition(width 300ms ease-out);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .act-calc-time{
+    display: none;
+    padding: .556rem .667rem;
+    border-top:1px solid #eee;
+    background-color: #fff;
+    >div{
+      &:nth-of-type(1){
+        height: 1.778rem;
+        background-color: #fee;
+        border-radius: .3rem;
+        @include wq();
+        &:before{
+          content: '';
+          display: block;
+          width: .889rem;
+          height: .889rem;
+          @include img('../assets/icons/oneYuan/clock-icon.png',.889rem .889rem);
+          margin-right: .5rem;
+        }
+        >div{
+          font-size: .833rem;
+          color: #f66;
+          &:nth-of-type(2),&:nth-of-type(4),&:nth-of-type(6){
+            font-weight: bold;
+          }
+          &:nth-of-type(3),&:nth-of-type(5),&:nth-of-type(7){
+            margin: 0 .2rem;
+          }
+        }
+      }
+      &:nth-of-type(2){
+        margin-top: 0.5rem;
+        line-height: 1;
+        font-size: .778rem;
+        color: #999;
+        text-align: center;
+      }
+    }
+  }
+
+  .winner-info{
+    display: none;
+    padding: .556rem .667rem;
+    border-top:1px solid #eee;
+    background-color: #fff;
+  }
+
+  .winner-info-wrap{
+    position: relative;
+    @include ty(0,0,.5rem,0,#ccc);
+    border-radius: .2rem;
+    >div{
+      &:nth-of-type(1){
+        padding: .667rem .667rem .667rem 1rem;
+        line-height: 1;
+        @include sx();
+        >div{
+          &:nth-of-type(1){
+            width: 2.722rem;
+            height: 2.722rem;
+            border-radius: 50%;
+            @include imgBgFix(2.722rem 2.722rem);
+            margin-right: .556rem;
+          }
+          &:nth-of-type(2){
+            @include boxFlex(1);
+            >div{
+              font-size: .778rem;
+              color: #999;
+              margin-bottom: .5rem;
+              @include sx();
+              >div{
+                &:nth-of-type(2){
+                  @include boxFlex(1);
+                  @include sl();
+                  color: #616161;
+                  >span{
+                    color: #f66;
+                  }
+                }
+              }
+              &:nth-of-type(1){
+                >div:nth-of-type(2){
+                  color: #4a4a4a;
+                }
+              }
+              &:last-child{
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+      &:nth-of-type(2){
+        padding: 0 .5rem 0 .778rem;
+        background-color: #ff6666;
+        border-bottom-left-radius: .2rem;
+        border-bottom-right-radius: .2rem;
+        height: 1.806rem;
+        @include sx();
+        color: #fff;
+        >div{
+          &:nth-of-type(1){
+            font-size: .944rem;
+          }
+          &:nth-of-type(2){
+            @include boxFlex(1);
+            font-size: 1.111rem;
+          }
+          &:nth-of-type(3){
+            width: 5.195rem;
+            height: 1.167rem;
+            line-height: 1.167rem;
+            text-align: center;
+            border-radius: .2rem;
+            background-color: #fff;
+            color: #f66;
+            font-size: .778rem;
+          }
+        }
+      }
+      &:nth-of-type(3){
+        position: absolute;
+        top: .2rem;
+        left: -.8rem;
+        width: 2.833rem;
+        height: .889rem;
+        line-height: .889rem;
+        text-align: center;
+        @include img('../assets/icons/oneYuan/win-tip-icon.png',2.833rem .889rem);
+        color: #fff;
+        font-size: .5rem;
+        @include rotate(-45deg);
+      }
+    }
+  }
+
+  .my-nums{
+    margin-top: .5rem;
+    background-color: #fff;
+    >div{
+      &:nth-of-type(1){
+        padding: 0 .667rem;
+        height: 2.222rem;
+        @include sx();
+        >div{
+          &:nth-of-type(1){
+            font-size: .889rem;
+            color: #4a4a4a;
+          }
+          &:nth-of-type(2){
+            @include boxFlex(1);
+            font-size: .944rem;
+            color: #212121;
+          }
+          &:nth-of-type(3){
+            @include arrowDown(#999);
+          }
+        }
+      }
+      &:nth-of-type(2){
+        display: none;
+        >div{
+          &:nth-of-type(1){
+            font-size: .889rem;
+            color: #4a4a4a;
+            padding: 0 .667rem;
+            line-height: 1.3;
+          }
+          &:nth-of-type(2){
+            height: 1rem;
+            @include wq();
+            >div{
+              @include arrowUp();
+            }
+          }
+        }
+      }
+    }
+    &.no-more{
+      >div:nth-of-type(1)>div:nth-of-type(3){
+        display: none;
+      }
+    }
+    &.null-data{
+      >div:nth-of-type(1)>div:nth-of-type(2){
+        font-size: .778rem;
+        color: #616161;
+      }
+    }
+    &.expanded{
+      >div{
+        &:nth-of-type(1){
+          >div{
+            &:nth-of-type(3){
+              @include rotate(135deg);
+            }
+          }
+        }
+        &:nth-of-type(2){
+          display: block;
+        }
+      }
+    }
+  }
+
+  .past-win-info{
+    margin-top: .5rem;
+    background-color: #fff;
+    >div{
+      &:nth-of-type(1){
+        @include sx();
+        height: 2.222rem;;
+        padding: 0 .667rem;
+        >div{
+          &:nth-of-type(1){
+            width: .806rem;
+            height: .806rem;
+            border-radius: 50%;
+            @include img('../assets/icons/oneYuan/trophy-icon.png',.806rem .806rem);
+            margin-right: .556rem;
+          }
+          &:nth-of-type(2){
+            @include boxFlex(1);
+            font-size: .889rem;
+            color: #4a4a4a;
+          }
+          &:nth-of-type(3){
+            font-size: .722rem;
+            color: #999;
+            margin-right: .2rem;
+          }
+          &:nth-of-type(4){
+            @include arrowRight();
+          }
+        }
+      }
+      &:nth-of-type(2){
+        @include img('../assets/icons/oneYuan/past-win-info-bg.png',11.472rem 2.444rem);
+        background-position: center center;
+        >div{
+          margin: 0 auto;
+          width: 2.556rem;
+          height: 2.556rem;
+          border-radius: 50%;
+          border: .2rem solid #ffcc36;
+          @include imgBgFix(2.556rem 2.556rem);
+        }
+      }
+      &:nth-of-type(3){
+        font-size: .722rem;
+        color: #FF9A0C;
+        text-align: center;
+      }
+    }
+  }
+
+  .join-list{
+    margin-top: .5rem;
+    background-color: #fff;
+    >div{
+      &:nth-of-type(1){
+        @include sx();
+        height: 2.222rem;
+        padding: 0 .667rem;
+        >div{
+          &:nth-of-type(1){
+            width: .806rem;
+            height: .806rem;
+            border-radius: 50%;
+            @include img('../assets/icons/oneYuan/join-list-icon.png',.806rem .806rem);
+            margin-right: .556rem;
+          }
+          &:nth-of-type(2){
+            @include boxFlex(1);
+            font-size: .889rem;
+            color: #4a4a4a;
+          }
+          &:nth-of-type(3){
+            font-size: .722rem;
+            color: #999;
+            margin-right: .2rem;
+          }
+          &:nth-of-type(4){
+            @include arrowRight();
+          }
+        }
+      }
+      &:nth-of-type(2){
+        padding: 0 .667rem .667rem;
+        >div{
+          &:nth-of-type(1){
+            >div.join-item{
+              line-height: 1.8;
+              border-bottom: 1px solid #eee;
+              &:last-child{
+                border-bottom: none;
+              }
+              @include sx();
+              >div{
+                &:nth-of-type(1){
+                  width: 1.889rem;
+                  height: 1.889rem;
+                  border-radius: 50%;
+                  margin-right: .556rem;
+                  @include imgBgFix(1.889rem 1.889rem);
+                }
+                &:nth-of-type(2){
+                  @include boxFlex(1);
+                  >div{
+                    &:nth-of-type(1){
+                      @include sx();
+                      >div{
+                        font-size: .722rem;
+                        &:nth-of-type(1){
+                          @include boxFlex(1);
+                          @include sl();
+                          color: #4d4d4d;
+                        }
+                        &:nth-of-type(2){
+                          margin-left: .2rem;
+                          color: #999;
+                          >span{
+                            color: #f66;
+                          }
+                        }
+                      }
+                    }
+                    &:nth-of-type(2){
+                      color: #999;
+                      font-size: .667rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &:nth-of-type(2){
+            display: none;
+            text-align: center;
+            font-size: .667rem;
+            color: #999;
+          }
+        }
+        &.null-data{
+          >div{
+            &:nth-of-type(1){
+              display: none;
+            }
+            &:nth-of-type(2){
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .rob-item{
+    margin-top: .5rem;
+    background-color: #fff;
+    >div{
+      &:nth-of-type(1){
+        color: #4a4a4a;
+        padding:.556rem 1.944rem;
+        font-size: .889rem;
+        @include imgBgFix(.833rem .833rem);
+        background-position: .667rem center;
+        border-bottom: .056rem solid #eee;
+        line-height: 1;
+        &.node-pad-icon{
+          background-image: url('../assets/icons/robProject/nodepad.png');
+        }
+        &.info-icon{
+          background-image: url('../assets/icons/robProject/info-icon.png');
+        }
+      }
+      &:nth-of-type(2){
+        padding-left: .667rem;
+        >div{
+          &:nth-of-type(1){
+            border-bottom: .056rem solid #E0E0E0;
+            >div{
+              padding: .667rem 0;
+              line-height: 1;
+              &:nth-of-type(1){
+                font-size: .889rem;
+                color: #FF9D09;
+                @include sx();
+                >div{
+                  &:nth-of-type(1){
+                    width: 2.833rem;
+                    height: 2.833rem;
+                    margin-right: .556rem;
+                    border-radius: .278rem;
+                    @include imgBgFix(2.833rem 2.833rem);
+                  }
+                  &:nth-of-type(2){
+                    @include boxFlex(1);
+                    >div{
+                      line-height: 1;
+                      &:nth-of-type(1){
+                        font-size: .944rem;
+                        color: #4a4a4a;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                      }
+                      &:nth-of-type(2){
+                        margin-top: .944rem;
+                        font-size: .833rem;
+                        color: #616161;
+                      }
+                    }
+                  }
+                }
+              }
+              &:nth-of-type(2){
+                font-size: .833rem;
+                padding: 0 0 .667rem;
+              }
+            }
+          }
+          &:nth-of-type(2){
+            padding: .667rem .667rem .667rem 0;
+            line-height: 1;
+            >div{
+              &:nth-of-type(1){
+                font-size: .944rem;
+                color: #FF9D09;
+              }
+              &:nth-of-type(2){
+                margin-top: 0;
+                font-size: .833rem;
+                >div:nth-of-type(1),>div:nth-of-type(2){
+                  color: #666;
+                  >span{
+                    color: #999;
+                  }
+                }
+                >div{
+                  p{
+                    margin: 0;
+                  }
+                  >ul{
+                    margin: 0;
+                    padding-left: .85rem;
+                    >li{
+                      list-style-type: disc;
+                      margin-top: .5rem;
+                      &:first-child{
+                        margin-top: 0;
+                      }
+                    }
+                    ul{
+                      margin: 0;
+                      padding-left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-btn{
+    position: fixed;
+    bottom:0;
+    left: 0;
+    height: 3.167rem;
+    padding: 0 .667rem;
+    background: rgba(255,255,255,.96);
+    width: 100%;
+    border-top: 1px solid #ccc;
+    >div{
+      height: 100%;
+      @include sx();
+      &:nth-of-type(1){
+        >div{
+          @include boxFlex(1);
+          width: 9.056rem;
+          height: 2.444rem;
+          line-height: 2.444rem;
+          font-size: 1rem;
+          text-align: center;
+          border-radius: .3rem;
+          &:nth-of-type(1){
+            border: 2px solid #f66;
+            color: #f66;
+            margin-right: .5rem;
+          }
+          &:nth-of-type(2){
+            background-color: #f66;
+            color: #fff;
+          }
+        }
+      }
+      &:nth-of-type(2){
+        display: none;
+        >div{
+          &:nth-of-type(1){
+            @include boxFlex(1);
+            font-size: .833rem;
+            color: #616161;
+          }
+          &:nth-of-type(2){
+            width: 6.5rem;
+            height: 2.444rem;
+            line-height: 2.444rem;
+            text-align: center;
+            color: #fff;
+            font-size: 1rem;
+            background-color: #f66;
+            border-radius: .3rem;
+          }
+        }
+      }
+    }
+    &.over{
+      >div{
+        &:nth-of-type(1){
+          display: none;
+        }
+        &:nth-of-type(2){
+          @include sx();
+        }
+      }
+    }
+  }
+
+  .join-info{
+    position: fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.5);
+    @include scale(1,0);
+    opacity: 0;
+    @include transition(all 0.3s);
+    @include tOrigin(50% 100%);
+    z-index:9;
+    &.active{
+      @include scale(1,1);
+      opacity: 1;
+    }
+    >div{
+      position: absolute;
+      bottom:0;
+      background-color: #fff;
+      width: 100%;
+      >div{
+        &:nth-of-type(1){
+          line-height: 2.833rem;
+          padding: 0 .667rem;
+          @include sx();
+          >div{
+            &:nth-of-type(1){
+              @include boxFlex(1);
+              color: #ff5549;
+              font-size: 1rem;
+              >span{
+                margin-left: .5rem;
+                font-size: .667rem;
+              }
+            }
+            &:nth-of-type(2){
+              width: 1.389rem;
+              height: 1.389rem;
+              border-radius: 50%;
+              border: 1px solid #757575;
+              color: #757575;
+              text-align: center;
+              line-height: 1.389rem;
+              font-size: 1rem;
+              box-sizing: content-box;
+            }
+          }
+        }
+        &:nth-of-type(2){
+          border: 1px solid #e0e0e0;
+          border-left: none;
+          border-right: none;
+          padding: 1rem .667rem .667rem;
+          >.input-item{
+            color: #999;
+            margin-bottom: .5rem;
+            @include sx();
+            :-moz-placeholder {
+              color: #999 !important;
+            }
+            ::-moz-placeholder {
+              color: #999 !important;
+            }
+            input::-webkit-input-placeholder {
+              color: #999 !important;
+            }
+            >div{
+              font-size: .833rem;
+              &:nth-of-type(1){
+                text-align: right;
+                margin-right: .2rem;
+                color: #616161;
+              }
+              &:nth-of-type(2){
+                @include boxFlex(1);
+              }
+            }
+            &.phone-item{
+              >div{
+                &:nth-of-type(2){
+                  @include boxFlex(1);
+                  >input{
+                    border-bottom: 1px solid #e0e0e0;
+                    width: 8rem;
+                    padding: 0;
+                    margin: 0;
+                    font-size: .833rem;
+                    color: #212121;
+                    &[disabled]{
+                      color: #212121 !important;
+                    }
+                  }
+                }
+                &:nth-of-type(3){
+                  margin-left: .5rem;
+                  width: 5.194rem;
+                  height: 1.528rem;
+                  text-align: center;
+                  line-height: 1.528rem;
+                  border-radius: .2rem;
+                  background-color: #f66;
+                  color: #fff;
+                }
+              }
+            }
+            &.code-item{
+              >div{
+                &:nth-of-type(1){
+                  padding-left: 0.85rem;
+                }
+                &:nth-of-type(2){
+                  @include boxFlex(1);
+                  >input{
+                    width: 8rem;
+                    padding: 0;
+                    margin: 0;
+                    font-size: .833rem;
+                    color: #212121;
+                    border-bottom: 1px solid #e0e0e0;
+                  }
+                }
+              }
+            }
+            &.amount-item{
+              >div{
+                &:nth-of-type(2){
+                  @include boxFlex(1);
+                  >div{
+                    @include sx();
+                    >div{
+                      min-width:1.8rem;
+                      text-align: center;
+                      -webkit-user-select: none;
+                      user-select: none;
+                      border: 1px solid #ececec;
+                      &:nth-of-type(1){
+                        font-size: 1.306rem;
+                        background-color: #ececec;
+                        color: #a1a1a1;
+                        border-top-left-radius: .167rem;
+                        border-bottom-left-radius: .167rem;
+                      }
+                      &:nth-of-type(2){
+                        padding:0 .167rem;
+                        color: #444;
+                        font-size: .944rem;
+                      }
+                      &:nth-of-type(3){
+                        font-size: .944rem;
+                        background-color: #ececec;
+                        color: #a1a1a1;
+                        border-top-right-radius: .167rem;
+                        border-bottom-right-radius: .167rem;
+                      }
+                    }
+                  }
+                }
+                &:nth-of-type(3){
+                  color: #666;
+                  font-size: .833rem;
+                  @include img('../assets/icons/oneYuan/uncheck.png',.7rem .7rem);
+                  background-position: .2rem center;
+                  padding-left: 1.2rem;
+                  line-height: 1.8rem;
+                  &.checked{
+                    background-image: url('../assets/icons/oneYuan/checked.png');
+                  }
+                }
+              }
+            }
+          }
+          >div:nth-of-type(4){
+            color: #666;
+            text-align: right;
+            font-size: .722rem;
+            margin-top: .722rem;
+            line-height: 1;
+            >span:nth-of-type(2){
+              >span{
+                margin:0 .3rem;
+                color: #ff9a0c;
+              }
+            }
+          }
+
+          &.is-bind{
+            >div{
+              &.phone-item{
+                >div>input{
+                  background: transparent;
+                  border-bottom: none !important;
+                }
+                >div:nth-of-type(3){
+                  display: none;
+                }
+              }
+              &.code-item{
+                display: none;
+              }
+            }
+          }
+        }
+        &.sure-btn{
+          padding: .556rem .667rem;
+          text-align: center;
+          >div{
+            height: 2.111rem;
+            line-height: 2.111rem;
+            font-size: .889rem;
+            border-radius: .333rem;
+            background-color: #f66;
+            color:#fff;
+          }
+        }
+      }
+    }
+  }
+
+  .show-num-pop{
+    >div{
+      width: 17.222rem;
+      border-radius: .5rem;
+      background-color: #fff;
+      padding-bottom: .889rem;
+      >div{
+        padding: 0 .889rem;
+        &:nth-of-type(1){
+          @include sx();
+          height: 2rem;
+          color: #fff;
+          background-color: #f66;
+          border-top-left-radius: .5rem;
+          border-top-right-radius: .5rem;
+          >div{
+            &:nth-of-type(1){
+              @include boxFlex(1);
+              @include sl();
+              font-size: 1.056rem;
+              margin-right: .5rem;
+            }
+            &:nth-of-type(2){
+              font-size: 1.2rem;
+              padding-left: 1.5rem;
+            }
+          }
+        }
+        &:nth-of-type(2){
+          >div{
+            font-size: .833rem;
+            &:nth-of-type(1){
+              padding-top: .5rem;
+              color: #616161;
+              >span{
+                color: #f66;
+              }
+            }
+            &:nth-of-type(2){
+              color: #212121;
+              min-height: 4.444rem;
+              max-height: 14rem;
+              overflow-y: auto;
+              -webkit-overflow-scrolling: touch;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.act-end{
+    .act-processing{
+      >div{
+        &:nth-of-type(1){
+          >div{
+            &:nth-of-type(1){
+              color: #6fd21d;
+              border-color: #6fd21d;
+            }
+          }
+        }
+        &:nth-of-type(2){
+          >div{
+            &:nth-of-type(1){
+              >div:nth-of-type(2){
+                display: none;
+              }
+            }
+            &:nth-of-type(2){
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .act-calc-time{
+      display: block;
+    }
+  }
+
+  &.act-complete{
+    .act-processing{
+      >div{
+        &:nth-of-type(1){
+          >div{
+            &:nth-of-type(1){
+              color: #20b9ff;
+              border-color: #20b9ff;
+            }
+            &:nth-of-type(3){
+              display: block;
+            }
+          }
+        }
+        &:nth-of-type(2){
+          display: none;
+        }
+      }
+    }
+    .winner-info{
+      display: block;
+    }
+  }
+}

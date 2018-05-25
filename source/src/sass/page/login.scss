@@ -1,0 +1,140 @@
+@import "../common/mixin.scss";
+
+div.login-page{
+  overflow: hidden;
+  div.input{
+    height:2.611rem;
+    position: relative;
+    width:100%;
+    margin-top: .611rem;
+    padding: 0 .722rem;
+    background-color: #fff;
+    border-bottom: 1px solid #d9d9d9;
+    >i{
+      display: block;
+      width:0.75rem;
+      height:0.972rem;
+      position: absolute;
+      left:0.722rem;
+      top:50%;
+      margin-right:0.5rem;
+      margin-top:-0.486rem;
+      @include imgBgFix(0.75rem 0.972rem);
+    }
+    >span{
+      position: absolute;
+      left:2.122rem;
+      color:#4d4d4d;
+      font-size:0.888rem;
+      display: inline-block;
+      height:1.4rem;
+      top:50%;
+      margin-top:-0.7rem;
+    }
+    >input{
+      width:100%;
+      height:1.4rem;
+      line-height:1.4rem;
+      margin-top:0.605rem;
+      padding-left:3.422rem;
+      color:#4d4d4d;
+      font-size:0.888rem;
+      box-sizing: border-box;
+    }
+    &.tel{
+      >i{
+        background-image: url('../assets/icons/login/tel_icon.png');
+      }
+    }
+    &.pw,&.auth{
+      margin-top:0;
+      >input{
+        padding-left:1.5rem;
+      }
+    }
+    &.pw{
+      >i{
+        background-image: url("../assets/icons/login/lock_icon.png");
+      }
+    }
+    &.auth{
+      >i{
+        background-image: url("../assets/icons/login/auth_icon.png");
+      }
+      >a{
+        position: absolute;
+        display: block;
+        right: 0.722rem;
+        width: 6.166rem;
+        height: 2.138rem;
+        top: 50%;
+        margin-top: -1.069rem;
+        background-color: #fb5549;
+        text-align: center;
+        line-height: 2.138rem;
+        font-size: .888rem;
+        border-radius: .166rem;
+        color: #fff;
+        &.disabled,&.pause{
+          background-color: #ccc;
+        }
+        &.repeat{
+          background-color: #fb5448;
+        }
+      }
+    }
+    &.spec{
+      border-bottom-width:0;
+      &::after{
+        content : "";
+        display: block;
+        position: absolute;
+        left:0.722rem;
+        right:0.722rem;
+        bottom:0;
+        height:1px;
+        background-color: #f0f0f0;
+      }
+    }
+  }
+
+  div.next-btn{
+    background-color: #bebebe;
+    margin: 2.25rem .722rem 0;
+    color: #fff;
+    font-size: .888rem;
+    height: 2.472rem;
+    line-height: 2.472rem;
+    text-align: center;
+    border-radius: .166rem;
+    letter-spacing: 1px;
+    &.active{
+      background-color: #fb5549;
+    }
+  }
+
+  div.tip-title{
+    font-size: .889rem;
+    color: #666;
+    margin: 1.583rem .722rem 0;
+  }
+
+  div.tip{
+    margin: 0 1.811rem;
+    color: #ff9d09;
+    font-size: .778rem;
+  }
+
+  div.error{
+    margin: .5rem .722rem 0;
+    font-size: .778rem;
+    color: #fb5549;
+  }
+
+  div.recover-password{
+    font-size: .777rem;
+    margin: .3rem .722rem;
+    color: #fb5549;
+    text-align: right;
+  }
+}

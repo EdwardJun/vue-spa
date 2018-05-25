@@ -1,0 +1,337 @@
+@import "../common/mixin.scss";
+div#fast-pay-detail-page{
+    background-color: #ededed;
+    padding-top: px2rem(25px);
+    div.item-phone{
+        padding: 0 px2rem(25px);
+        border-bottom: 0.1rem solid #e0e0e0;
+        padding-bottom: px2rem(30px);
+        background-color: #fff;
+        >span{
+            font-size: px2rem(28px);
+            color: #666666;
+            padding-top: 0.3rem;
+            display: block;
+        }
+        >input{
+            width: 18.5rem;
+            height: px2rem(80px);
+            font-size: px2rem(30px);
+            color: #999999;
+            letter-spacing: 0.05rem;
+            text-align: center;
+            border-radius: 0.3rem;
+            border: 0.06rem solid #e0e0e0;
+            background-color: #faf5f5;
+        }
+        >div{
+            width: 18.57rem;
+            height: px2rem(80px);
+            background-color: #ff6666;
+            color: #fff;
+            line-height: px2rem(80px);
+            font-size: 0.9rem;
+            text-align: center;
+            border-radius: .3rem;
+            letter-spacing: 0.1rem;
+            margin: 0.6rem auto 0;
+        }
+    }
+    div.item-gift{
+        padding: px2rem(15px) px2rem(25px);
+        >span{
+            color: #666666;
+            font-size: px2rem(30px);
+        }
+    }
+    div.item-detail{
+        width: px2rem(672px);
+        margin: auto;
+        margin-bottom: px2rem(25px);
+        background-color: #fff;
+        border-radius: 0.2rem;
+        border-top: 0.01rem solid #e0e0e0;
+        border-bottom: 0.01rem solid #e0e0e0;
+        .item-top{
+            .title{
+                color: #2e4b6a;
+                font-size: px2rem(31px);
+                padding: 0.2rem 0.4rem;
+                border-bottom: 0.02rem solid #e0e0e0;
+                >span{
+                    float: right;
+                    font-size: px2rem(25px);
+                    color: #999999;
+                }
+            }
+            .name{
+                padding: 0.4rem 0.4rem;
+                border-bottom: 0.01rem solid #e0e0e0;
+                >div{
+                    line-height: 1.4rem;
+                    color: #212121;
+                    font-size: px2rem(30px);
+                    >span{
+                        float: right;
+                    }
+                }
+            }
+        }
+        .item-bottom{
+            font-size: px2rem(27px);
+            line-height: 1.3rem;
+            padding: 0.4rem 0.4rem 0.8rem 1.2rem;
+            color: #212121;
+            >div{
+                &:nth-of-type(3), &:nth-of-type(5){
+                    color: #616161;
+                    font-size: px2rem(26px);
+                    margin-left: 1.4rem;
+                    position: relative;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: -0.4rem;
+                        margin-top: px2rem(-4px);
+                        width: px2rem(8px);
+                        height: px2rem(8px);
+                        border-radius: 100%;
+                        background-color: #999999;
+                    }
+                }
+                &:nth-of-type(4){
+                    >span{
+                        color: #ff4545;
+                    }
+                }
+                >span{
+                    float: right;
+                }
+            }
+        }
+    }
+    div.coupons-area{
+        padding: 0 px2rem(25px);
+        margin-top: .5rem;
+        >.item-title{
+            font-size: px2rem(30px);
+            color: #333333;
+            letter-spacing: 0.05333rem;
+        }
+        >div.item-content{
+            font-size: px2rem(28px);
+            color: #616161;
+            margin-top: px2rem(15px);
+            >.item-container{
+                width: 100%;
+                height: px2rem(202px);
+                >.coupon-left{
+                    width: px2rem(214px);
+                    height: px2rem(202px);
+                    background-size: px2rem(214px) px2rem(202px);
+                    background-repeat: no-repeat;
+                    border-radius: px2rem(8px);
+                    display: inline-block;
+                    position: absolute;
+                    background-image: url("../assets/icons/oClockCoupon/9.png");
+                    box-shadow: 0 0 0.03rem rgba(100, 100, 100, 0.5);
+                    >div{
+                        &:nth-of-type(1){
+                            height: px2rem(45px);
+                            text-align: center;
+                            padding-bottom: px2rem(60px);
+                            padding-top: px2rem(50px);
+                            >span{
+                                color: #333333;
+                                font-weight: 700;
+                                &:nth-of-type(2){
+                                    font-size: 1.6rem;
+                                }
+                            }
+                        }
+                        &:nth-of-type(2){
+                            padding-top: px2rem(2px);
+                            text-align: center;
+                            color: #333333;
+                            border-top: 0.06556rem  solid rgba(0, 0, 0, .2);
+                            margin-left: px2rem(35px);
+                            margin-right: px2rem(35px);
+                        }
+                    }
+                }
+                .money,.coupon,.discount,.cash{
+                    background-image: url("../assets/icons/oClockCoupon/8.png");
+                }
+                .paid{
+                    background-image: url("../assets/icons/oClockCoupon/4.png");
+                }
+                .gift{
+                    background-color: #fff;
+                    background-size: px2rem(158px) px2rem(156px);
+                    background-position: center center;
+                    background-image: url("../assets/icons/home/serviceItem_default.jpg");
+                }
+                >.coupon-right{
+                    display: inline-block;
+                    width: px2rem(459px);
+                    height: px2rem(202px);
+                    background-color: #fff;
+                    margin-left: px2rem(214px);
+                    border-radius: px2rem(8px);
+                    position: absolute;
+                    padding: px2rem(17px);
+                    box-shadow: 0 0 0.03rem rgba(100, 100, 100, 0.5);
+                    >div{
+                        border: px2rem(2px) dashed #f6bab9;
+                        border-radius: px2rem(8px);
+                        height: px2rem(168px);
+                        padding: px2rem(5px) px2rem(10px);
+                        >div{
+                            &:nth-of-type(1){
+                                font-size: px2rem(37px);
+                                color: #333333;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                width: 11.3rem;
+                            }
+                            &:nth-of-type(2){
+                                font-size: px2rem(28px);
+                                color: #333333;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            &:nth-of-type(3){
+                                font-size: px2rem(28px);
+                                color: #333333;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            &:nth-of-type(4){
+                                font-size: px2rem(28px);
+                                color: #333333;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            &:nth-of-type(5){
+                                font-size: px2rem(28px);
+                                color: #333333;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            &:nth-of-type(6){
+                                font-size: px2rem(28px);
+                                color: #333333;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            &:nth-of-type(7){
+                                font-size: px2rem(28px);
+                                color: #333333;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            &:last-child{
+                                font-size: 0.56rem;
+                                color: #757575;
+                            }
+                        }
+                    }
+                    .money1,.coupon1,.discount1,.cash1{
+                        border: px2rem(2px) dashed #ffd37f;
+                    }
+                    .gift1{
+                        border: px2rem(2px) dashed #bbbbbb;
+                    }
+                    .paid1{
+                        border: px2rem(2px) dashed #f6bab9;
+                    }
+                    &:after{
+                        content: "";
+                        width: px2rem(25px);
+                        height: px2rem(25px);
+                        border-radius: 100%;
+                        background-color: #eee;
+                        position: absolute;
+                        left: -0.370rem;
+                        bottom: -0.26667rem;
+                    }
+                    &:before{
+                        content: "";
+                        width: px2rem(25px);
+                        height: px2rem(25px);
+                        line-height: px2rem(20px);
+                        border-radius: 100%;
+                        background-color: #eee;
+                        position: absolute;
+                        left: -0.370rem;
+                        top: -0.26667rem;
+                    }
+                }
+            }
+        }
+    }
+    .item-integral{
+        background-color: #fff;
+        border-radius: px2rem(4px);
+        height: px2rem(205px);
+        margin-top: px2rem(15px);
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: px2rem(296px) px2rem(236px);
+        background-image: url("../assets/icons/fastPay/10.png");
+        position: relative;
+        box-shadow: 0 0 0.03rem rgba(100, 100, 100, 0.5);
+        >div{
+            color: #faad00;
+            font-weight: 700;
+            font-size: px2rem(55px);
+            position: absolute;
+            right: px2rem(50px);
+            height: px2rem(60px);
+            line-height: px2rem(60px);
+            margin-top: px2rem(72px);
+            >span{
+                color: #333333;
+                font-size: px2rem(28px);
+                vertical-align: middle;
+            }
+        }
+    }
+    div.item-get{
+        padding: px2rem(60px) px2rem(25px) 0 px2rem(25px);
+        >div{
+            &:nth-of-type(1){
+                width: px2rem(214px);
+                height: px2rem(183px);
+                margin: auto;
+                color: #fff;
+                background-position: center;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-image: url("../assets/icons/fastPay/11.png");
+                padding-top: px2rem(55px);
+            }
+            &:nth-of-type(2){
+                color: #333333;
+                font-size: px2rem(38px);
+                text-align: center;
+                margin-top: px2rem(25px);
+                letter-spacing: 0.05rem;
+            }
+            &:nth-of-type(3){
+                text-align: center;
+                font-size: px2rem(30px);
+                color: #666666;
+                letter-spacing: 0.07rem;
+            }
+        }
+    }
+}

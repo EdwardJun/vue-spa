@@ -1,0 +1,33 @@
+@import "../common/mixin.scss";
+
+div#technician-img-page{
+  background-color: #383838;
+  div.pic-swipe{
+    position: relative;
+    width:20rem;
+    height:100%;
+    background-color: #383838;
+    div.swiper-wrapper{
+      position: absolute;
+      width:20rem;
+      height:27.978rem;
+      top:50%;
+      margin-top:-13.989rem;
+    }
+  }
+  div.swiper-slide{
+    display: flex;
+    width:20rem;
+    height:27.978rem;
+    align-items: center;
+    >img{
+      width: 20rem;
+    }
+  }
+  div.swipe-indicators{
+    .swipe-indicator.active{
+      background-color: #007aff;
+      opacity: 1;
+    }
+  }
+}

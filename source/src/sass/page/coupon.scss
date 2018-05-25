@@ -1,0 +1,383 @@
+@import "../common/mixin.scss";
+
+div#coupon-page{
+  .tab-list{
+    background: #fafafa;
+    height: px2rem(75px);
+    box-sizing: content-box;
+    border-bottom: 1px solid #e0e0e0;
+    >div{
+      float: left;
+      box-sizing: border-box;
+      width: 33.3%;
+      text-align: center;
+      height: 100%;
+      line-height: px2rem(75px);
+      color: #616161;
+      font-size: px2rem(28px);
+      border-right: 1px solid #e0e0e0;
+      &:last-child{
+        border-right-width: 0;
+      }
+      &.active{
+        color: #f66;
+          position: relative;
+          &:before{
+              content: "";
+              width: px2rem(140px);
+              height: px2rem(3px);
+              background-color: #f66;
+              position: absolute;
+              left: px2rem(48px);
+              bottom: px2rem(-1px);
+          }
+      }
+    }
+  }
+
+    div.item-content{
+        background-color: #eeeeee;
+        font-size: px2rem(28px);
+        color: #616161;
+        overflow-y: auto;
+        >div{
+            div.item-coupon{
+                padding: px2rem(0px) px2rem(23px);
+                >.item-container{
+                    width: 100%;
+                    height: px2rem(202px);
+                }
+                >.item-data1{
+                    position: relative;
+                    height: px2rem(202px);
+                    margin-bottom: px2rem(25px);
+                    &:nth-of-type(1){
+                        margin-top: px2rem(20px);
+                    }
+                    >div{
+                        >.coupon-left{
+                            width: px2rem(214px);
+                            height: px2rem(202px);
+                            background-size: px2rem(214px) px2rem(202px);
+                            background-repeat: no-repeat;
+                            border-radius: px2rem(8px);
+                            display: inline-block;
+                            position: absolute;
+                            bottom: 0;
+                            background-image: url("../assets/icons/oClockCoupon/9.png");
+                            box-shadow: 0 0 2px rgba(100, 100, 100, 0.5);
+                            >div{
+                                &:nth-of-type(1){
+                                    height: px2rem(45px);
+                                    text-align: center;
+                                    padding-bottom: px2rem(60px);
+                                    padding-top: px2rem(50px);
+                                    @include sl();
+                                    >span{
+                                        color: #333;
+                                        font-weight: 700;
+                                        &:nth-of-type(2){
+                                            font-size: px2rem(60px);
+                                        }
+                                    }
+                                }
+                                &:nth-of-type(2){
+                                    padding-top: px2rem(2px);
+                                    text-align: center;
+                                    color: #333333;
+                                    border-top: 0.06556rem  solid rgba(0, 0, 0, .2);
+                                    margin-left: px2rem(20px);
+                                    margin-right: px2rem(20px);
+                                }
+                            }
+                        }
+                        .money,.coupon,.discount,.cash{
+                            background-image: url("../assets/icons/oClockCoupon/8.png");
+                        }
+                        .paid{
+                            background-image: url("../assets/icons/oClockCoupon/4.png");
+                        }
+                        .gift{
+                            background-color: #fff;
+                            background-size: px2rem(158px) px2rem(156px);
+                            background-position: center center;
+                            background-image: url("../assets/icons/home/serviceItem_default.jpg");
+                        }
+                        >.coupon-right{
+                            display: inline-block;
+                            width: px2rem(459px);
+                            height: px2rem(202px);
+                            background-color: #fff;
+                            margin-left: px2rem(214px);
+                            border-radius: px2rem(8px);
+                            position: absolute;
+                            bottom: 0;
+                            padding: px2rem(17px);
+                            box-shadow: 0 0 2px rgba(100, 100, 100, 0.5);
+                            >div{
+                                border: px2rem(2px) dashed #f6bab9;
+                                border-radius: px2rem(8px);
+                                height: px2rem(168px);
+                                padding: px2rem(5px) px2rem(10px);
+                                >div{
+                                    font-size: px2rem(28px);
+                                    color: #333333;
+                                    @include sl();
+                                    &:nth-of-type(1){
+                                        font-size: px2rem(37px);
+                                        color: #333333;
+                                    }
+                                    &:last-child{
+                                        font-size: 0.56rem;
+                                        color: #757575;
+                                    }
+                                }
+                            }
+                            .money1,.coupon1,.discount1,.cash1{
+                                border: px2rem(2px) dashed #ffd37f;
+                            }
+                            .gift1{
+                                border: px2rem(2px) dashed #bbbbbb;
+                            }
+                            .paid1{
+                                border: px2rem(2px) dashed #f6bab9;
+                            }
+                            &:after{
+                                content: "";
+                                width: px2rem(25px);
+                                height: px2rem(25px);
+                                border-radius: 100%;
+                                background-color: #eee;
+                                position: absolute;
+                                left: -0.370rem;
+                                bottom: -0.26667rem;
+                            }
+                            &:before{
+                                content: "";
+                                width: px2rem(25px);
+                                height: px2rem(25px);
+                                line-height: px2rem(20px);
+                                border-radius: 100%;
+                                background-color: #eee;
+                                position: absolute;
+                                left: -0.370rem;
+                                top: -0.26667rem;
+                            }
+                            >ul{
+                                position: absolute;
+                                left: -0.10989rem;
+                                >li{
+                                    width: px2rem(6px);
+                                    height: px2rem(6px);
+                                    border-radius: 100%;
+                                    background-color: #dadada;
+                                    margin-top: px2rem(6px);
+                                }
+                            }
+                        }
+                    }
+                }
+                >.item-data{
+                    position: relative;
+                    height: px2rem(202px);
+                    margin-bottom: px2rem(25px);
+                    &:nth-of-type(1){
+                        margin-top: px2rem(20px);
+                    }
+                    >div{
+                        >.coupon-left{
+                            width: px2rem(214px);
+                            height: px2rem(202px);
+                            background-size: px2rem(214px) px2rem(202px);
+                            background-image: url("../assets/icons/oClockCoupon/5.png");
+                            background-repeat: no-repeat;
+                            background-color: #fff;
+                            border-radius: px2rem(8px);
+                            display: inline-block;
+                            position: absolute;
+                            bottom: 0;
+                            box-shadow: 0 2px 6px rgba(100, 100, 100, 0.5);
+                            >div{
+                                &:nth-of-type(1){
+                                    height: px2rem(45px);
+                                    text-align: center;
+                                    padding-bottom: px2rem(60px);
+                                    padding-top: px2rem(50px);
+                                    @include sl();
+                                    >span{
+                                        color: #999999;
+                                        font-weight: 700;
+                                        &:nth-of-type(2){
+                                            font-size: px2rem(60px);
+                                        }
+                                    }
+                                }
+                                &:nth-of-type(2){
+                                    padding-top: px2rem(2px);
+                                    text-align: center;
+                                    color: #999999;
+                                    border-top: 0.06556rem  solid rgba(0, 0, 0, .2);
+                                    margin-left: px2rem(20px);
+                                    margin-right: px2rem(20px);
+                                }
+                            }
+                        }
+                        .gift{
+                            background-color: #fff;
+                            background-size: px2rem(158px) px2rem(156px);
+                            background-position: center center;
+                            background-image: url("../assets/icons/home/serviceItem_default.jpg");
+                        }
+                        >.coupon-right{
+                            display: inline-block;
+                            width: px2rem(459px);
+                            height: px2rem(202px);
+                            background-color: #fff;
+                            margin-left: px2rem(214px);
+                            border-radius: px2rem(8px);
+                            position: absolute;
+                            bottom: 0;
+                            padding: px2rem(17px);
+                            box-shadow: 0px 2px 6px rgba(100, 100, 100, 0.5);
+                            >div{
+                                border: px2rem(2px) dashed #dadada;
+                                border-radius: px2rem(8px);
+                                height: px2rem(168px);
+                                padding: px2rem(5px) px2rem(10px);
+                                >div{
+                                    &:nth-of-type(1){
+                                        font-size: px2rem(37px);
+                                        color: #999999;
+                                    }
+                                    &:nth-of-type(2){
+                                        font-size: px2rem(28px);
+                                        color: #999999;
+                                    }
+                                    &:nth-of-type(3){
+                                        font-size: px2rem(28px);
+                                        color: #999999;
+                                    }
+                                    &:nth-of-type(4){
+                                        font-size: px2rem(28px);
+                                        color: #999999;
+                                    }
+                                    &:nth-of-type(5){
+                                        font-size: px2rem(28px);
+                                        color: #999999;
+                                    }
+                                    &:last-child{
+                                        font-size: 0.56rem;
+                                        color: #999999;
+                                    }
+                                }
+                            }
+                            &:after{
+                                content: "";
+                                width: px2rem(25px);
+                                height: px2rem(25px);
+                                border-radius: 100%;
+                                background-color: #eee;
+                                position: absolute;
+                                left: -0.370rem;
+                                bottom: -0.26667rem;
+                            }
+                            &:before{
+                                content: "";
+                                width: px2rem(25px);
+                                height: px2rem(25px);
+                                line-height: px2rem(20px);
+                                border-radius: 100%;
+                                background-color: #eee;
+                                position: absolute;
+                                left: -0.370rem;
+                                top: -0.26667rem;
+                            }
+                            >ul{
+                                position: absolute;
+                                left: -0.10989rem;
+                                background-color: #fafafa;
+                                >li{
+                                    width: px2rem(6px);
+                                    height: px2rem(6px);
+                                    border-radius: 100%;
+                                    background-color: #dadada;
+                                    margin-top: px2rem(6px);
+                                }
+                            }
+                            >span.item-circle{
+                                position: absolute;
+                                top: px2rem(3px);
+                                right: px2rem(3px);
+                                width: px2rem(138px);
+                                height: px2rem(138px);
+                                background-size: px2rem(138px) px2rem(138px);
+                                background-image: url("../assets/icons/oClockCoupon/7.png");
+                                >i{
+                                    display: inline-block;
+                                    width: px2rem(96px);
+                                    color: #c4c4c4;
+                                    font-size: px2rem(32px);
+                                    font-weight: 700;
+                                    transform: rotate(15deg);
+                                    margin-left: px2rem(22px);
+                                    margin-top: px2rem(44px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div.list-item{
+        padding-bottom: 0.722rem;
+        div.header{
+            height: 1.805rem;
+            line-height: 1.805rem;
+            background-color: #e6e6e6;
+            font-size: 0.889rem;
+            color: #666;
+            text-indent: 0.611rem;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            &.first{
+                border-top: 0;
+            }
+            >div{
+                float: right;
+                font-size: 0.778rem;
+                text-decoration: underline;
+                margin-right: px2rem(16px);
+                &:after{
+                    content: "";
+                    display: inline-block;
+                    width: 0.42rem;
+                    height: 0.42rem;
+                    border-left: 1px solid #999;
+                    border-bottom: 1px solid #999;
+                    margin-left: 0.244rem;
+                    transition: transform 0.3s;
+                    @include rotate(135deg);
+                }
+                &.closed{
+                    &:after{
+                        margin-top:-0.3rem;
+                        vertical-align: middle;
+                        @include rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+    div.load-more{
+        text-align: center;
+        line-height: px2rem(40px);
+        font-size: px2rem(28px);
+        color: #666;
+        text-decoration: underline;
+    }
+}

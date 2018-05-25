@@ -1,0 +1,102 @@
+@import "../common/mixin.scss";
+
+div#fast-pay-records-page{
+  .all-list{
+    overflow-y: auto;
+    >div{
+      width: 20rem;
+    }
+  }
+  div.item-title{
+    position: relative;
+    height: 1.861rem;
+    line-height: 1.861rem;
+    padding-left: 2.556rem;
+    font-size: 0.889rem;
+    color: #616161;
+    background-color: #f5f5f5;
+    >div{
+      position: absolute;
+      width: 1.389rem;
+      height: 1.389rem;
+      left: 0.667rem;
+      top: 50%;
+      margin-top: -0.6945rem;
+      border-radius: 50%;
+      border:1px solid #ccc;
+      @include imgBgFix(1.389rem 1.389rem);
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      width: 0.45rem;
+      height: 0.45rem;
+      right: 0.5rem;
+      top: 50%;
+      margin-top:-0.225rem;
+      border-left: 0.1rem solid #9c9c9c;
+      border-bottom: 0.1rem solid #9c9c9c;
+      @include rotate(-135deg);
+    }
+  }
+
+  ul.item-list{
+    li{
+      position: relative;
+      height: 3.833rem;
+      padding: 0.65rem 1.333rem;
+      background: #fff;
+      border-bottom: 1px solid #f5f5f5;
+      >div{
+        &:nth-of-type(1){
+          color: #4d4d4d;
+          font-size: 0.889rem;
+          line-height: 1.5;
+          position: relative;
+          >span{
+            font-size: 0.6111rem;
+            padding: 0 0.4rem;
+            border-radius: 1rem;
+            border: 1px solid #999;
+            color: #999;
+            margin-left: 0.3rem;
+          }
+          >i{
+            display: inline-block;
+            height: px2rem(40px);
+            width: px2rem(40px);
+            position: absolute;
+            top: 0.1rem;
+            margin-left: 0.3rem;
+            @include imgBgFix(px2rem(40px) px2rem(40px));
+            background-image: url("../assets/icons/personal/ic_lipin.png");
+          }
+        }
+        &:nth-of-type(2){
+          line-height: 1.65;
+          color: #999;
+          font-size: 0.722rem;
+        }
+        &:nth-of-type(3){
+          position: absolute;
+          right: 0.6389rem;
+          top: 0.5rem;
+          font-size: 0.778rem;
+          color: #4d4d4d;
+          >b{
+            color: #f66;
+            font-size: 0.889rem;
+            font-weight: normal;
+          }
+        }
+        &:nth-of-type(4){
+            position: absolute;
+            font-size: px2rem(26px);
+            right: 0.6389rem;
+            color: #212121;
+            top: 1.72rem;
+        }
+      }
+    }
+  }
+}

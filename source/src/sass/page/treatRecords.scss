@@ -1,0 +1,56 @@
+@import "../common/mixin.scss";
+
+div#treat-records-page{
+  div.list{
+    overflow-y: auto;
+  }
+  a.list-item{
+    display: block;
+    background-color: #fff;
+    font-size: .778rem;
+    color: #616161;
+    line-height: 1;
+    margin-top: .667rem;
+    border-top:1px solid #e0e0e0;
+    border-bottom:1px solid #e0e0e0;
+    &:first-child{
+      margin-top: 0;
+      border-top: none;
+    }
+    >div{
+      padding: .722rem .667rem;
+      &:nth-of-type(1){
+        overflow: hidden;
+        border-bottom:1px solid #e0e0e0;
+        >div{
+          &:first-child{
+            float: left;
+          }
+          &:last-child{
+            float: right;
+          }
+          &.treat-unuse{
+            color: #6c6;
+          }
+          &.treat-used{
+            color: #f66;
+          }
+          &.treat-canceled{
+            color: #212121;
+          }
+        }
+      }
+      &:nth-of-type(2){
+        >div{
+          &:nth-of-type(2){
+            margin-top: .667rem;
+          }
+          >span{
+            color: #212121;
+            margin-left:.667rem;
+          }
+        }
+      }
+    }
+  }
+}

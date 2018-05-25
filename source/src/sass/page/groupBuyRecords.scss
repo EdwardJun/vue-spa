@@ -1,0 +1,201 @@
+@import "../common/mixin.scss";
+
+#group-buy-records-page{
+  .switch-menu{
+    display: flex;
+    height: px2rem(96px);
+    background: #fff;
+    justify-content: center;
+    border-bottom: 1px solid #e0e0e0;
+    >div{
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      width: px2rem(163px);
+      font-size: px2rem(32px);
+      color: #666;
+      border-bottom: 2px solid #fff;
+      &.active{
+        color: #f66;
+        border-bottom-color: #f66;
+      }
+      &:nth-of-type(1){
+        margin-right: px2rem(100px);
+      }
+    }
+  }
+  .wrap{
+    display: flex;
+    width: 40rem;
+    transition: transform 0.3s ease-out;
+    transform: translateX(0);
+    >div{
+      width: 20rem;
+      height: 100%;
+      overflow-y: auto;
+    }
+    &.active{
+      transform: translateX(-50%);
+    }
+  }
+  .item{
+    padding-top: px2rem(16px);
+    >div{
+      &:nth-of-type(1){
+        position: relative;
+        padding: px2rem(12px) px2rem(24px) px2rem(18px) px2rem(48px);
+        background: #fff;
+        border-bottom: 1px solid #e0e0e0;
+        >h3{
+          padding-top: px2rem(12px);
+          font-size: px2rem(36px);
+          color: #212121;
+          margin-bottom: px2rem(10px);
+          width: 16.4rem;
+        }
+        >div{
+          line-height: 1.4;
+          label{
+            font-size: px2rem(28px);
+            color: #666;
+            display: inline-block;
+            text-align: left;
+            width: px2rem(148px);
+          }
+          span{
+            font-size: px2rem(28px);
+            color: #333;
+          }
+          &:nth-of-type(1){
+            >strong{
+              font-size: px2rem(32px);
+              color: #f66;
+              font-weight: normal;
+            }
+            >span{
+              font-size: px2rem(26px);
+              color: #757575;
+              margin-left: px2rem(5px);
+            }
+          }
+        }
+      }
+      &:nth-of-type(2){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: px2rem(60px);
+        color: #1e78d5;
+        font-size: px2rem(28px);
+        text-decoration: underline;
+        background: #fff;
+      }
+    }
+    &.already{
+      >div>div:nth-of-type(4){
+        position: absolute;
+        right: px2rem(24px);
+        top: px2rem(30px);
+        font-size: px2rem(28px);
+        color: #f66;
+      }
+    }
+    &.processing{
+      >div{
+        >div{
+          &:nth-of-type(2){
+            >span{
+              color: #f66;
+            }
+          }
+          &:nth-of-type(3){
+            >span{
+              color: #333;
+            }
+          }
+        }
+      }
+    }
+  }
+  .center-wrap{
+    background: #fff;
+    width: px2rem(574px);
+    width: px2rem(582px);
+    border-radius: px2rem(10px);
+    >h3{
+      text-align: center;
+      font-size: px2rem(42px);
+      color: #212121;
+      line-height: px2rem(90px);
+    }
+    >img{
+      display: block;
+      width: px2rem(414px);
+      height: px2rem(414px);
+      line-height: px2rem(414px);
+      text-align: center;
+      margin: 0 auto;
+      //border: 1px solid #f0f0f0;
+      font-size: px2rem(32px);
+    }
+    >div{
+      line-height: px2rem(78px);
+      text-align: center;
+      font-size: px2rem(36px);
+      color: #212121;
+    }
+  }
+
+  .load-more{
+    text-align: center;
+    line-height: px2rem(40px);
+    font-size: px2rem(28px);
+    color: #666;
+    text-decoration: underline;
+  }
+
+  .list-item{
+    padding-bottom: 0.722rem;
+    .header{
+        height: 1.805rem;
+        line-height: 1.805rem;
+        background-color: #e6e6e6;
+        font-size: 0.889rem;
+        color: #666;
+        text-indent: 0.611rem;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &.first{
+            border-top: 0;
+        }
+        >div{
+            float: right;
+            font-size: 0.778rem;
+            text-decoration: underline;
+            margin-right: px2rem(16px);
+            &:after{
+                content: "";
+                display: inline-block;
+                width: 0.42rem;
+                height: 0.42rem;
+                border-left: 1px solid #999;
+                border-bottom: 1px solid #999;
+                margin-left: 0.244rem;
+                transition: transform 0.3s;
+                @include rotate(135deg);
+            }
+            &.closed{
+                &:after{
+                    margin-top:-0.3rem;
+                    vertical-align: middle;
+                    @include rotate(-45deg);
+                }
+            }
+        }
+    }
+  }
+}

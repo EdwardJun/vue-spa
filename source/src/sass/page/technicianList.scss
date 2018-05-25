@@ -1,0 +1,368 @@
+@import "../common/mixin.scss";
+
+div#technician-list-page{
+  overflow: hidden;
+  div.search{
+    margin:0.333rem 0.639rem;
+    background-color: #fff;
+    height:1.722rem;
+    display: none;
+    border:1px solid #d9d9d9;
+    border-radius: 0.222rem;
+    &.active{
+      display: block;
+    }
+    >input{
+      display: block;
+      float: left;
+      height:100%;
+      width:15rem;
+      border:none;
+      border-bottom-left-radius: 0.222rem;
+      border-top-left-radius: 0.222rem;
+      padding-left:0.694rem;
+      font-size:0.778rem;
+      box-sizing: border-box;
+    }
+    >div{
+      height:100%;
+      width:2.917rem;
+      float: right;
+      border:1px solid #f66;
+      text-align: center;
+      background-color: #f66;
+      color:#fff;
+      font-size:0.778rem;
+      border-top-right-radius: 0.222rem;
+      border-bottom-right-radius: 0.222rem;
+    }
+  }
+
+  div.menu{
+    @include sx();
+    height: 2.444rem;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: .778rem;
+    color: #616161;
+    text-align: center;
+    background-color: #fff;
+    > div {
+      height: 1.778rem;
+      border-right: 1px solid #e0e0e0;
+      >div{
+        @include imgBgFix(.889rem .889rem);
+        background-position: left center;
+        display: inline-block;
+        padding-left: 1rem;
+        line-height: 1.778rem;
+        &.active{
+          color:#f66
+        }
+      }
+      &.status{
+        @include boxFlex(1);
+        >div{
+          background-image: url('../assets/icons/technicianList/status_icon.png');
+          &.active{
+            background-image: url('../assets/icons/technicianList/status_selected_icon.png');
+          }
+        }
+      }
+      &.comment{
+        @include boxFlex(1);
+        >div{
+          background-image: url('../assets/icons/technicianList/comment_order_icon.png');
+          &.active{
+            background-image: url('../assets/icons/technicianList/comment_order_selected_icon.png');
+          }
+        }
+      }
+      &.filter{
+        @include boxFlex(1);
+        >div{
+          background-image: url('../assets/icons/technicianList/filter_icon.png');
+          &.active{
+            background-image: url('../assets/icons/technicianList/filter_selected_icon.png');
+          }
+        }
+      }
+      &.search-icon{
+        width: 2.361rem;
+        border-right:none;
+        @include img('../assets/icons/technicianList/search_icon.png',.889rem .889rem);
+        background-position: center;
+      }
+    }
+  }
+
+  div.tech-list{
+    overflow-y: auto;
+    background-color: #fff;
+    a.item{
+      display: block;
+      padding-top: .667rem;
+      margin-left:.667rem;
+      margin-right:.667rem;
+      @include sx();
+      >div{
+        &:nth-of-type(1){
+          width: 3.333rem;
+          height: 3.333rem;
+          border-radius: 50%;
+          position: relative;
+          margin-right: .667rem;
+          @include imgBgFix(3.333rem 3.333rem);
+          border: 1px solid #e0e0e0;
+          box-sizing: content-box;
+          &:after{
+            content: '闲';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 1rem;
+            height: 1rem;
+            text-align: center;
+            line-height: 1rem;
+            font-size: .556rem;
+            color: #fff;
+            border-radius: 50%;
+            border: 1px solid #fff;
+          }
+          &.free:after{
+            content: '闲';
+            background-color: #64cb64;
+          }
+          &.rest:after{
+            content: '休';
+            background-color: #999;
+          }
+          &.busy:after{
+            content: '忙';
+            background-color: #ff5c5c;
+          }
+        }
+        &:nth-of-type(2){
+          @include boxFlex(1);
+          @include sx();
+          border-bottom: 1px solid #eee;
+          >div{
+            &:nth-of-type(1){
+              @include boxFlex(1);
+              margin-right: .667rem;
+              >div{
+                @include sx();
+                &:nth-of-type(1){
+                  line-height: 1.2;
+                  margin-bottom: .2rem;
+                  >div{
+                    &:nth-of-type(1){
+                      font-size: .889rem;
+                      color: #4d4d4d;
+                      max-width: 10rem;
+                      @include sl();
+                    }
+                    &:nth-of-type(2){
+                        text-align: center;
+                        padding: 0 px2rem(10px);
+                      height: 0.722rem;
+                      line-height: 0.733rem;
+                      margin-left: .444rem;
+                      width: 2.556rem;
+                      font-size: .556rem;
+                      color: #999;
+                      border: 1px solid #999;
+                      border-radius: .389rem;
+                      vertical-align: middle;
+                      @include sl();
+                    }
+                  }
+                }
+
+
+              }
+              .item-grade{
+                line-height: 1.2;
+                margin-bottom: .2rem;
+                >div{
+                  &:nth-of-type(1),&:nth-of-type(2){
+                    height: .889rem;
+                    line-height: .889rem;
+                    font-size: .611rem;
+                    margin-right:.5rem;
+                    padding-left: 1rem;
+                    padding-right: .3rem;
+                    border-radius: .25rem;
+                    background-position: .222rem center;
+                  }
+                  &:nth-of-type(1){
+                    background: #ffe4c6 url('../assets/icons/technicianList/comment_icon.png') no-repeat 0.2rem center;
+                    background-size: 0.556rem 0.556rem;
+                    color: #ff8909;
+                  }
+                  &:nth-of-type(2){
+                    background: #ffe0e5 url('../assets/icons/technicianList/good_icon.png') no-repeat 0.2rem center;
+                    background-size: 0.556rem 0.556rem;
+                    color: #f66;
+                  }
+                  &:nth-of-type(3){
+                    @include boxFlex(1);
+                    @include sl();
+                    font-size: .722rem;
+                    color: #ff5d8f;
+                  }
+                }
+              }
+              .item-descrip{
+                >div{
+                  @include boxFlex(1);
+                  font-size: .778rem;
+                  color: #999;
+                  @include sl();
+                  line-height: 2;
+                  padding-bottom: 0.1rem;
+                  padding-bottom: 0.2rem;
+                }
+              }
+            }
+            &:nth-of-type(2){
+              width: .43rem;
+              height: .43rem;
+              border-left: .1rem solid #999;
+              border-bottom: .1rem solid #999;
+              @include rotate(-135deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div.selector-area{
+    @include tOrigin(top center);
+    top:2.4rem;
+    &.show-search{
+      top:7.4rem;
+    }
+    >div{
+      display: none;
+      border-top:1px solid #eee;
+      background-color: #fff;
+      position: relative;
+      &:after{
+        position: absolute;
+        content: ' ';
+        width: .6rem;
+        height: .6rem;
+        top: -.3rem;
+        left:8.7rem;
+        border-top:1px solid #eee;
+        border-right:1px solid #eee;
+        @include rotate(-45deg);
+        @include tOrigin();
+        background-color: inherit;
+      }
+      &.active{
+        display: block;
+      }
+    }
+    >div.comment{
+      >div{
+        height: 2.222rem;
+        line-height: 2.222rem;
+        border-bottom:1px solid #eee;
+        padding-left: 1.944rem;
+        position: relative;
+        font-size: .889rem;
+        color: #212121;
+        &.active{
+          color: #f66;
+        }
+        &.active:before{
+          position: absolute;
+          content: ' ';
+          height: .367rem;
+          width: 0.611rem;
+          left: .667rem;
+          top: 0.8rem;
+          border-left:1px solid #f66;
+          border-bottom:1px solid #f66;
+          @include tOrigin(center top);
+          @include rotate(-45deg);
+        }
+      }
+    }
+    >div.service-item{
+      &:after{
+        left:14.5rem;
+      }
+      >div{
+        &:nth-of-type(1){
+          height: 18.306rem;
+          overflow-x: hidden;
+          -webkit-overflow-scrolling: touch;
+          >div{
+            margin-left:.667rem;
+          }
+          div.all{
+            width: 100%;
+            height: 3rem;
+            border-bottom:1px solid #e0e0e0;
+          }
+          div.category{
+            font-size: .889rem;
+            color: #212121;
+            > div {
+              width: 18.666rem;
+              display: inline-block;
+              div.item:nth-of-type(4n) {
+                margin-right: 0;
+              }
+            }
+          }
+          div.item{
+            width: 4.3rem;
+            height: 1.889rem;
+            border-radius: 3px;
+            border: 1px solid #616161;
+            float: left;
+            margin-right: .444rem;
+            margin-top: .611rem;
+            background: #fff;
+            @include sl();
+            text-align: center;
+            line-height: 1.889rem;
+            font-size: .778rem;
+            color:#4d4d4d;
+            &.active {
+              border: 1px solid #f66;
+              color: #f66;
+            }
+          }
+        }
+        &:nth-of-type(2){
+          @include sx();
+          border-top: 1px solid #e0e0e0;
+          padding: .306rem .667rem;
+          >div{
+            @include boxFlex(1);
+            -webkit-border-radius: .3rem;
+            -moz-border-radius: .3rem;
+            border-radius: .3rem;
+            height: 2.444rem;
+            line-height: 2.444rem;
+            font-size: .889rem;
+            color: #fff;
+            text-align: center;
+            &:nth-of-type(1){
+              margin-right: .667rem;
+              background-color: #bbb;
+            }
+            &:nth-of-type(2){
+              background-color: #f66;
+            }
+          }
+        }
+      }
+    }
+  }
+}

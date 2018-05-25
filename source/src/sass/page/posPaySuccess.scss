@@ -1,0 +1,62 @@
+@import "../common/mixin.scss";
+
+div#pos-pay-success-page{
+    background: #eee;
+    padding-top: px2rem(48px);
+
+    .ok{
+      font-size: px2rem(48px);
+      color: #4d4d4d;
+      text-align: center;
+      line-height: 2.0;
+      &:before{
+        content: "";
+        display: block;
+        width: px2rem(106px);
+        height: px2rem(106px);
+        @include img("../assets/icons/posPay/ok.png");
+        margin: 0 auto px2rem(8px);
+      }
+      &.alipay{
+          &:before{
+              @include img("../assets/icons/posPay/ok2.png");
+          }
+      }
+    }
+
+    .wrap{
+      margin: px2rem(32px) px2rem(24px) 0;
+      background: #fff;
+      border-radius: px2rem(12px);
+      box-shadow: 0 1px 1px 2px rgba(0,0,0,0.05);
+      padding: px2rem(15px) px2rem(40px);
+      color: #4d4d4d;
+      font-size: px2rem(32px);
+      >div{
+        height: px2rem(65px);
+        line-height: px2rem(65px);
+        >span{
+          float: right
+        }
+        &:nth-of-type(1)>span{
+          font-size: px2rem(42px);
+          color: #212121;
+        }
+      }
+    }
+
+    .act-btn{
+      height: px2rem(80px);
+      line-height: px2rem(80px);
+      text-align: center;
+      margin: px2rem(332px) px2rem(24px) 0;
+      background: #3cae34;
+      color: #fff;
+      font-size: px2rem(36px);
+      border-radius: px2rem(10px);
+      letter-spacing: 2px;
+      &.alipay{
+          background: #00aaef;
+      }
+    }
+}

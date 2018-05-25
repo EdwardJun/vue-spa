@@ -1,0 +1,371 @@
+@import "../common/mixin.scss";
+
+div#personal-page{
+  padding-bottom: 2.611rem;
+  div.top{
+    position: relative;
+    width: px2rem(720px);
+    height: px2rem(386px);
+    padding-top: px2rem(18px);
+    @include img('../assets/icons/personal/1.jpg',20rem px2rem(386px));
+
+    div.header{
+        width: px2rem(124px);
+        height: px2rem(124px);
+        margin: 0 auto;
+        @include imgBgFix(px2rem(124px) px2rem(124px));
+        border-radius: 50%;
+        border: 2px solid #eee2ce;
+    }
+
+    div.info{
+        color:#fff;
+        text-align: center;
+        >div{
+          &:nth-of-type(1){
+            margin-top: px2rem(6px);
+            font-size:1rem;
+            line-height: 1.35rem;
+          }
+          &:nth-of-type(2){
+            font-size: px2rem(26px);
+            line-height: 1.2rem;
+          }
+          &.bind-phone{
+            padding: 0 .556rem;
+            font-size: .611rem;
+            color: #fff;
+            background-color: #69cb66;
+            border-radius: .167rem;
+            display: inline-block;
+            transform: translateY(px2rem(-11px));
+          }
+        }
+    }
+
+    div.btn{
+        width:5.722rem;
+        height:1.667rem;
+        margin: px2rem(72px) auto 0;
+        border:1px solid #fb5549;
+        border-radius: 4px;
+        line-height:1.667rem;
+        color:#fb5549;
+        text-align: center;
+        font-size:0.889rem;
+    }
+
+    div.edit{
+      position: absolute;
+      top: px2rem(20px);
+      right: px2rem(25px);
+      width: px2rem(44px);
+      height:px2rem(44px);
+      @include img("../assets/icons/personal/2.png");
+    }
+
+    div.btn-menu{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: px2rem(135px);
+        width: 100%;
+        background: rgba(0,0,0,0.4);
+        display: flex;
+        justify-content: space-around;
+        >div{
+          width: px2rem(160px);
+          height: 100%;
+          box-sizing: border-box;
+          text-align: center;
+          color: #fff;
+          font-size: px2rem(24px);
+          padding-top: px2rem(8px);
+          &.hide{
+            display: none;
+          }
+          &:before{
+            display: block;
+            content: "";
+            height: px2rem(68px);
+            @include imgBgFix(px2rem(44px) px2rem(44px));
+            background-position: center center;
+          }
+          &.collect_btn:before{
+            background-image: url("../assets/icons/personal/3.png");
+          }
+          &.coupon_btn:before{
+            background-image: url("../assets/icons/personal/4.png");
+          }
+          &.member_btn:before{
+            background-image: url("../assets/icons/personal/5.png");
+          }
+          &.integral_btn:before{
+            background-image: url("../assets/icons/personal/6.png");
+          }
+        }
+    }
+  }
+
+  div.order-wrap{
+    margin: px2rem(20px) 0;
+    background: #fff;
+    color: #616161;
+    padding: px2rem(12px) 0;
+    >div{
+      &:nth-of-type(1){
+        font-size: px2rem(32px);
+        padding-left: px2rem(20px);
+      }
+      &:nth-of-type(2){
+        display: flex;
+        justify-content: space-around;
+        >div{
+          width: px2rem(160px);
+          height: 100%;
+          text-align: center;
+          font-size: px2rem(26px);
+          padding-top: px2rem(3px);
+          &.hide{
+            display: none;
+          }
+          &:before{
+            display: block;
+            content: "";
+            height: px2rem(60px);
+            @include imgBgFix(px2rem(40px) px2rem(40px));
+            background-position: center center;
+          }
+          &.discount_mall_btn:before{
+            background-image: url("../assets/icons/personal/7.png");
+          }
+          &.item_limit_btn:before{
+            background-image: url("../assets/icons/personal/8.png");
+          }
+          &.appoint_btn:before{
+            background-image: url("../assets/icons/personal/9.png");
+          }
+          &.paid_coupon_btn:before{
+            background-image: url("../assets/icons/personal/10.png");
+          }
+          &.group_buy_btn:before{
+            background-image: url("../assets/icons/personal/18.png");
+          }
+        }
+      }
+    }
+  }
+
+  div.menu-wrap{
+    padding:0 0.667rem;
+    background: #fff;
+    margin-bottom: .667rem;
+    border-bottom:1px solid #e0e0e0;
+    >a{
+      display: block;
+      width: 19.333rem;
+      height: 2.667rem;
+      border-top: 1px solid #f0f0f0;
+      @include sx();
+      &:nth-of-type(1){
+        border-top: 0;
+      }
+      >div{
+        &:nth-of-type(1){
+            width: px2rem(43px);
+            height: px2rem(43px);
+            @include imgBgFix(px2rem(43px) px2rem(43px));
+            &.oneYuan{
+                background-image: url("../assets/icons/personal/11.png");
+            }
+            &.lucky{
+                background-image: url("../assets/icons/personal/13.png");
+            }
+            &.fastPay{
+                background-image: url("../assets/icons/personal/12.png");
+            }
+            &.serviceItemCoupon{
+                @include imgBgFix(px2rem(32px) px2rem(32px));
+                background-image: url("../assets/icons/personal/17.png");
+                background-position: center center;
+            }
+        }
+        &:nth-of-type(2){
+          padding-left: 0.667rem;
+          width: 17.194rem;
+          height: 1.139rem;
+          color:#666;
+          font-size: 0.889rem;
+          line-height: 1.139rem;
+          position: relative;
+          >span{
+            position: absolute;
+            right:0.3rem;
+            line-height: 1.055rem;
+            font-size:0.667rem;
+            color:#fff;
+            border-radius:0.8rem;
+            padding-left:0.333rem;
+            padding-right:0.333rem;
+            background-color: #fb5549;
+          }
+        }
+      }
+    }
+  }
+
+  div.menu-wrap{
+    border-top:1px solid #e0e0e0;
+  }
+  div.suggestion-wrap,div.wx-wrap,div.phone-wrap,div.exit-wrap{
+    margin-bottom: 0.722rem;
+    height: 2.611rem;
+    background: #fff;
+    @include sx();
+    border-top:1px solid #e0e0e0;
+    border-bottom:1px solid #e0e0e0;
+    >div{
+      &:nth-of-type(1){
+        margin-left: 0.667rem;
+        width: px2rem(43px);
+        height: px2rem(43px);
+        @include imgBgFix(px2rem(43px) px2rem(43px));
+        &.suggestions{
+          background-image: url('../assets/icons/personal/15.png')
+        }
+        &.logout{
+          background-image: url('../assets/icons/personal/16.png')
+        }
+        &.unbind-wechat{
+          background-image: url('../assets/icons/personal/unbind_wechat.png');
+        }
+        &.unbind-phone{
+          background-image: url('../assets/icons/personal/unbind_phone.png');
+        }
+      }
+      &:nth-of-type(2){
+        padding-left: 0.667rem;
+        width: 17.194rem;
+        height: 1.139rem;
+        color:#666;
+        font-size: 0.889rem;
+        line-height: 1.139rem;
+      }
+    }
+  }
+
+  .confirm-logout{
+    >div{
+      height:6.756rem;
+      width:16.667rem;
+      background-color: #fff;
+      color:#4d4d4d;
+      font-size:0.889rem;
+      overflow: hidden;
+      @include ty(0,0,4px,4px,#908f8f);
+      >div:nth-of-type(1){
+        height:4.35rem;
+        line-height: 4.35rem;
+        text-align: center;
+        border-bottom: 1px solid #d9d9d9;
+      }
+      >div:nth-of-type(2){
+        height:2.5rem;
+        a{
+          display: block;
+          width:50%;
+          float: left;
+          text-align: center;
+          line-height: 2.5rem;
+          &:nth-of-type(1){
+            color:#fff;
+            background-color: #ff5549;
+          }
+          &:nth-of-type(2){
+            background-color: #ebebeb;
+          }
+        }
+      }
+    }
+  }
+
+  .unbind-dialog{
+    >div{
+      width:16.667rem;
+      background-color: #fff;
+      color:#4d4d4d;
+      font-size:0.889rem;
+      overflow: hidden;
+      border-radius:.5rem;
+      @include ty(0,0,4px,4px,#908f8f);
+      >div:nth-of-type(1){
+        text-align: center;
+        border-bottom: 1px solid #d9d9d9;
+        padding: 1.472rem 0;
+        >p{
+          line-height: 1.8;
+        }
+        >p:nth-of-type(1){
+          margin: 0 0.3rem .667rem;
+          font-size: 1.056rem;
+          font-weight: bold;
+          color: #222;
+        }
+        >p:nth-of-type(2){
+          color: #060606;
+          font-size: .778rem;
+          margin: .667rem 0.3rem 0;
+        }
+      }
+      >div:nth-of-type(2){
+        overflow: hidden;
+        >a{
+          display: block;
+          width:50%;
+          float: left;
+          box-sizing: border-box;
+          text-align: center;
+          line-height: 2.806rem;
+          font-size: 1rem;
+          &:nth-of-type(1){
+            color:#fff;
+            background-color: #ff5549;
+          }
+          &:nth-of-type(2){
+            background-color: #ebebeb;
+          }
+        }
+      }
+    }
+  }
+
+  .remind-tip{
+    position: relative;
+    >i{
+      position: absolute;
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      color: #fff;
+      background: #f66;
+      top: 0.42rem;
+      right: 0.9rem;
+    }
+    &.service-item-coupon{
+      >i{
+        top: 0.35;
+        right: 11.3rem;
+      }
+    }
+  }
+
+  #invite-btn{
+      position: fixed;
+      right: 0;
+      bottom: 3.5rem;
+      width: px2rem(110px);
+      height: px2rem(130px);
+      @include img("../assets/icons/inviteActivity/14.png", px2rem(110px) px2rem(130px));
+  }
+}

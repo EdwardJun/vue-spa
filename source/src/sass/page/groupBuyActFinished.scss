@@ -1,0 +1,88 @@
+@import "../common/mixin.scss";
+
+#group-buy-act-finished-page{
+  .top-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: px2rem(318px);
+    background: #fff;
+    flex-direction: column;
+    padding-top: px2rem(30px);
+    >div{
+      &:nth-of-type(1){
+        display: flex;
+        color: #333;
+        font-size: px2rem(38px);
+        justify-content: center;
+        align-items: center;
+        &:before{
+          content: "";
+          display: block;
+          width: px2rem(69px);
+          height: px2rem(70px);
+          @include img("../assets/icons/groupBuy/10.png", 100% 100%);
+          margin-right: px2rem(20px);
+        }
+      }
+      &:nth-of-type(2){
+        color: #666;
+        font-size: px2rem(28px);
+        margin-top: px2rem(6px);
+      }
+      &:nth-of-type(3){
+        height: px2rem(64px);
+        width: px2rem(320px);
+        line-height: px2rem(64px);
+        text-align: center;
+        color: #fff;
+        background: #f66;
+        font-size: px2rem(28px);
+        border-radius: px2rem(6px);
+        margin-top: px2rem(24px);
+      }
+    }
+  }
+  .act-list{
+    margin-top: px2rem(16px);
+    background: #fff;
+  }
+  .wrap-title{
+    display: flex;
+    align-items: center;
+    height: px2rem(82px);
+    border-bottom: 1px solid #eee;
+    font-size: px2rem(32px);
+    color: #333;
+    padding-left: px2rem(24px);
+    &:before{
+      content: "";
+      display: flex;
+      height: px2rem(32px);
+      width: px2rem(4px);
+      background: #f66;
+      margin-right: px2rem(16px);
+    }
+    span{
+      flex: 1;
+    }
+    div{
+      display: flex;
+      height: px2rem(82px);
+      width: px2rem(120px);
+      justify-content: center;
+      align-items: center;
+      color: #f66;
+      font-size: px2rem(28px);
+      &:after{
+        content: "";
+        display: block;
+        width: px2rem(14px);
+        height: px2rem(14px);
+        border-bottom: 1px solid #f66;
+        border-left: 1px solid #f66;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+}

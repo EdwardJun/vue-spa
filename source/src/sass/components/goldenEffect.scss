@@ -1,0 +1,28 @@
+@import "../common/mixin.scss";
+
+div.golden-effect{
+  position: absolute;
+  left:0;
+  bottom:0;
+  right:0;
+  top:100%;
+  &.show{
+    top:0;
+  }
+  >div{
+    position: absolute;
+    top: 0;
+    @include dhqx(linear);
+    margin-top: -10rem;
+    &.m1{
+      width: 1.944rem;
+      height: 1.806rem;
+      @include img('../assets/icons/chat/effect/1.png', 1.944rem 1.806rem);
+    }
+    &.m2{
+      width: 2.028rem;
+      height: 1.222rem;
+      @include img('../assets/icons/chat/effect/2.png', 2.028rem 1.222rem);
+    }
+  }
+}

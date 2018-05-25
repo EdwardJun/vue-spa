@@ -1,0 +1,105 @@
+@import "../common/mixin.scss";
+
+div#qrpay-page{
+
+  div.club-info{
+    padding: 1.667rem 0 1.444rem;
+    text-align: center;
+    >div{
+      display: inline-block;
+      text-align: center;
+      >div{
+        display: inline-block;
+        width: 4.111rem;
+        height: 4.111rem;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        margin-bottom:.833rem;
+        background-position: center;
+        @include imgBgFix(4.111rem 4.111rem)
+      }
+      >p{
+        margin: 0;
+        line-height: 1;
+        font-size: .889rem;
+        color: #424242;
+      }
+    }
+  }
+
+  div.money-info{
+    background-color: #fff;
+    padding:1rem .667rem;
+    >div{
+      line-height:1;
+      &:nth-of-type(1){
+        color: #424242;
+        font-size: .778rem;
+      }
+      &:nth-of-type(2){
+        position: relative;
+        line-height: 1;
+        margin-top: 1.5rem;
+        >span{
+          position: absolute;
+          font-size: 1.444rem;
+        }
+        >div{
+          margin-left:1.5rem;
+          position: relative;
+          border-bottom: 1px solid #e0e0e0;
+          >input{
+            background-color: transparent;
+            color: #000;
+            font-size: 1.889rem;
+            padding:0 0 0 1rem;
+            border: 0;
+            outline: none;
+            -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+            resize: none;
+            width: 15rem;
+          }
+          >span{
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translate(0,-50%);
+            font-size: .778rem;
+            color: #ccc;
+            pointer-events: none;
+          }
+          >i{
+            display: inline-block;
+            position: absolute;
+            width: 1.056rem;
+            height: 1.056rem;
+            right: 0;
+            top: 50%;
+            transform: translate(0,-50%);
+            @include img('../assets/icons/qrPay/icon_delete.png',1.056rem 1.056rem);
+          }
+        }
+      }
+    }
+  }
+
+  div.pay-btn{
+    margin: .889rem .667rem;
+    background-color: #fb5549;
+    color: #fff;
+    text-align: center;
+    height: 2.444rem;
+    line-height: 2.444rem;
+    font-size: .889rem;
+    border-radius: .222rem;
+    &.disabled{
+      background-color: #e0e0e0;
+      color: #bdbdbd;
+    }
+    &.processing{
+      color: #bdbdbd;
+      background: #e0e0e0 url("../assets/icons/common/loading.gif") no-repeat 30% 45%;
+    }
+  }
+}
